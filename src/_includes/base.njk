@@ -17,7 +17,11 @@
     {{ bodyOpen | safe }}
     <header class="grid grid-cols-1 gap-y-8 mb-12 md:grid-cols-12 md:gap-x-12 md:mb-24">
       <div class="order-2 col-span-4 flex flex-col justify-between md:order-1 md:col-span-7 2xl:col-span-9">
-        <div class="{{ introMaxWidthClass | default('max-w-[620px]') }} text-2xl font-light leading-tight text-black">
+        <div class="print-header hidden" aria-hidden="true">
+          <div class="print-name">Jason Lau</div>
+          <div class="print-subtitle">{{ printSubtitle | default("") }}</div>
+        </div>
+        <div class="{{ introMaxWidthClass | default('max-w-[620px]') }} text-2xl font-light leading-tight text-black intro-text">
           <h1 class="sr-only">{{ h1 }}</h1>
           <span class="font-bold">Jason Lau</span> is a
           <nav class="inline">
@@ -42,6 +46,11 @@
       <div class="order-1 col-span-4 flex justify-start -ml-[30px] -mt-5 md:order-2 md:col-span-4 md:justify-end md:ml-0 md:mt-0 xl:-mr-[50px] 2xl:col-span-2 2xl:-mr-20">
         <img src="profile-picture.png" alt="Jason Lau" width="320" height="360"
              class="h-40 w-40 object-contain md:h-auto md:w-full md:max-w-[200px]">
+      </div>
+      <div class="print-contact hidden" aria-hidden="true">
+        <div><strong>Phone:</strong> (929) 273-1217</div>
+        <div><strong>Email:</strong> i@jasonlau.io</div>
+        <div><strong>GitHub:</strong> github.com/dotkrnl</div>
       </div>
       <nav aria-label="External links" class="absolute right-6 top-12 order-3 flex flex-col md:relative md:right-auto md:top-auto md:col-span-1 md:items-end md:text-right">
         <ul>

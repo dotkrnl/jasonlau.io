@@ -121,8 +121,7 @@ body.pdf-active article.active-paper {
   }
 
   /* Hide aside's Services & Reviews in print (print-only copies come after pubs) */
-  aside > section:nth-child(3),
-  aside > section:nth-child(4) {
+  .aside-print-hide {
     display: none !important;
   }
 

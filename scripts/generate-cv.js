@@ -70,7 +70,7 @@ const data = stripHtmlDeep({
         org: merged.org,
         time: merged.time,
         desc: merged.desc,
-        location: merged.location,
+        location: merged.location || "",
       };
     }),
   publications: site.publications.map((p) => ({

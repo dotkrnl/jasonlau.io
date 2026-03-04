@@ -52,14 +52,14 @@ permalink: "index.html"
       {% endfor %}
     </section>
 
-    <section>
+    <section class="aside-print-hide">
       {{ sectionHeading("Services") }}
       <ul class="list-inside space-y-2">
 {{ servicesItems(site.services) }}
       </ul>
     </section>
 
-    <section>
+    <section class="aside-print-hide">
       {{ sectionHeading("Reviews") }}
 {{ reviewsSection(site.reviews, true) }}
     </section>
@@ -68,7 +68,7 @@ permalink: "index.html"
   <div id="main-div" class="flex flex-col max-w-[1400px] gap-16 md:col-span-8 2xl:col-span-6 2xl:-mt-[140px]">
     <section class="w-full">
       <div class="mb-8 flex items-baseline justify-between border-t border-gray-100 pt-4 md:border-none md:pt-0">
-        <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-gray-500">Publications (Cited 950+ times)</h2>
+        <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-gray-500">Publications (Cited {{ site.publicationsCitations }} times)</h2>
         <span class="hidden text-[10px] uppercase tracking-widest text-gray-500 md:block"><span class="font-black">*</span> indicates co-first authors</span>
       </div>
       <div class="space-y-12" id="publication-list">

@@ -5,6 +5,7 @@ email: "i@jasonlau.io"
 github: "github.com/dotkrnl"
 copyright: "2026"
 lastmod: "2026-03-03"
+publicationsCitations: "950+"
 
 roles:
   - name: "Researcher"
@@ -27,7 +28,13 @@ navLinks:
   - label: "Email"
     external: false
 
-# --- Education (unified, page-filtered) ---
+# --- Education & Experience ---
+# Unified lists with per-page visibility flags. Each entry can have:
+#   researcher: true          — show on researcher page using base fields
+#   developer: { time: ... }  — show on developer page, object fields override base
+#   designer: { ... }         — show on designer page with overrides
+#   designerLine: "..."       — show as summary line on designer page
+#   cv: true                  — include in generated CV (uses developer overrides)
 education:
   - degree: "Ph.D. Computer Science"
     school: "University of California, Los Angeles"
@@ -152,6 +159,9 @@ reviews:
     - "IEEE Transactions on Computers, Special Issue (TCSI)"
     - "IEEE Transactions on Industrial Electronics (TIE)"
 
+# Publications use `year` for the web (shown per year group) and `cvYear` as a
+# fallback for the CV only (every paper gets a year). If `year` is present it is
+# used on both web and CV; if only `cvYear` is set, the web shows no year label.
 publications:
   - pdf: "research-papers/10.1109-ICCAD66269.2025.11240757.pdf"
     titleStart: "Automated Design Space Exploration in High-Level Physical"

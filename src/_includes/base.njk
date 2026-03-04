@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ description }}">
+    <meta name="keywords" content="{{ keywords }}">
+    <title>{{ title }}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      {{ extraBodyStyle | safe }}
+    }
+    .button-underline {
+      position: relative;
+      text-decoration: none;
+      padding-bottom: 4px;
+    }
+    .button-underline::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 1px;
+      bottom: 0;
+      left: 0;
+      background-color: currentColor;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+    .button-underline:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+    {{ extraStyle | safe }}
+    </style>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  </head>
+  <body class="min-h-screen bg-white p-6 leading-snug text-black selection:bg-black selection:text-white md:p-12">
+    {{ bodyOpen | safe }}
+    <header class="mb-12 grid grid-cols-1 gap-y-8 md:mb-24 md:grid-cols-12 md:gap-x-12">
+      <div class="order-2 col-span-4 flex flex-col justify-between md:order-1 md:col-span-7 2xl:col-span-9">
+        <div class="max-w-[{{ introMaxWidth | default('620px') }}] text-2xl font-light leading-tight text-black">
+          <h1 class="sr-only">{{ h1 }}</h1>
+          <span class="font-bold">Jason Lau</span> is a
+          <nav class="inline">
+            {% set roles = [
+              { name: "Researcher", url: "index.html" },
+              { name: "Developer", url: "developer.html" },
+              { name: "Designer", url: "designer.html" }
+            ] %}
+            {% for role in roles %}
+              {%- if role.name == activeRole -%}
+                <a href="#" class="role-link role-active border-b-2 border-black font-bold hover:text-gray-800">{{ role.name }}</a>
+              {%- else -%}
+                <a href="{{ role.url }}" class="role-link role-inactive border-b-2 border-gray-500 text-gray-500 hover:text-black">{{ role.name }}</a>
+              {%- endif -%}
+              {%- if loop.index == 1 %},
+              {% elif loop.index == 2 %}, and
+              {% endif -%}
+            {% endfor %}
+          </nav>
+          <span class="inline">{{ tagline }}</span>
+        </div>
+      </div>
+      <div class="order-1 col-span-4 -ml-[30px] -mt-5 flex justify-start md:order-2 md:col-span-4 md:ml-0 md:mt-0 md:justify-end xl:-mr-[50px] 2xl:col-span-2 2xl:-mr-20">
+        <img src="profile-picture.png" alt="Jason Lau" width="320" height="360"
+             class="h-40 w-40 object-contain md:h-auto md:w-full md:max-w-[200px]">
+      </div>
+      <div class="order-3 absolute right-6 top-12 flex flex-col md:relative md:right-auto md:top-auto md:order-3 md:col-span-1 md:items-end md:text-right">
+        <ul>
+          {% set emailAddr = email | default("jalau@jumptrading.com") %}
+          {% set navLinks = [
+            { label: "Scholar", url: "https://scholar.google.com/citations?user=8mKFNtUAAAAJ", external: true },
+            { label: "ORCID", url: "https://orcid.org/0000-0003-0751-8227", external: true },
+            { label: "GitHub", url: "https://github.com/dotkrnl", external: true },
+            { label: "Email", url: "mailto:" + emailAddr, external: false }
+          ] %}
+          {% for link in navLinks %}
+          <li>
+            <a href="{{ link.url }}"
+               {% if link.external %}target="_blank"{% endif %}
+               class="button-underline group flex items-center gap-2 md:justify-end">
+              {{ link.label }}
+              <svg class="h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </header>
+
+    {{ content | safe }}
+
+    <footer class="mt-24 border-t border-gray-100 pt-12 text-center md:text-left">
+      <p class="text-xs uppercase tracking-widest text-gray-500">&copy; 2026 Jason Lau. Designed by Jason Lau.</p>
+    </footer>
+    {{ bodyClose | safe }}
+  </body>
+</html>

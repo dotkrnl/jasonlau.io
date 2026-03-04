@@ -6,46 +6,17 @@
     <meta name="description" content="{{ description }}">
     <meta name="keywords" content="{{ keywords }}">
     <title>{{ title }}</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-    body {
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      -webkit-font-smoothing: antialiased;
-      {{ extraBodyStyle | safe }}
-    }
-    .button-underline {
-      position: relative;
-      text-decoration: none;
-      padding-bottom: 4px;
-    }
-    .button-underline::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      transform: scaleX(0);
-      height: 1px;
-      bottom: 0;
-      left: 0;
-      background-color: currentColor;
-      transform-origin: bottom right;
-      transition: transform 0.25s ease-out;
-    }
-    .button-underline:hover::after {
-      transform: scaleX(1);
-      transform-origin: bottom left;
-    }
-    {{ extraStyle | safe }}
-    </style>
+    <link rel="stylesheet" href="/styles.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
   </head>
-  <body class="min-h-screen bg-white p-6 leading-snug text-black selection:bg-black selection:text-white md:p-12">
+  <body class="min-h-screen bg-white p-6 font-sans antialiased leading-snug text-black selection:bg-black selection:text-white md:p-12 {{ extraBodyClass }}">
     {{ bodyOpen | safe }}
     <header class="mb-12 grid grid-cols-1 gap-y-8 md:mb-24 md:grid-cols-12 md:gap-x-12">
       <div class="order-2 col-span-4 flex flex-col justify-between md:order-1 md:col-span-7 2xl:col-span-9">
-        <div class="max-w-[{{ introMaxWidth | default('620px') }}] text-2xl font-light leading-tight text-black">
+        <div class="{{ introMaxWidthClass | default('max-w-[620px]') }} text-2xl font-light leading-tight text-black">
           <h1 class="sr-only">{{ h1 }}</h1>
           <span class="font-bold">Jason Lau</span> is a
           <nav class="inline">
@@ -63,9 +34,8 @@
               {%- if loop.index == 1 %},
               {% elif loop.index == 2 %}, and
               {% endif -%}
-            {% endfor %}
-          </nav>
-          <span class="inline">{{ tagline }}</span>
+            {% endfor %}</nav>,
+          <span class="inline">{{ tagline | safe }}</span>
         </div>
       </div>
       <div class="order-1 col-span-4 -ml-[30px] -mt-5 flex justify-start md:order-2 md:col-span-4 md:ml-0 md:mt-0 md:justify-end xl:-mr-[50px] 2xl:col-span-2 2xl:-mr-20">

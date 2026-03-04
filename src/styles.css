@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@source "../_site/**/*.html";
+
+@theme {
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Animated underline for links */
+.button-underline {
+  position: relative;
+  text-decoration: none;
+  padding-bottom: 4px;
+}
+
+.button-underline::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: currentColor;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.button-underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* PDF preview panel states */
+body.pdf-active aside {
+  opacity: 0;
+}
+
+body.pdf-active #main-div {
+  position: absolute;
+  padding-bottom: 200px;
+}
+
+body.pdf-active footer {
+  opacity: 0;
+}
+
+body.pdf-active article {
+  opacity: 0.3;
+  transition: opacity 0.25s;
+}
+
+body.pdf-active article.active-paper {
+  opacity: 1 !important;
+  pointer-events: auto;
+}

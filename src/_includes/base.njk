@@ -18,19 +18,14 @@
     <header class="grid grid-cols-1 gap-y-8 mb-12 md:grid-cols-12 md:gap-x-12 md:mb-24">
       <div class="order-2 col-span-4 flex flex-col justify-between md:order-1 md:col-span-7 2xl:col-span-9">
         <div class="print-header hidden" aria-hidden="true">
-          <div class="print-name">Jason Lau</div>
+          <div class="print-name">{{ site.name }}</div>
           <div class="print-subtitle">{{ printSubtitle | default("") }}</div>
         </div>
         <div class="{{ introMaxWidthClass | default('max-w-[620px]') }} text-2xl font-light leading-tight text-black intro-text">
           <h1 class="sr-only">{{ h1 }}</h1>
-          <span class="font-bold">Jason Lau</span> is a
+          <span class="font-bold">{{ site.name }}</span> is a
           <nav class="inline">
-            {% set roles = [
-              { name: "Researcher", url: "index.html" },
-              { name: "Developer", url: "developer.html" },
-              { name: "Designer", url: "designer.html" }
-            ] %}
-            {% for role in roles %}
+            {% for role in site.roles %}
               {%- if role.name == activeRole -%}
                 <span class="role-link role-active border-b-2 border-black font-bold" aria-current="page">{{ role.name }}</span>
               {%- else -%}
@@ -44,26 +39,21 @@
         </div>
       </div>
       <div class="order-1 col-span-4 flex justify-start -ml-[30px] -mt-5 md:order-2 md:col-span-4 md:justify-end md:ml-0 md:mt-0 xl:-mr-[50px] 2xl:col-span-2 2xl:-mr-20">
-        <img src="profile-picture.png" alt="Jason Lau" width="320" height="360"
+        <img src="profile-picture.png" alt="{{ site.name }}" width="320" height="360"
              class="h-40 w-40 object-contain md:h-auto md:w-full md:max-w-[200px]">
       </div>
       <div class="print-contact hidden" aria-hidden="true">
-        <div><strong>Phone:</strong> (929) 273-1217</div>
-        <div><strong>Email:</strong> i@jasonlau.io</div>
-        <div><strong>GitHub:</strong> github.com/dotkrnl</div>
+        <div><strong>Phone:</strong> {{ site.phone }}</div>
+        <div><strong>Email:</strong> {{ site.email }}</div>
+        <div><strong>GitHub:</strong> {{ site.github }}</div>
       </div>
       <nav aria-label="External links" class="nav-external absolute right-6 top-12 order-3 text-right md:relative md:right-auto md:top-auto md:col-span-1">
         <ul>
           {% set emailAddr = email | default("jalau@jumptrading.com") %}
-          {% set navLinks = [
-            { label: "Scholar", url: "https://scholar.google.com/citations?user=8mKFNtUAAAAJ", external: true },
-            { label: "ORCID", url: "https://orcid.org/0000-0003-0751-8227", external: true },
-            { label: "GitHub", url: "https://github.com/dotkrnl", external: true },
-            { label: "Email", url: "mailto:" + emailAddr, external: false }
-          ] %}
-          {% for link in navLinks %}
+          {% for link in site.navLinks %}
+          {% set linkUrl = ("mailto:" + emailAddr) if not link.external and link.label == "Email" else link.url %}
           <li class="flex justify-end">
-            <a href="{{ link.url }}"
+            <a href="{{ linkUrl }}"
                {% if link.external %}target="_blank" rel="noopener noreferrer"{% endif %}
                class="button-underline group inline-flex items-center gap-2">
               {{ link.label }}
@@ -80,7 +70,7 @@
     {{ content | safe }}
 
     <footer class="mt-24 border-t border-gray-100 pt-12 text-center md:text-left">
-      <p class="text-xs uppercase tracking-widest text-gray-500">&copy; 2026 Jason Lau. Designed by Jason Lau.</p>
+      <p class="text-xs uppercase tracking-widest text-gray-500">&copy; {{ site.copyright }} {{ site.name }}. Designed by {{ site.name }}.</p>
     </footer>
     {{ bodyClose | safe }}
   </body>

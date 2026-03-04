@@ -146,91 +146,51 @@ publications:
   <aside class="flex flex-col max-w-[400px] gap-16 pr-16 md:col-span-4 lg:-mt-[120px] xl:-mt-[140px] 2xl:col-span-3">
     <section>
       <h2 class="mb-6 text-xs font-bold uppercase tracking-[0.2em] text-gray-500">Education</h2>
-      <div class="mb-8">
-        <div class="font-bold">Ph.D. Computer Science</div>
-        <div class="text-gray-800">University of California, Los Angeles</div>
-        <div class="mt-1 text-sm text-gray-500">2018 – 2024</div>
-        <div class="mt-1 text-sm text-gray-500">
-          Advisor: <a href="https://scholar.google.com/citations?user=UVGe0gQAAAAJ&hl=en">Prof. Jason Cong</a>
-        </div>
+      {% for edu in site.education %}
+      <div{% if not loop.last %} class="mb-8"{% endif %}>
+        <div class="font-bold">{{ edu.degree }}</div>
+        <div class="text-gray-800">{{ edu.school }}</div>
+        <div class="mt-1 text-sm text-gray-500">{{ edu.time }}</div>
+        {% for detail in edu.details %}
+        <div class="mt-1 text-sm text-gray-500">{{ detail | safe }}</div>
+        {% endfor %}
       </div>
-      <div>
-        <div class="font-bold">B.Eng. Computer Science</div>
-        <div class="text-gray-800">Tsinghua University</div>
-        <div class="mt-1 text-sm text-gray-500">2014 – 2018</div>
-        <div class="mt-1 text-sm text-gray-500">with a B.A. Design Media Art</div>
-      </div>
+      {% endfor %}
     </section>
 
     <section>
       <h2 class="mb-6 text-xs font-bold uppercase tracking-[0.2em] text-gray-500">Experience</h2>
-      <article class="mb-8">
-        <h3 class="font-bold">Hardware Engineer</h3>
-        <div class="text-sm text-gray-800">Jump Trading Group</div>
-        <time class="mt-1 text-sm text-gray-500">2025 – Present</time>
+      {% for exp in site.experience %}
+      <article{% if not loop.last %} class="mb-8"{% endif %}>
+        <h3 class="font-bold">{{ exp.title }}</h3>
+        <div class="text-sm text-gray-800">{{ exp.org }}</div>
+        <time class="mt-1 text-sm text-gray-500">{{ exp.time }}</time>
         <p class="mt-1 text-sm leading-relaxed text-gray-800">
-          Research in high-level synthesis algorithms and high-performance designs for high-frequency trading.
+          {{ exp.desc }}
         </p>
       </article>
-      <article class="mb-8">
-        <h3 class="font-bold">CTO &amp; Co-Founder</h3>
-        <div class="text-sm text-gray-800">RapidStream Design Automation (Acquired)</div>
-        <time class="mt-1 text-sm text-gray-500">2023 – 2025</time>
-        <p class="mt-1 text-sm leading-relaxed text-gray-800">
-          Developed compiler solutions for low-latency FPGA accelerators. Led research enabling efficient high-level physical designs from software specifications.
-        </p>
-      </article>
-      <article class="mb-8">
-        <h3 class="font-bold">Compilation Researcher</h3>
-        <div class="text-sm text-gray-800">AMD Xilinx</div>
-        <time class="mt-1 text-sm text-gray-500">2022 (Intern)</time>
-        <p class="mt-1 text-sm leading-relaxed text-gray-800">
-          Researched and designed a physical layout aware MLIR flow for AMD Versal devices.
-        </p>
-      </article>
-      <article>
-        <h3 class="font-bold">Doctoral Researcher</h3>
-        <div class="text-sm text-gray-800">UCLA VAST Lab</div>
-        <time class="mt-1 text-sm text-gray-500">2018 – 2022</time>
-        <p class="mt-1 text-sm leading-relaxed text-gray-800">
-          Developed methodologies and tools for high-level synthesis, enabling efficient hardware acceleration for software developers. Focused on lowering barriers to entry for FPGA programming.
-        </p>
-      </article>
+      {% endfor %}
     </section>
 
     <section>
       <h2 class="mb-6 text-xs font-bold uppercase tracking-[0.2em] text-gray-500">Services</h2>
       <ul class="list-inside space-y-2">
-        <li><span class="font-bold">TPC Member</span> of FPL 2026</li>
-        <li><span class="font-bold">TPC Member</span> of FCCM 2026</li>
-        <li><span class="font-bold">TPC Member</span> of DAC 2026</li>
-        <li><span class="font-bold">TPC Member</span> of FPL 2025</li>
-        <li><span class="font-bold">TPC Member</span> of FPL 2024</li>
-        <li><span class="font-bold">Invited Reviewer</span> of DAC 2022</li>
+        {% for svc in site.services %}
+        <li><span class="font-bold">{{ svc.role }}</span> of {{ svc.event }}</li>
+        {% endfor %}
       </ul>
     </section>
 
     <section>
       <h2 class="mb-6 text-xs font-bold uppercase tracking-[0.2em] text-gray-500">Reviews</h2>
       <div class="reviews-summary">
-        <h3 class="font-bold">Reviewed 97 Papers</h3>
+        <h3 class="font-bold">Reviewed {{ site.reviews.count }} Papers</h3>
         <h3 class="mb-2 text-sm text-gray-800">Excluding Subreviews</h3>
       </div>
       <ul class="list-inside space-y-2 text-sm text-gray-800">
-        <li>ACM Transactions on Design Automation of Electronic Systems (TODAES)</li>
-        <li>ACM Transactions on Reconfigurable Technology and Systems (TRETS)</li>
-        <li>Design Automation Conference (DAC)</li>
-        <li>Field-Programmable Custom Computing Machines (FCCM)</li>
-        <li>Field-Programmable Logic and Applications (FPL)</li>
-        <li>GigaScience</li>
-        <li>IEEE Access</li>
-        <li>IEEE Open Journal of Circuits and Systems (OJCAS)</li>
-        <li>IEEE Transactions on Aerospace and Electronic Systems (TAES)</li>
-        <li>IEEE Transactions on Circuits and Systems I: Regular Papers (TCAS-I)</li>
-        <li>IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD)</li>
-        <li>IEEE Transactions on Computers (TC)</li>
-        <li>IEEE Transactions on Computers, Special Issue (TCSI)</li>
-        <li>IEEE Transactions on Industrial Electronics (TIE)</li>
+        {% for journal in site.reviews.journals %}
+        <li>{{ journal }}</li>
+        {% endfor %}
       </ul>
     </section>
   </aside>
@@ -285,36 +245,22 @@ publications:
   <section class="print-after-pubs hidden">
     <h2>Services</h2>
     <ul>
-      <li><span class="font-bold">TPC Member</span> of FPL 2026</li>
-      <li><span class="font-bold">TPC Member</span> of FCCM 2026</li>
-      <li><span class="font-bold">TPC Member</span> of DAC 2026</li>
-      <li><span class="font-bold">TPC Member</span> of FPL 2025</li>
-      <li><span class="font-bold">TPC Member</span> of FPL 2024</li>
-      <li><span class="font-bold">Invited Reviewer</span> of DAC 2022</li>
+      {% for svc in site.services %}
+      <li><span class="font-bold">{{ svc.role }}</span> of {{ svc.event }}</li>
+      {% endfor %}
     </ul>
   </section>
 
   <section class="print-after-pubs hidden">
     <h2>Reviews</h2>
     <div class="reviews-summary">
-      <h3>Reviewed 97 Papers</h3>
+      <h3>Reviewed {{ site.reviews.count }} Papers</h3>
       <h3>Excluding Subreviews</h3>
     </div>
     <ul>
-      <li>ACM Transactions on Design Automation of Electronic Systems (TODAES)</li>
-      <li>ACM Transactions on Reconfigurable Technology and Systems (TRETS)</li>
-      <li>Design Automation Conference (DAC)</li>
-      <li>Field-Programmable Custom Computing Machines (FCCM)</li>
-      <li>Field-Programmable Logic and Applications (FPL)</li>
-      <li>GigaScience</li>
-      <li>IEEE Access</li>
-      <li>IEEE Open Journal of Circuits and Systems (OJCAS)</li>
-      <li>IEEE Transactions on Aerospace and Electronic Systems (TAES)</li>
-      <li>IEEE Transactions on Circuits and Systems I: Regular Papers (TCAS-I)</li>
-      <li>IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD)</li>
-      <li>IEEE Transactions on Computers (TC)</li>
-      <li>IEEE Transactions on Computers, Special Issue (TCSI)</li>
-      <li>IEEE Transactions on Industrial Electronics (TIE)</li>
+      {% for journal in site.reviews.journals %}
+      <li>{{ journal }}</li>
+      {% endfor %}
     </ul>
   </section>
 </main>

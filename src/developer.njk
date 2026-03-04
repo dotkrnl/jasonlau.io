@@ -63,70 +63,34 @@ projects:
   <aside class="order-2 flex flex-col max-w-[400px] gap-16 pr-16 md:order-1 md:col-span-4 lg:-mt-[120px] xl:-mt-[140px] 2xl:col-span-3">
     <section>
       <h2 class="mb-6 text-xs font-bold uppercase tracking-[0.2em] text-gray-500">Education</h2>
-      <div class="mb-8">
-        <div class="font-bold">Ph.D. Computer Science</div>
-        <div class="text-gray-800">University of California, Los Angeles</div>
-        <div class="mt-1 text-sm text-gray-500">2018 – 2024, Major GPA 4.0/4.0</div>
-        <div class="mt-1 text-sm text-gray-500">Advisor: Prof. Jason Cong</div>
+      {% for edu in site.developerEducation %}
+      <div{% if not loop.last %} class="mb-8"{% endif %}>
+        <div class="font-bold">{{ edu.degree }}</div>
+        <div class="text-gray-800">{{ edu.school }}</div>
+        <div class="mt-1 text-sm text-gray-500">{{ edu.time }}</div>
+        {% if edu.details %}
+        {% for detail in edu.details %}
+        <div class="mt-1 text-sm text-gray-500">{{ detail | safe }}</div>
+        {% endfor %}
+        {% endif %}
       </div>
-      <div class="mb-8">
-        <div class="font-bold">B.Eng. Computer Science</div>
-        <div class="text-gray-800">Tsinghua University</div>
-        <div class="mt-1 text-sm text-gray-500">2014 – 2018, Major GPA 93/100</div>
-      </div>
-      <div class="mb-8">
-        <div class="font-bold">B.A. Digital Media Arts</div>
-        <div class="text-gray-800">Tsinghua University, Academy of Arts &amp; Design</div>
-        <div class="mt-1 text-sm text-gray-500">2015 – 2018, Major GPA 88/100</div>
-      </div>
-      <div>
-        <div class="font-bold">Exchange Student</div>
-        <div class="text-gray-800">Hong Kong University of Science and Technology</div>
-        <div class="mt-1 text-sm text-gray-500">2016 – 2017, Major GPA 4.0/4.0</div>
-      </div>
+      {% endfor %}
     </section>
 
     <section>
       <h2 class="mb-6 text-xs font-bold uppercase tracking-[0.2em] text-gray-500">Technical Skills</h2>
-      <div class="mb-6">
-        <h3 class="font-bold">Programming Languages</h3>
-        <p class="text-sm leading-relaxed text-gray-800">C/C++, Python, Rust, Java, JavaScript, TypeScript, Bash, Verilog.</p>
+      {% for skill in site.skills %}
+      <div{% if not loop.last %} class="mb-6"{% endif %}>
+        <h3 class="font-bold">{{ skill.category }}</h3>
+        <p class="text-sm leading-relaxed text-gray-800">{{ skill.items }}</p>
       </div>
-      <div class="mb-6">
-        <h3 class="font-bold">Systems &amp; Cloud</h3>
-        <p class="text-sm leading-relaxed text-gray-800">
-          Linux, Docker, Kubernetes, Ansible, Ceph, Nginx, CI/CD, Distributed Systems, Multithreading, SIMD, RDMA, MPI, DevOps.
-        </p>
-      </div>
-      <div class="mb-6">
-        <h3 class="font-bold">Hardware &amp; Compilers</h3>
-        <p class="text-sm leading-relaxed text-gray-800">
-          LLVM, MLIR, Clang, ROSE, ARM, High-Level Synthesis, FPGA, CAD, EDA, Vivado, CUDA, OpenCL, VTune, Embedded.
-        </p>
-      </div>
-      <div>
-        <h3 class="font-bold">Web</h3>
-        <p class="text-sm leading-relaxed text-gray-800">Node.js, React, Canvas, SVG, Webpack, Django, G6.</p>
-      </div>
+      {% endfor %}
     </section>
 
     <section>
       <h2 class="mb-6 text-xs font-bold uppercase tracking-[0.2em] text-gray-500">Selected Awards</h2>
       <ul class="space-y-4 text-gray-800">
-        {% set awards = [
-          { name: "Best Paper Award", org: "International Symposium on Field-Programmable Gate Arrays (2021)" },
-          { name: "Outstanding Contributor", org: "Xilinx, Inc. (2021)" },
-          { name: "A. Richard Newton Young Student Fellow", org: "Design Automation Conference (2019 & 2020)" },
-          { name: "International Champion", org: "ASC Student Supercomputer Challenge (2017 & 2018)" },
-          { name: "National Champion", org: "National Student Computer System Challenge (2017)" },
-          { name: "International Champion", org: "ISC Student Cluster Competition (2017)" },
-          { name: "Dean's List", org: "School of Engineering, HKUST (2017)" },
-          { name: "Freshman Award", org: "Tsinghua University (2014)" },
-          { name: "National Scholarship", org: "National Youth Science and Technology Innovation Award (2014)" },
-          { name: "National Gold Medal", org: "National Olympiad in Informatics (2013)" },
-          { name: "International Silver Medal", org: "Asia-Pacific Informatics Olympiad, China Region (2013)" }
-        ] %}
-        {% for award in awards %}
+        {% for award in site.awards %}
         <li>
           <span class="block font-bold text-black">{{ award.name }}</span>
           {{ award.org }}

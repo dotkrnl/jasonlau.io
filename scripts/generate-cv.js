@@ -28,9 +28,15 @@ function stripHtmlDeep(obj) {
 }
 
 // Read site data (single source of truth)
-const site = yaml.load(
-  fs.readFileSync(path.join(ROOT, "src/_data/site.yaml"), "utf-8"),
-);
+let site;
+try {
+  site = yaml.load(
+    fs.readFileSync(path.join(ROOT, "src/_data/site.yaml"), "utf-8"),
+  );
+} catch (err) {
+  console.error("Failed to parse site.yaml:", err.message);
+  process.exit(1);
+}
 
 // Combine all data, stripping HTML
 const data = stripHtmlDeep({

@@ -3,7 +3,7 @@
 #set document(title: "Jason Lau - CV", author: data.name)
 #set page(margin: (x: 0.7in, y: 0.6in), paper: "us-letter", numbering: "1")
 #set text(font: "Libertinus Serif", size: 10pt)
-#set par(justify: true, leading: 0.55em)
+#set par(justify: true, leading: 0.65em)
 
 // Helpers
 #let section-heading(title) = {

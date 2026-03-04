@@ -161,22 +161,27 @@ document.addEventListener('DOMContentLoaded', () => {
   const mainDiv = document.getElementById('main-div');
   const paperTitles = document.querySelectorAll('.paper-title');
   const allArticles = document.querySelectorAll('#publication-list article');
+  const PANEL_TRANSITION_MS = 300;
+  let triggerElement = null;
 
   const closePreview = () => {
     body.classList.remove('pdf-active');
     mainDiv.style.width = '';
     pdfPanel.style.translate = '100% 0';
     allArticles.forEach(art => art.classList.remove('active-paper'));
+    if (triggerElement) { triggerElement.focus(); triggerElement = null; }
     setTimeout(() => {
       if (!body.classList.contains('pdf-active')) {
         pdfFrame.src = "";
         pdfPanel.classList.remove('flex');
         pdfPanel.classList.add('hidden');
       }
-    }, 300);
+    }, PANEL_TRANSITION_MS);
   };
 
   const openPreview = (pdfUrl, titleElement) => {
+    if (!pdfUrl || !pdfUrl.endsWith('.pdf')) return;
+    triggerElement = titleElement;
     mainDiv.style.width = `${mainDiv.offsetWidth}px`;
     body.classList.add('pdf-active');
     pdfPanel.classList.remove('hidden');

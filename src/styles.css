@@ -62,9 +62,10 @@ body.pdf-active article.active-paper {
     size: letter;
   }
 
-  /* Safari scaling fix: lock viewport to printable width */
+  /* Safari scaling fix: use width:auto so Safari doesn't miscalculate
+     the initial print scale from fixed-width elements */
   html {
-    width: 6.5in !important;
+    width: auto !important;
   }
 
   * {
@@ -77,7 +78,7 @@ body.pdf-active article.active-paper {
     margin: 0 !important;
     min-height: auto !important;
     min-width: auto !important;
-    width: 6.5in !important;
+    width: auto !important;
     font-family: "Times New Roman", Times, Georgia, serif !important;
     font-size: 10pt;
     line-height: 1.4;

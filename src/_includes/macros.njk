@@ -1,0 +1,33 @@
+{%- macro sectionHeading(title) -%}
+<h2 class="mb-6 text-xs font-bold uppercase tracking-[0.2em] text-gray-500">{{ title }}</h2>
+{%- endmacro -%}
+
+{%- macro servicesItems(services) -%}
+{% for svc in services %}
+        <li><span class="font-bold">{{ svc.role }}</span> of {{ svc.event }}</li>
+{%- endfor %}
+{%- endmacro -%}
+
+{%- macro reviewsSection(reviews, styled) -%}
+{% if styled %}
+      <div class="reviews-summary">
+        <h3 class="font-bold">Reviewed {{ reviews.count }} Papers</h3>
+        <h3 class="mb-2 text-sm text-gray-800">Excluding Subreviews</h3>
+      </div>
+      <ul class="list-inside space-y-2 text-sm text-gray-800">
+        {% for journal in reviews.journals %}
+        <li>{{ journal }}</li>
+        {% endfor %}
+      </ul>
+{%- else %}
+    <div class="reviews-summary">
+      <h3>Reviewed {{ reviews.count }} Papers</h3>
+      <h3>Excluding Subreviews</h3>
+    </div>
+    <ul>
+      {% for journal in reviews.journals %}
+      <li>{{ journal }}</li>
+      {% endfor %}
+    </ul>
+{%- endif %}
+{%- endmacro -%}

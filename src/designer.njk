@@ -14,22 +14,21 @@ permalink: "designer.html"
 <main id="main-content" class="grid grid-cols-1 gap-x-4 gap-y-16 md:grid-cols-12">
   <aside class="order-2 flex flex-col max-w-[400px] gap-16 md:col-span-4 md:pl-24 2xl:col-span-3 2xl:-mt-[140px]">
     <section>
-      {% for edu in site.designerEducation %}
-      {% if edu.degree %}
-      <div class="{% if not loop.last %}mb-8{% endif %}">
+      {% set designerEdu = site.education | selectattr("designer") | list %}
+      {% for edu in designerEdu %}
+      <div class="mb-8">
         <div class="font-bold">{{ edu.degree }}</div>
-        <div class="text-gray-800">{{ edu.school }}</div>
-        {% if edu.schoolSub %}
-        <div class="text-gray-800">{{ edu.schoolSub }}</div>
+        <div class="text-gray-800">{{ edu.designer.school or edu.school }}</div>
+        {% if edu.designer.schoolSub %}
+        <div class="text-gray-800">{{ edu.designer.schoolSub }}</div>
         {% endif %}
-        <div class="mt-1 text-sm text-gray-500">{{ edu.time }}</div>
+        <div class="mt-1 text-sm text-gray-500">{{ edu.designer.time or edu.time }}</div>
       </div>
-      {% endif %}
       {% endfor %}
       <div>
-        {% for edu in site.designerEducation %}
-        {% if edu.line %}
-        <div class="text-gray-800">{{ edu.line }}</div>
+        {% for edu in site.education %}
+        {% if edu.designerLine %}
+        <div class="text-gray-800">{{ edu.designerLine }}</div>
         {% endif %}
         {% endfor %}
       </div>

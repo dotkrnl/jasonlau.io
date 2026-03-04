@@ -2,7 +2,7 @@
 
 Personal website for Jason Lau — researcher, developer, and designer.
 
-Built with [Eleventy](https://www.11ty.dev/) using Nunjucks templates and Tailwind CSS (via CDN).
+Built with [Eleventy](https://www.11ty.dev/) using Nunjucks templates and Tailwind CSS (via CLI).
 
 ## Prerequisites
 
@@ -32,7 +32,7 @@ src/
 ├── _includes/
 │   └── base.njk          # Shared layout (head, header, nav, footer)
 ├── _data/
-│   └── site.json         # Shared site data (nav links)
+│   └── site.yaml         # Shared site data (content, nav, meta)
 ├── index.njk             # Researcher page (homepage)
 ├── developer.njk         # Developer page
 ├── designer.njk          # Designer page

@@ -9,6 +9,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/profile-picture.png");
   eleventyConfig.addPassthroughCopy("src/design-works");
   eleventyConfig.addPassthroughCopy("src/research-papers");
+  eleventyConfig.addPassthroughCopy("src/robots.txt");
 
   // Build Tailwind CSS after Eleventy generates HTML (so it scans final output)
   eleventyConfig.on("eleventy.after", () => {

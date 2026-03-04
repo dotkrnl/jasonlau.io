@@ -104,7 +104,7 @@ body.pdf-active article.active-paper {
   #app > svg,
   video,
   footer,
-  nav[aria-label="External links"],
+  .nav-external,
   svg[aria-hidden="true"],
   .intro-text {
     display: none !important;

@@ -52,7 +52,7 @@
         <div><strong>Email:</strong> i@jasonlau.io</div>
         <div><strong>GitHub:</strong> github.com/dotkrnl</div>
       </div>
-      <nav aria-label="External links" class="absolute right-6 top-12 order-3 flex flex-col md:relative md:right-auto md:top-auto md:col-span-1 md:items-end md:text-right">
+      <nav aria-label="External links" class="nav-external absolute right-6 top-12 order-3 text-right md:relative md:right-auto md:top-auto md:col-span-1">
         <ul>
           {% set emailAddr = email | default("jalau@jumptrading.com") %}
           {% set navLinks = [
@@ -62,15 +62,15 @@
             { label: "Email", url: "mailto:" + emailAddr, external: false }
           ] %}
           {% for link in navLinks %}
-          <li>
+          <li class="flex justify-end">
             <a href="{{ link.url }}"
                {% if link.external %}target="_blank" rel="noopener noreferrer"{% endif %}
-               class="button-underline group flex items-center gap-2 md:justify-end">
-              {{ link.label }}{% if link.external %}<span class="sr-only"> (opens in new tab)</span>{% endif %}
+               class="button-underline group inline-flex items-center gap-2">
+              {{ link.label }}
               <svg aria-hidden="true" class="h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
               </svg>
-            </a>
+            </a>{% if link.external %}<span class="sr-only"> (opens in new tab)</span>{% endif %}
           </li>
           {% endfor %}
         </ul>

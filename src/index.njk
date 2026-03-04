@@ -1,0 +1,357 @@
+---
+layout: base.njk
+title: "Jason Lau - FPGA HLS Researcher"
+description: "Jason Lau is a researcher interested in High-Level Synthesis, Customized Computing, and FPGA Abstraction."
+keywords: "Jason Lau, Researcher, Developer, Design, HLS, High-Level Synthesis, Hardware Engineer, Jump Trading, UCLA, Tsinghua"
+h1: "Jason Lau - An FPGA HLS Researcher"
+activeRole: "Researcher"
+tagline: "interested in High-Level Synthesis, Customized Computing, and FPGA Abstraction."
+email: "lau@cs.ucla.edu"
+extraBodyStyle: "overflow-x: hidden;"
+extraStyle: |
+  body.pdf-active aside { opacity: 0; }
+  body.pdf-active #main-div { position: absolute; padding-bottom: 200px; }
+  body.pdf-active footer { opacity: 0; }
+  body.pdf-active article { opacity: 0.3; transition: opacity 0.25s; }
+  body.pdf-active article.active-paper { opacity: 1 !important; pointer-events: auto; }
+bodyOpen: |
+  <div id="app" class="relative w-full">
+  <svg class="hidden">
+    <symbol id="icon-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+    </symbol>
+  </svg>
+permalink: "index.html"
+publications:
+  - pdf: "research-papers/10.1109-ICCAD66269.2025.11240757.pdf"
+    titleStart: "Automated Design Space Exploration in High-Level Physical"
+    titleEnd: "Synthesis"
+    authors: 'Linfeng Du, Jiawei Liang, <span class="font-bold text-black">Jason Lau</span>, Yuze Chi, Yutong Xie, Chunyou Su, Afzal Ahmad, Zifan He, Jake Ke, Jinming Ge, Jason Cong, Wei Zhang, Licheng Guo'
+    venue: "ICCAD '25 - The 2025 IEEE/ACM International Conference On Computer Aided Design"
+    year: "2025"
+    abstract: "We propose a robust Design Space Exploration (DSE) framework to address the instability and manual complexity of existing High-Level Physical Synthesis (HLPS) for multi-die FPGAs. By automating iterative parameter tuning through physical implementation metrics and tailored heuristics, our framework ensures consistent timing closure and eliminates user intervention. In evaluations on large-scale designs, the framework achieved an average frequency of 311.06 MHz, outperforming the AMD Vitis/Vivado toolchain by 2.42× and leading academic solutions by 1.67×."
+  - pdf: "research-papers/10.1145-3676536.3676649.pdf"
+    titleStart: "RapidStream IR: Infrastructure for FPGA High-Level Physical"
+    titleEnd: "Synthesis"
+    authors: '<span class="font-bold text-black">Jason Lau</span>, Yuanlong Xiao, Yutong Xie, Yuze Chi, Linghao Song, Shaojie Xiang, Michael Lo, Zhiru Zhang, Jason Cong, Licheng Guo'
+    venue: "ICCAD '24 - The 43rd IEEE/ACM International Conference on Computer-Aided Design"
+    year: "2024"
+    abstract: "We present the concept of high-level physical synthesis (HLPS), and a practical infrastructure for representing the composition of complex FPGA designs and exploring physical optimizations. Our approach introduces a flexible intermediate representation that captures interconnection protocols at arbitrary hierarchical levels, coarse-grained pipelining, and spatial information, enabling the creation of reusable passes for design frequency optimizations. RapidStream IR improves the frequency of a broad set of mixed-source designs by 7% to 62%."
+  - pdf: "research-papers/10.1145-3686163.pdf"
+    titleStart: "CHARM 2.0: Composing Heterogeneous Accelerators for Deep Learning on Versal ACAP"
+    titleEnd: "Architecture"
+    authors: 'Jinming Zhuang, <span class="font-bold text-black">Jason Lau</span>, Hanchen Ye, Zhuoping Yang, Shixin Ji, Jack Lo, Kristof Denolf, Stephen Neuendorffer, Alex Jones, Jingtong Hu, Yiyu Shi, Deming Chen, Jason Cong, Peipei Zhou'
+    venue: "TRETS '24 - ACM Transactions on Reconfigurable Technology and Systems, Volume 17, Issue 3, Article No. 51, Pages 1 - 31"
+    abstract: "We propose CHARM, a framework designed to optimize throughput for end-to-end deep learning applications on the AMD/Xilinx Versal ACAP. To overcome the performance bottlenecks caused by executing small matrix multiply (MM) layers on monolithic accelerators, CHARM composes multiple diverse, concurrent accelerator architectures tailored to varied layer sizes. By utilizing analytical models for design space exploration and automated code generation, CHARM achieves throughput gains of up to 32.51x over monolithic designs across models like BERT and ViT."
+  - pdf: "research-papers/thesis.pdf"
+    titleStart: "Enabling Heterogeneous Computing for Software"
+    titleEnd: "Developers"
+    authors: '<span class="font-bold text-black">Jason Lau</span> advised by Jason Cong'
+    venue: "Ph.D. Dissertation, University of California, Los Angeles"
+    abstract: "We introduce Heterosys, an end-to-end framework designed to bridge the gap between high-level software and efficient FPGA implementation. By decoupling algorithmic descriptions from underlying hardware, Heterosys utilizes three core components—HeteroRefactor for automated refactoring and selective offloading, Adroit for frequency-driven architectural optimization, and RapidIR for high-level physical synthesis and floorplanning. Our research demonstrates frequency improvements of 30% to over 100%, resource reductions up to 90%, and a 51% decrease in manual code effort, significantly lowering the barrier to entry for heterogeneous computing."
+  - pdf: "research-papers/10.1145-3609335.pdf"
+    titleStart: "TAPA: A Scalable Task-Parallel Dataflow Programming Framework for Modern FPGAs with Co-Optimization of HLS and Physical"
+    titleEnd: "Design"
+    authors: '<span class="underline">{Licheng Guo*, Yuze Chi*, <span class="font-bold text-black">Jason Lau*</span>}</span>, Linghao Song, Xingyu Tian, Moazin Khatti, Weikang Qiao, Jie Wang, Ecenur Ustun, Zhenman Fang, Zhiru Zhang, Jason Cong'
+    venue: "TRETS '23 - ACM Transactions on Reconfigurable Technology and Systems, Volume 16, Issue 4, Article No. 63, Pages 1 - 31"
+    year: "2023"
+    abstract: "We propose TAPA, an end-to-end framework for compiling C++ task-parallel programs into high-frequency FPGA accelerators. By utilizing flexible communication APIs and coarse-grained floorplanning during compilation, TAPA enables accurate pipelining of critical paths and optimizes designs for HBM-based FPGAs. Experimental results across 43 designs demonstrate a 102% average frequency improvement, including successful implementation of previously unroutable designs with minimal resource impact."
+    badges:
+      - "Cited 50+ times"
+  - pdf: "research-papers/10.1145-3593025.pdf"
+    titleStart: "RapidStream 2.0: Automated Parallel Implementation of Latency–Insensitive FPGA Designs Through Partial"
+    titleEnd: "Reconfiguration"
+    authors: 'Licheng Guo, Pongstorn Maidee, Yun Zhou, Chris Lavin, Eddie Hung, Wuxi Li, <span class="font-bold text-black">Jason Lau</span>, Weikang Qiao, Yuze Chi, Linghao Song, Yuanlong Xiao, Alireza Kaviani, Zhiru Zhang, Jason Cong'
+    venue: "TRETS '23 - ACM Transactions on Reconfigurable Technology and Systems, Volume 16, Issue 4, Article No. 59, Pages 1 - 30"
+    abstract: "We present RapidStream, a parallelized, physical-integrated compilation framework designed to drastically reduce FPGA compilation cycles. By co-optimizing HLS with back-end physical implementation, RapidStream partitions latency-insensitive C/C++ programs for parallel placement and routing. RapidStream achieves a 5–7× reduction in compile time and up to a 1.3× increase in frequency compared to commercial toolchains."
+  - pdf: "research-papers/10.1145-3543622.3573210.pdf"
+    titleStart: "CHARM: Composing Heterogeneous Accelerators for Matrix Multiply on Versal ACAP"
+    titleEnd: "Architecture"
+    authors: 'Jinming Zhuang, <span class="font-bold text-black">Jason Lau</span>, Hanchen Ye, Zhuoping Yang, Yubo Du, Jack Lo, Kristof Denolf, Stephen Neuendorffer, Alex Jones, Jingtong Hu, Deming Chen, Jason Cong, Peipei Zhou'
+    venue: "FPGA '23 - The 2023 ACM/SIGDA International Symposium on Field Programmable Gate Arrays"
+    abstract: "We propose CHARM, a framework for composing heterogeneous matrix multiply (MM) accelerators to optimize deep learning throughput on platforms like the AMD/Xilinx Versal ACAP. While monolithic accelerators struggle with the small, diverse MM layers found in models like BERT—often achieving less than 5% peak performance—CHARM utilizes analytical models to partition resources and schedule layers across multiple concurrent, specialized architectures. By automating code generation and design space exploration, CHARM achieves up to 32.5x throughput gains over monolithic designs across BERT, ViT, NCF, and MLP benchmarks."
+    badges:
+      - "Cited 50+ times"
+  - pdf: "research-papers/10.1145-3530775.pdf"
+    titleStart: "FPGA HLS Today: Successes, Challenges, and"
+    titleEnd: "Opportunities"
+    authors: 'Jason Cong, <span class="font-bold text-black">Jason Lau</span>, Gai Liu, Stephen Neuendorffer, Peichen Pan, Kees Vissers, Zhiru Zhang'
+    venue: "TRETS '22 - ACM Transactions on Reconfigurable Technology and Systems, Volume 15, Issue 4, Article No. 51, Pages 1 - 4"
+    year: "2022"
+    abstract: "We evaluate the decade-long evolution of FPGA HLS from prototype to industrial deployment across domains like deep learning and genomics. While highlighting HLS successes, we identify critical bottlenecks in clock frequency, system integration, and code legacy, proposing a roadmap for future research centered on open-source infrastructures and standardization."
+    badges:
+      - "Cited 200+ times"
+  - pdf: "research-papers/10.1145-3490422.3502357.pdf"
+    titleStart: "Sextans: A Streaming Accelerator for General-Purpose Sparse-Matrix Dense-Matrix"
+    titleEnd: "Multiplication"
+    authors: 'Linghao Song, Yuze Chi, Atefeh Sohrabizadeh, Young-kyu Choi, <span class="font-bold text-black">Jason Lau</span>, Jason Cong'
+    venue: "FPGA '22 - The 2022 ACM/SIGDA International Symposium on Field-Programmable Gate Arrays"
+    abstract: "We present Sextans, a flexible FPGA accelerator for general-purpose SpMM that addresses challenges in random memory access, data movement, and workload balancing. By leveraging HBM and PE-aware scheduling, Sextans enables streaming access and balanced pipelining for arbitrary matrix sizes. Evaluation on 1,400 benchmarks shows that Sextans achieves up to a 2.50x speedup over K80 GPUs, with projected optimizations outperforming V100 GPUs."
+    badges:
+      - "Cited 100+ times"
+  - pdf: "research-papers/10.1109-TCAD.2022.3216544.pdf"
+    titleStart: "TARO: Automatic Optimization for Free-Running Kernels in FPGA High-Level"
+    titleEnd: "Synthesis"
+    authors: 'Young-kyu Choi, Yuze Chi, <span class="font-bold text-black">Jason Lau</span>, Jason Cong'
+    venue: "TCAD '22 - IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems"
+    abstract: "We present TARO, an automated framework for applying free-running optimization to HLS-based streaming applications. By regulating tasks via data streams rather than complex global control, TARO simplifies hardware logic while preserving original functionality and performance. On the Alveo U250, TARO achieves an average reduction of 16% in LUTs and 45% in FFs for systolic array designs."
+  - pdf: "research-papers/10.1145-3431920.3439289.pdf"
+    titleStart: "AutoBridge: Coupling Coarse-Grained Floorplanning and Pipelining for High-Frequency HLS Design on Multi-Die"
+    titleEnd: "FPGAs"
+    authors: 'Licheng Guo, Yuze Chi, Jie Wang, <span class="font-bold text-black">Jason Lau</span>, Weikang Qiao, Ecenur Ustun, Zhiru Zhang, Jason Cong'
+    venue: "FPGA '21 - The 2021 ACM/SIGDA International Symposium on Field-Programmable Gate Arrays"
+    year: "2021"
+    abstract: "We introduce AutoBridge, an automated framework that closes the frequency gap between HLS-generated and handcrafted RTL designs by integrating coarse-grained floorplanning with pipelining during HLS compilation. By providing global layout awareness, AutoBridge identifies and pipelines long interconnects—particularly die-crossing wires in multi-die FPGAs—while preventing routing congestion. Across 43 configurations, AutoBridge increased average frequency from 147 MHz to 297 MHz (102% improvement) and successfully routed previously unroutable designs with negligible resource overhead and zero throughput loss."
+    badges:
+      - "Best Paper Award"
+      - "Cited 100+ times"
+  - pdf: "research-papers/10.1109-FCCM51124.2021.00032.pdf"
+    titleStart: "TAPA: Extending High-Level Synthesis for Task-Parallel"
+    titleEnd: "Programs"
+    authors: 'Yuze Chi, Licheng Guo, <span class="font-bold text-black">Jason Lau</span>, Young-kyu Choi, Jie Wang, Jason Cong'
+    venue: "FCCM '21 - The 29th IEEE Annual International Symposium on Field-Programmable Custom Computing Machines"
+    abstract: "We present TAPA, an automated HLS framework designed to enhance the productivity of task-parallel FPGA accelerators. While traditional HLS struggles with the complexities of parallel task communication and slow development cycles, TAPA introduces a programmer-friendly C++ interface, unconstrained software simulation, and fast hierarchical code generation. By streamlining the development and verification process, TAPA reduces kernel and host code by 22% and 51% respectively, while accelerating correctness verification by 3.2× and QoR tuning by 6.8×."
+    badges:
+      - "Cited 50+ times"
+  - pdf: "research-papers/10.1145-3377811.3380340.pdf"
+    titleStart: "HeteroRefactor: Refactoring for Heterogeneous Computing with"
+    titleEnd: "FPGA"
+    authors: '<span class="underline">{<span class="font-bold text-black">Jason Lau*</span>, Aishwarya Sivaraman*, Qian Zhang*}</span>, Muhammad Ali Gulzar, Jason Cong, Miryung Kim'
+    venue: "ICSE '20 - The ACM/IEEE 42nd International Conference on Software Engineering"
+    year: "2020"
+    abstract: "We propose HeteroRefactor, an automated refactoring framework that enables HLS for traditionally incompatible C/C++ programs containing recursion and dynamic memory. By monitoring FPGA-specific dynamic invariants—such as variable bitwidths and data structure sizes—HeteroRefactor automatically transforms kernels into synthesizable, resource-optimized hardware while using selective CPU offloading to ensure correctness. On Xilinx FPGAs, HeteroRefactor reduces BRAM usage by up to 83% and improves clock frequency by 42%, eliminating the need for extensive manual code refactoring by hardware experts."
+  - pdf: "research-papers/10.1109-DAC18072.2020.9218718.pdf"
+    titleStart: "Analysis and Optimization of the Implicit Broadcasts in FPGA HLS to Improve Maximum"
+    titleEnd: "Frequency"
+    authors: '<span class="underline">{Licheng Guo*, <span class="font-bold text-black">Jason Lau*</span></span>}, Yuze Chi, Jie Wang, Cody Hao Yu, Zhe Chen, Zhiru Zhang, Jason Cong'
+    venue: "DAC '20 - The 2020 57th ACM/IEEE Design Automation Conference"
+    abstract: "We present a study on frequency degradation in HLS-generated FPGA designs, identifying broadcast structures—specifically high-fanout data, flow control, and synchronization signals—as the primary bottlenecks. By addressing HLS compiler limitations through broadcast-aware scheduling, synchronization pruning, and skid-buffer integration, our approach improves the maximum frequency of representative benchmarks by 53% on average, with gains exceeding 100 MHz in several cases."
+    badges:
+      - "Best Paper Candidate"
+      - "Cited 50+ times"
+  - pdf: "research-papers/10.1109-FCCM.2019.00027.pdf"
+    titleStart: "Hardware Acceleration of Long Read Pairwise Overlapping in Genome"
+    titleEnd: "Sequencing"
+    authors: '<span class="underline">{Licheng Guo*, <span class="font-bold text-black">Jason Lau*</span></span>}, Zhenyuan Ruan, Peng Wei, Jason Cong'
+    venue: "FCCM '19 - The 2019 IEEE 27th Annual International Symposium on Field-Programmable Custom Computing Machines"
+    year: "2019"
+    abstract: "We present a high-performance acceleration framework for chaining, the primary bottleneck in genome sequencing that accounts for 70% of execution time. By reordering operation sequences for hardware-friendly parallelism and implementing a fine-grained task dispatching scheme, we overcome the limitations of variable input sizes and poor data dependency. Our fully pipelined streaming architecture on FPGA achieves a 28x speedup over the highly-optimized multi-threaded CPU program and 4x over a fully-utilized GPU, providing a quantitative guide for selecting optimal hardware platforms for genomic workloads."
+    badges:
+      - "Cited 100+ times"
+  - pdf: "research-papers/10.1016-j.parco.2018.07.002.pdf"
+    titleStart: "Reproducing Vectorization of the Tersoff Multi-Body Potential on the Intel Skylake and NVIDIA Volta"
+    titleEnd: "Architectures"
+    authors: '<span class="font-bold text-black">Jason Lau</span>, Yuxuan Li, Lei Xie, Qian Xie, Beichen Li, Yu Chen, Guanyu Feng, Jiping Yu, Xinjian Yu, Miao Wang, Wentao Han, Jidong Zhai'
+    venue: "Parallel Computing, Volume 78, October 2018, Pages 47-53"
+    year: "2018"
+    abstract: "We present an evaluation of the Tersoff potential's performance portability on Intel Skylake and NVIDIA Volta architectures. While the original study claimed high efficiency and scalability through reduced precision and cross-platform vectorization, our experiments with updated datasets show inconsistent results. Analysis reveals that communication bottlenecks, triggered by specific characteristics of the new input data, significantly limit the reproducibility of the original performance gains."
+---
+
+<main class="grid grid-cols-1 gap-y-16 md:grid-cols-12 md:gap-x-12">
+  <aside class="flex max-w-[400px] flex-col gap-16 pr-16 md:col-span-4 lg:-mt-[120px] xl:-mt-[140px] 2xl:col-span-3">
+    <section>
+      <h2 class="mb-6 text-xs font-bold uppercase tracking-[0.2em] text-gray-500">Education</h2>
+      <div class="mb-8">
+        <div class="font-bold">Ph.D. Computer Science</div>
+        <div class="text-gray-800">University of California, Los Angeles</div>
+        <div class="mt-1 text-sm text-gray-500">2018 – 2024</div>
+        <div class="mt-1 text-sm text-gray-500">
+          Advisor: <a href="https://scholar.google.com/citations?user=UVGe0gQAAAAJ&hl=en">Prof. Jason Cong</a>
+        </div>
+      </div>
+      <div>
+        <div class="font-bold">B.Eng. Computer Science</div>
+        <div class="text-gray-800">Tsinghua University</div>
+        <div class="mt-1 text-sm text-gray-500">2014 – 2018</div>
+        <div class="mt-1 text-sm text-gray-500">with a B.A. Design Media Art</div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="mb-6 text-xs font-bold uppercase tracking-[0.2em] text-gray-500">Experience</h2>
+      <article class="mb-8">
+        <h3 class="font-bold">Hardware Engineer</h3>
+        <div class="text-sm text-gray-800">Jump Trading Group</div>
+        <time class="mt-1 text-sm text-gray-500">2025 – Present</time>
+        <p class="mt-1 text-sm leading-relaxed text-gray-800">
+          Research in high-level synthesis algorithms and high-performance designs for high-frequency trading.
+        </p>
+      </article>
+      <article class="mb-8">
+        <h3 class="font-bold">CTO &amp; Co-Founder</h3>
+        <div class="text-sm text-gray-800">RapidStream Design Automation (Acquired)</div>
+        <time class="mt-1 text-sm text-gray-500">2023 – 2025</time>
+        <p class="mt-1 text-sm leading-relaxed text-gray-800">
+          Developed compiler solutions for low-latency FPGA accelerators. Led research enabling efficient high-level physical designs from software specifications.
+        </p>
+      </article>
+      <article class="mb-8">
+        <h3 class="font-bold">Compilation Researcher</h3>
+        <div class="text-sm text-gray-800">AMD Xilinx</div>
+        <time class="mt-1 text-sm text-gray-500">2022 (Intern)</time>
+        <p class="mt-1 text-sm leading-relaxed text-gray-800">
+          Researched and designed a physical layout aware MLIR flow for AMD Versal devices.
+        </p>
+      </article>
+      <article>
+        <h3 class="font-bold">Doctoral Researcher</h3>
+        <div class="text-sm text-gray-800">UCLA VAST Lab</div>
+        <time class="mt-1 text-sm text-gray-500">2018 – 2022</time>
+        <p class="mt-1 text-sm leading-relaxed text-gray-800">
+          Developed methodologies and tools for high-level synthesis, enabling efficient hardware acceleration for software developers. Focused on lowering barriers to entry for FPGA programming.
+        </p>
+      </article>
+    </section>
+
+    <section>
+      <h2 class="mb-6 text-xs font-bold uppercase tracking-[0.2em] text-gray-500">Services</h2>
+      <ul class="list-inside space-y-2">
+        <li><span class="font-bold">TPC Member</span> of FPL 2026</li>
+        <li><span class="font-bold">TPC Member</span> of FCCM 2026</li>
+        <li><span class="font-bold">TPC Member</span> of DAC 2026</li>
+        <li><span class="font-bold">TPC Member</span> of FPL 2025</li>
+        <li><span class="font-bold">TPC Member</span> of FPL 2024</li>
+        <li><span class="font-bold">Invited Reviewer</span> of DAC 2022</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="mb-6 text-xs font-bold uppercase tracking-[0.2em] text-gray-500">Reviews</h2>
+      <h3 class="font-bold">Reviewed 97 Papers</h3>
+      <h3 class="mb-2 text-sm text-gray-800">Excluding Subreviews</h3>
+      <ul class="list-inside space-y-2 text-sm text-gray-800">
+        <li>ACM Transactions on Design Automation of Electronic Systems (TODAES)</li>
+        <li>ACM Transactions on Reconfigurable Technology and Systems (TRETS)</li>
+        <li>Design Automation Conference (DAC)</li>
+        <li>Field-Programmable Custom Computing Machines (FCCM)</li>
+        <li>Field-Programmable Logic and Applications (FPL)</li>
+        <li>GigaScience</li>
+        <li>IEEE Access</li>
+        <li>IEEE Open Journal of Circuits and Systems (OJCAS)</li>
+        <li>IEEE Transactions on Aerospace and Electronic Systems (TAES)</li>
+        <li>IEEE Transactions on Circuits and Systems I: Regular Papers (TCAS-I)</li>
+        <li>IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD)</li>
+        <li>IEEE Transactions on Computers (TC)</li>
+        <li>IEEE Transactions on Computers, Special Issue (TCSI)</li>
+        <li>IEEE Transactions on Industrial Electronics (TIE)</li>
+      </ul>
+    </section>
+  </aside>
+
+  <div id="main-div" class="flex max-w-[1400px] flex-col gap-16 md:col-span-8 2xl:col-span-6 2xl:-mt-[140px]">
+    <section class="w-full">
+      <div class="mb-8 flex items-baseline justify-between border-t border-gray-100 pt-4 md:border-none md:pt-0">
+        <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-gray-500">Publications (Cited 950+ times)</h2>
+        <span class="hidden text-[10px] uppercase tracking-widest text-gray-500 md:block"><span class="font-black">*</span> indicates co-first authors</span>
+      </div>
+      <div class="space-y-12" id="publication-list">
+        {% for pub in publications %}
+        <article>
+          <div class="grid grid-cols-1 gap-2 md:grid-cols-12">
+            <div class="md:col-span-10">
+              <h3 class="paper-title button-underline group mb-1 cursor-pointer text-lg font-bold leading-snug"
+                  data-pdf="{{ pub.pdf }}">
+                {{ pub.titleStart }}
+                <span class="whitespace-nowrap">{{ pub.titleEnd }}
+                  <svg class="inline-flex h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100">
+                    <use href="#icon-arrow-right"></use>
+                  </svg>
+                </span>
+              </h3>
+              <p class="mb-1 text-sm leading-snug text-gray-800">{{ pub.authors | safe }}</p>
+              <div class="text-sm uppercase tracking-wide text-gray-500">{{ pub.venue }}</div>
+            </div>
+            {% if pub.year %}
+            <div class="hidden text-right font-mono text-sm text-gray-500 md:block md:col-span-2">{{ pub.year }}</div>
+            {% else %}
+            <div class="hidden md:block md:col-span-2"></div>
+            {% endif %}
+          </div>
+          <div class="mt-3 text-sm leading-relaxed text-gray-800 md:pr-[16.666%]">
+            <p>{{ pub.abstract }}</p>
+          </div>
+          {% if pub.badges %}
+          <div class="mt-2">
+            {% for badge in pub.badges %}
+            <span class="bg-black px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white">{{ badge }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+  </div>
+</main>
+
+<div id="pdf-panel"
+     class="fixed inset-0 z-50 hidden translate-x-full flex-col bg-white shadow-2xl lg:left-auto lg:right-0 lg:w-3/4">
+  <div class="flex items-center justify-between border-b border-gray-200 bg-white p-4">
+    <span class="text-xs font-bold uppercase tracking-widest text-gray-500">Paper Preview</span>
+    <div class="flex items-center gap-4">
+      <a id="download-btn" href="#" download target="_blank"
+         class="text-gray-500 transition-colors hover:text-black" title="Download">
+        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+        </svg>
+      </a>
+      <button id="close-btn" class="text-gray-500 transition-colors hover:text-black" title="Close">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div class="flex-grow bg-gray-50 p-4">
+    <iframe id="pdf-frame" src="" class="h-full w-full border border-gray-200 bg-white"></iframe>
+  </div>
+</div>
+</div>{# close #app #}
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const body = document.body;
+  const pdfPanel = document.getElementById('pdf-panel');
+  const pdfFrame = document.getElementById('pdf-frame');
+  const downloadBtn = document.getElementById('download-btn');
+  const closeBtn = document.getElementById('close-btn');
+  const app = document.getElementById('app');
+  const mainDiv = document.getElementById('main-div');
+  const paperTitles = document.querySelectorAll('.paper-title');
+  const allArticles = document.querySelectorAll('#publication-list article');
+
+  const closePreview = () => {
+    body.classList.remove('pdf-active');
+    mainDiv.style.width = '';
+    pdfPanel.classList.add('translate-x-full');
+    allArticles.forEach(art => art.classList.remove('active-paper'));
+    setTimeout(() => {
+      if (!body.classList.contains('pdf-active')) pdfFrame.src = "";
+    }, 300);
+  };
+
+  const openPreview = (pdfUrl, titleElement) => {
+    mainDiv.style.width = `${mainDiv.offsetWidth}px`;
+    body.classList.add('pdf-active');
+    pdfPanel.classList.add('transform', 'transition-transform', 'duration-300', 'ease-in-out');
+    pdfPanel.classList.remove('hidden');
+    pdfPanel.classList.remove('translate-x-full');
+    allArticles.forEach(art => art.classList.remove('active-paper'));
+    const parentArticle = titleElement.closest('article');
+    if (parentArticle) parentArticle.classList.add('active-paper');
+    pdfFrame.src = pdfUrl;
+    downloadBtn.href = pdfUrl;
+  };
+
+  paperTitles.forEach(title => {
+    title.addEventListener('click', (e) => {
+      e.stopPropagation();
+      openPreview(title.getAttribute('data-pdf'), title);
+    });
+  });
+
+  closeBtn.addEventListener('click', (e) => { e.stopPropagation(); closePreview(); });
+  app.addEventListener('click', () => { if (body.classList.contains('pdf-active')) closePreview(); });
+  document.addEventListener('keydown', (e) => { if (e.key === "Escape" && body.classList.contains('pdf-active')) closePreview(); });
+});
+</script>

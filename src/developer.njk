@@ -1,0 +1,178 @@
+---
+layout: base.njk
+title: "Jason Lau - Full-Stack Developer"
+description: "Jason Lau is a full-stack developer specializing in Hardware Design, Compiler, Devops, HPC, Algorithm, and Web Frontend and Backend."
+keywords: "Jason Lau, Developer, Hardware Engineer, Jump Trading, RapidStream, Google, FPGA, HLS, C++, Python, System Architecture, AMD, Xilinx"
+h1: "Jason Lau - A Full-Stack Developer"
+activeRole: "Developer"
+tagline: "who has full-stack expertise in Hardware Design, Compiler, Devops, HPC, Algorithm, and Web Frontend and Backend."
+permalink: "developer.html"
+experience:
+  - title: "Hardware Engineer"
+    org: "Jump Trading Group"
+    location: "Sunnyvale, CA"
+    time: "Aug 2025 – Present"
+    desc: "Researching and developing high-level synthesis algorithms for high-frequency trading, and creating high-performance FPGA and ARM hardware accelerators based on the developed toolchain. Developing low-latency hardware logic and integration for modern multi-die FPGAs to optimize trading performance."
+  - title: "Chief Technology Officer & Co-Founder"
+    org: "RapidStream Design Automation (Acquired by a Leading Global HFT Firm)"
+    location: "Sunnyvale, CA"
+    time: "Jan 2023 – Aug 2025"
+    desc: "Devise the technical strategy and development of compiler solutions that deliver low-latency, high-performance FPGA accelerators. Engineered systems enabling efficient high-level physical designs directly from software specifications, significantly reducing compilation cycles."
+  - title: "Compilation Researcher (Intern)"
+    org: "Advanced Micro Devices (AMD), Xilinx"
+    location: "Longmont, CO"
+    time: "Jun 2022 – Sep 2022"
+    desc: "Researched and implemented an MLIR compiler that is hardware physical aware for AMD Versal devices, targeting the AI Engine array. Designed flows enabling high-performance application acceleration on next-generation SoCs."
+  - title: "Cloud Software Engineer (Intern)"
+    org: "Google"
+    location: "Cambridge, MA"
+    time: "Jun 2016 – Sep 2016"
+    desc: 'Created "AwesomeChart," a cloud performance data analytical platform and visualization library capable of rendering millions of time series smoothly. The platform was integrated into Google Cloud Platform and remains in use by customers for monitoring critical metrics.'
+projects:
+  - title: "TAPA: Task-Parallel FPGA Compiler"
+    role: "Maintainer and Co-Author"
+    desc: "In collaboration with lab members at UCLA, implemented TAPA, a task-parallel FPGA compiler based on Clang that enables high-level programming of FPGAs using C++ dataflow graph. Extended the compiler with nested tasks supporting complex applications. Implemented with lab members a high-performance parallel RTL co-simulation framework, allowing real-world application mixing HLS and RTL designs. Extended a high-level synthesis tool, AutoSA, to generate TAPA programs that provide higher performance than Vitis HLS."
+  - title: "HeteroRefactor: Source-to-Source Code Refactoring"
+    role: "Automated Code Refactoring Developer"
+    desc: "Developed HeteroRefactor, a ROSE-based source-to-source code refactoring tool that automatically transforms C++ code to use heterogeneous programming models, so that the code's recursion, pointers and dynamic memory allocation are translated to vendor tool supported equivalents."
+  - title: "TUNA Open Source Mirror Site"
+    role: "Maintainer and Organizational Chair"
+    desc: "Maintained the largest open-source mirror site in China (mirrors.tuna.tsinghua.edu.cn). Built a high-performance, reliable multi-server system with fast data storage, serving an average throughput of 3.1 Gbps used by users across China."
+  - title: "NGINXwise: RL-based Congestion Control"
+    role: "Network Software Developer"
+    desc: "Built a production-ready NGINX-based testbed for evaluating reinforcement learning for optimizing the initial congestion control window (CWND). The testbed is used in measuring HTTP request latency on live traffic of a top Chinese website."
+  - title: "MPIfuse: Distributed File System"
+    role: "Computer System Researcher"
+    desc: "In collaboration with team members, developed a high-performance distributed file system prototype using MPI and FUSE. Identified bottlenecks in FUSE and achieved 3.6 GB/s parallel write speeds on an 8-machine cluster, outperforming NFS on tmpfs."
+  - title: "CachedMIPS: FPGA-Based Processor"
+    role: "Hardware Design Engineer"
+    desc: "Developed a pipelined write-back L1 cache with AHB protocol for a MIPS32r1 compatible CPU on Xilinx FPGA. Improved interrupt logic and peripheral support to enable full Linux booting in 8.4 seconds, achieving a 50x speedup on general applications."
+  - title: "Cherry: Cluster Management System"
+    role: "Full Stack Developer"
+    desc: "Developed a network management system for a cluster used by a Chinese backbone network. Implemented deployment configuration (Puppet), resource management (virtualization, bandwidth), and metrics monitoring using Node.js, Redis, and Nagios."
+  - title: "iTunet: Automated Network Configuration"
+    role: "iOS Developer"
+    desc: "Developed an iOS widget application that automatically configures settings for the Tsinghua University campus network. The app simplifies the process of connecting to the university's network by automating the connection setup, making the login process transparent on disconnections."
+  - title: "Iodine: Online Program Judge System"
+    role: "Full Stack Developer"
+    desc: "In collaboration with the HUSTOJ author, developed an online judge system for programming competitions. Refactored the code to support modern web standards, including a new frontend using Bootstrap and a backend with Laravel PHP. The grading is isolated in Docker containers, allowing for secure and efficient execution of user-submitted code."
+---
+
+<main class="grid grid-cols-1 gap-y-16 md:grid-cols-12 md:gap-x-12">
+  <aside class="order-2 flex max-w-[400px] flex-col gap-16 pr-16 md:order-1 md:col-span-4 lg:-mt-[120px] xl:-mt-[140px] 2xl:col-span-3">
+    <section>
+      <h2 class="mb-6 text-xs font-bold uppercase tracking-[0.2em] text-gray-500">Education</h2>
+      <div class="mb-8">
+        <div class="font-bold">Ph.D. Computer Science</div>
+        <div class="text-gray-800">University of California, Los Angeles</div>
+        <div class="mt-1 text-sm text-gray-500">2018 – 2024, Major GPA 4.0/4.0</div>
+        <div class="mt-1 text-sm text-gray-500">Advisor: Prof. Jason Cong</div>
+      </div>
+      <div class="mb-8">
+        <div class="font-bold">B.Eng. Computer Science</div>
+        <div class="text-gray-800">Tsinghua University</div>
+        <div class="mt-1 text-sm text-gray-500">2014 – 2018, Major GPA 93/100</div>
+      </div>
+      <div class="mb-8">
+        <div class="font-bold">B.A. Digital Media Arts</div>
+        <div class="text-gray-800">Tsinghua University, Academy of Arts &amp; Design</div>
+        <div class="mt-1 text-sm text-gray-500">2015 – 2018, Major GPA 88/100</div>
+      </div>
+      <div>
+        <div class="font-bold">Exchange Student</div>
+        <div class="text-gray-800">Hong Kong University of Science and Technology</div>
+        <div class="mt-1 text-sm text-gray-500">2016 – 2017, Major GPA 4.0/4.0</div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="mb-6 text-xs font-bold uppercase tracking-[0.2em] text-gray-500">Technical Skills</h2>
+      <div class="mb-6">
+        <h3 class="font-bold">Programming Languages</h3>
+        <p class="text-sm leading-relaxed text-gray-800">C/C++, Python, Rust, Java, JavaScript, TypeScript, Bash, Verilog.</p>
+      </div>
+      <div class="mb-6">
+        <h3 class="font-bold">Systems &amp; Cloud</h3>
+        <p class="text-sm leading-relaxed text-gray-800">
+          Linux, Docker, Kubernetes, Ansible, Ceph, Nginx, CI/CD, Distributed Systems, Multithreading, SIMD, RDMA, MPI, DevOps.
+        </p>
+      </div>
+      <div class="mb-6">
+        <h3 class="font-bold">Hardware &amp; Compilers</h3>
+        <p class="text-sm leading-relaxed text-gray-800">
+          LLVM, MLIR, Clang, ROSE, ARM, High-Level Synthesis, FPGA, CAD, EDA, Vivado, CUDA, OpenCL, VTune, Embedded.
+        </p>
+      </div>
+      <div>
+        <h3 class="font-bold">Web</h3>
+        <p class="text-sm leading-relaxed text-gray-800">Node.js, React, Canvas, SVG, Webpack, Django, G6.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="mb-6 text-xs font-bold uppercase tracking-[0.2em] text-gray-500">Selected Awards</h2>
+      <ul class="space-y-4 text-gray-800">
+        {% set awards = [
+          { name: "Best Paper Award", org: "International Symposium on Field-Programmable Gate Arrays (2021)" },
+          { name: "Outstanding Contributor", org: "Xilinx, Inc. (2021)" },
+          { name: "A. Richard Newton Young Student Fellow", org: "Design Automation Conference (2019 & 2020)" },
+          { name: "International Champion", org: "ASC Student Supercomputer Challenge (2017 & 2018)" },
+          { name: "National Champion", org: "National Student Computer System Challenge (2017)" },
+          { name: "International Champion", org: "ISC Student Cluster Competition (2017)" },
+          { name: "Dean's List", org: "School of Engineering, HKUST (2017)" },
+          { name: "Freshman Award", org: "Tsinghua University (2014)" },
+          { name: "National Scholarship", org: "National Youth Science and Technology Innovation Award (2014)" },
+          { name: "National Gold Medal", org: "National Olympiad in Informatics (2013)" },
+          { name: "International Silver Medal", org: "Asia-Pacific Informatics Olympiad, China Region (2013)" }
+        ] %}
+        {% for award in awards %}
+        <li>
+          <span class="block font-bold text-black">{{ award.name }}</span>
+          {{ award.org }}
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+  </aside>
+
+  <div class="order-1 flex max-w-[1400px] flex-col gap-16 md:order-2 md:col-span-8 2xl:col-span-6 2xl:-mt-[140px]">
+    <section class="w-full">
+      <div class="mb-8 flex items-baseline justify-between border-t border-gray-100 pt-4 md:border-none md:pt-0">
+        <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-gray-500">Professional Experience</h2>
+      </div>
+      {% for exp in experience %}
+      <article class="{% if not loop.last %}mb-12{% endif %} group">
+        <div class="grid grid-cols-1 gap-2 md:grid-cols-12">
+          <div class="md:col-span-10">
+            <h3 class="mb-1 text-lg font-bold leading-snug">{{ exp.title }}</h3>
+            <div class="font-medium text-gray-800">{{ exp.org }}</div>
+            <div class="mb-2 mt-1 text-sm text-gray-500">{{ exp.time }} | {{ exp.location }}</div>
+          </div>
+        </div>
+        <div class="mt-2 text-sm leading-relaxed text-gray-800 md:pr-[16.666%]">
+          <p>{{ exp.desc }}</p>
+        </div>
+      </article>
+      {% endfor %}
+    </section>
+
+    <section class="w-full">
+      <div class="mb-8 flex items-baseline justify-between border-t border-gray-100 pt-4 md:border-none md:pt-0">
+        <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-gray-500">Key Engineering &amp; Systems Projects</h2>
+      </div>
+      <div class="space-y-10">
+        {% for proj in projects %}
+        <article class="group">
+          <h3 class="mb-1 text-lg font-bold leading-snug">{{ proj.title }}</h3>
+          <div class="mb-1 text-sm leading-snug text-gray-800">
+            <span class="font-bold text-black">{{ proj.role }}</span>
+          </div>
+          <div class="mt-2 text-sm leading-relaxed text-gray-800 md:pr-[16.666%]">
+            <p>{{ proj.desc }}</p>
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+  </div>
+</main>

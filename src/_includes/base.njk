@@ -71,7 +71,7 @@
         <div><strong>Email:</strong> {{ site.email }}</div>
         <div><strong>GitHub:</strong> {{ site.github }}</div>
       </div>
-      <nav aria-label="External links" class="nav-external absolute right-6 top-12 order-3 text-right md:relative md:right-auto md:top-auto md:col-span-1">
+      <nav aria-label="External links" class="nav-external absolute right-6 top-0 order-3 text-right md:relative md:right-auto md:top-auto md:col-span-1">
         <ul>
           {% set emailAddr = email | default(site.email) %}
           {% for link in site.navLinks %}

@@ -13,6 +13,7 @@
     <link rel="manifest" href="/site.webmanifest">
   </head>
   <body class="min-h-screen p-6 font-sans antialiased leading-snug text-black bg-white md:p-12 selection:bg-black selection:text-white {{ extraBodyClass }}">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-white focus:px-4 focus:py-2 focus:text-black focus:shadow-lg">Skip to main content</a>
     {{ bodyOpen | safe }}
     <header class="grid grid-cols-1 gap-y-8 mb-12 md:grid-cols-12 md:gap-x-12 md:mb-24">
       <div class="order-2 col-span-4 flex flex-col justify-between md:order-1 md:col-span-7 2xl:col-span-9">
@@ -27,7 +28,7 @@
             ] %}
             {% for role in roles %}
               {%- if role.name == activeRole -%}
-                <a href="#" class="role-link role-active border-b-2 border-black font-bold hover:text-gray-800">{{ role.name }}</a>
+                <span class="role-link role-active border-b-2 border-black font-bold" aria-current="page">{{ role.name }}</span>
               {%- else -%}
                 <a href="{{ role.url }}" class="role-link role-inactive border-b-2 border-gray-500 text-gray-500 hover:text-black">{{ role.name }}</a>
               {%- endif -%}
@@ -42,7 +43,7 @@
         <img src="profile-picture.png" alt="Jason Lau" width="320" height="360"
              class="h-40 w-40 object-contain md:h-auto md:w-full md:max-w-[200px]">
       </div>
-      <div class="absolute right-6 top-12 order-3 flex flex-col md:relative md:right-auto md:top-auto md:col-span-1 md:items-end md:text-right">
+      <nav aria-label="External links" class="absolute right-6 top-12 order-3 flex flex-col md:relative md:right-auto md:top-auto md:col-span-1 md:items-end md:text-right">
         <ul>
           {% set emailAddr = email | default("jalau@jumptrading.com") %}
           {% set navLinks = [
@@ -54,17 +55,17 @@
           {% for link in navLinks %}
           <li>
             <a href="{{ link.url }}"
-               {% if link.external %}target="_blank"{% endif %}
+               {% if link.external %}target="_blank" rel="noopener noreferrer"{% endif %}
                class="button-underline group flex items-center gap-2 md:justify-end">
-              {{ link.label }}
-              <svg class="h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {{ link.label }}{% if link.external %}<span class="sr-only"> (opens in new tab)</span>{% endif %}
+              <svg aria-hidden="true" class="h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
               </svg>
             </a>
           </li>
           {% endfor %}
         </ul>
-      </div>
+      </nav>
     </header>
 
     {{ content | safe }}

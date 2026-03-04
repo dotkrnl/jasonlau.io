@@ -54,3 +54,18 @@ body.pdf-active article.active-paper {
   opacity: 1 !important;
   pointer-events: auto;
 }
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .button-underline::after {
+    transition: none;
+  }
+
+  #pdf-panel {
+    transition: none !important;
+  }
+
+  body.pdf-active article {
+    transition: none;
+  }
+}

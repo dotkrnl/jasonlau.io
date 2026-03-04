@@ -27,22 +27,10 @@ function stripHtmlDeep(obj) {
   return obj;
 }
 
-// Extract frontmatter from a .njk file
-function extractFrontmatter(filePath) {
-  const content = fs.readFileSync(filePath, "utf-8");
-  const match = content.match(/^---\n([\s\S]*?)\n---/);
-  if (!match) throw new Error(`No frontmatter in ${filePath}`);
-  return yaml.load(match[1]);
-}
-
-// Read site data
+// Read site data (single source of truth)
 const site = yaml.load(
   fs.readFileSync(path.join(ROOT, "src/_data/site.yaml"), "utf-8"),
 );
-
-// Extract page frontmatters
-const indexFm = extractFrontmatter(path.join(ROOT, "src/index.njk"));
-const devFm = extractFrontmatter(path.join(ROOT, "src/developer.njk"));
 
 // Combine all data, stripping HTML
 const data = stripHtmlDeep({
@@ -51,15 +39,15 @@ const data = stripHtmlDeep({
   email: site.email,
   github: site.github,
   education: site.developerEducation,
-  experience: devFm.experience,
-  publications: indexFm.publications.map((p) => ({
+  experience: site.developerExperience,
+  publications: site.publications.map((p) => ({
     title: `${p.titleStart} ${p.titleEnd}`,
     authors: p.authors,
     venue: p.venue,
     year: p.year || p.cvYear || "",
     badges: p.badges || [],
   })),
-  projects: devFm.projects,
+  projects: site.projects,
   skills: site.skills,
   awards: site.awards,
   services: site.services,

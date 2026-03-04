@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@source "../_site/**/*.html";
+@source "./**/*.njk";
 
 @theme {
   --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;

@@ -1,6 +1,8 @@
 const { execSync } = require("child_process");
+const yaml = require("js-yaml");
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addDataExtension("yaml,yml", (contents) => yaml.load(contents));
   eleventyConfig.addPassthroughCopy("src/*.png");
   eleventyConfig.addPassthroughCopy("src/*.ico");
   eleventyConfig.addPassthroughCopy("src/site.webmanifest");

@@ -1,0 +1,210 @@
+name: "Jason Lau"
+phone: "(929) 273-1217"
+email: "i@jasonlau.io"
+github: "github.com/dotkrnl"
+copyright: "2026"
+
+roles:
+  - name: "Researcher"
+    url: "index.html"
+  - name: "Developer"
+    url: "developer.html"
+  - name: "Designer"
+    url: "designer.html"
+
+navLinks:
+  - label: "Scholar"
+    url: "https://scholar.google.com/citations?user=8mKFNtUAAAAJ"
+    external: true
+  - label: "ORCID"
+    url: "https://orcid.org/0000-0003-0751-8227"
+    external: true
+  - label: "GitHub"
+    url: "https://github.com/dotkrnl"
+    external: true
+  - label: "Email"
+    external: false
+
+# --- Researcher page ---
+education:
+  - degree: "Ph.D. Computer Science"
+    school: "University of California, Los Angeles"
+    time: "2018 – 2024"
+    details:
+      - 'Advisor: <a href="https://scholar.google.com/citations?user=UVGe0gQAAAAJ&hl=en">Prof. Jason Cong</a>'
+  - degree: "B.Eng. Computer Science"
+    school: "Tsinghua University"
+    time: "2014 – 2018"
+    details:
+      - "with a B.A. Design Media Art"
+
+experience:
+  - title: "Hardware Engineer"
+    org: "Jump Trading Group"
+    time: "2025 – Present"
+    desc: "Research in high-level synthesis algorithms and high-performance designs for high-frequency trading."
+  - title: "CTO & Co-Founder"
+    org: "RapidStream Design Automation (Acquired)"
+    time: "2023 – 2025"
+    desc: "Developed compiler solutions for low-latency FPGA accelerators. Led research enabling efficient high-level physical designs from software specifications."
+  - title: "Compilation Researcher"
+    org: "AMD Xilinx"
+    time: "2022 (Intern)"
+    desc: "Researched and designed a physical layout aware MLIR flow for AMD Versal devices."
+  - title: "Doctoral Researcher"
+    org: "UCLA VAST Lab"
+    time: "2018 – 2022"
+    desc: "Developed methodologies and tools for high-level synthesis, enabling efficient hardware acceleration for software developers. Focused on lowering barriers to entry for FPGA programming."
+
+services:
+  - role: "TPC Member"
+    event: "FPL 2026"
+  - role: "TPC Member"
+    event: "FCCM 2026"
+  - role: "TPC Member"
+    event: "DAC 2026"
+  - role: "TPC Member"
+    event: "FPL 2025"
+  - role: "TPC Member"
+    event: "FPL 2024"
+  - role: "Invited Reviewer"
+    event: "DAC 2022"
+
+reviews:
+  count: 97
+  journals:
+    - "ACM Transactions on Design Automation of Electronic Systems (TODAES)"
+    - "ACM Transactions on Reconfigurable Technology and Systems (TRETS)"
+    - "Design Automation Conference (DAC)"
+    - "Field-Programmable Custom Computing Machines (FCCM)"
+    - "Field-Programmable Logic and Applications (FPL)"
+    - "GigaScience"
+    - "IEEE Access"
+    - "IEEE Open Journal of Circuits and Systems (OJCAS)"
+    - "IEEE Transactions on Aerospace and Electronic Systems (TAES)"
+    - "IEEE Transactions on Circuits and Systems I: Regular Papers (TCAS-I)"
+    - "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD)"
+    - "IEEE Transactions on Computers (TC)"
+    - "IEEE Transactions on Computers, Special Issue (TCSI)"
+    - "IEEE Transactions on Industrial Electronics (TIE)"
+
+# --- Developer page ---
+developerEducation:
+  - degree: "Ph.D. Computer Science"
+    school: "University of California, Los Angeles"
+    time: "2018 – 2024, Major GPA 4.0/4.0"
+    details:
+      - "Advisor: Prof. Jason Cong"
+  - degree: "B.Eng. Computer Science"
+    school: "Tsinghua University"
+    time: "2014 – 2018, Major GPA 93/100"
+  - degree: "B.A. Digital Media Arts"
+    school: "Tsinghua University, Academy of Arts & Design"
+    time: "2015 – 2018, Major GPA 88/100"
+  - degree: "Exchange Student"
+    school: "Hong Kong University of Science and Technology"
+    time: "2016 – 2017, Major GPA 4.0/4.0"
+
+skills:
+  - category: "Programming Languages"
+    items: "C/C++, Python, Rust, Java, JavaScript, TypeScript, Bash, Verilog."
+  - category: "Systems & Cloud"
+    items: "Linux, Docker, Kubernetes, Ansible, Ceph, Nginx, CI/CD, Distributed Systems, Multithreading, SIMD, RDMA, MPI, DevOps."
+  - category: "Hardware & Compilers"
+    items: "LLVM, MLIR, Clang, ROSE, ARM, High-Level Synthesis, FPGA, CAD, EDA, Vivado, CUDA, OpenCL, VTune, Embedded."
+  - category: "Web"
+    items: "Node.js, React, Canvas, SVG, Webpack, Django, G6."
+
+awards:
+  - name: "Best Paper Award"
+    org: "International Symposium on Field-Programmable Gate Arrays (2021)"
+  - name: "Outstanding Contributor"
+    org: "Xilinx, Inc. (2021)"
+  - name: "A. Richard Newton Young Student Fellow"
+    org: "Design Automation Conference (2019 & 2020)"
+  - name: "International Champion"
+    org: "ASC Student Supercomputer Challenge (2017 & 2018)"
+  - name: "National Champion"
+    org: "National Student Computer System Challenge (2017)"
+  - name: "International Champion"
+    org: "ISC Student Cluster Competition (2017)"
+  - name: "Dean's List"
+    org: "School of Engineering, HKUST (2017)"
+  - name: "Freshman Award"
+    org: "Tsinghua University (2014)"
+  - name: "National Scholarship"
+    org: "National Youth Science and Technology Innovation Award (2014)"
+  - name: "National Gold Medal"
+    org: "National Olympiad in Informatics (2013)"
+  - name: "International Silver Medal"
+    org: "Asia-Pacific Informatics Olympiad, China Region (2013)"
+
+# --- Designer page ---
+designerEducation:
+  - degree: "B.A. Digital Media Arts"
+    school: "Tsinghua University"
+    schoolSub: "Academy of Arts & Design"
+    time: "2015 – 2018"
+  - line: "Ph.D. from UCLA"
+  - line: "B.Eng. from Tsinghua University"
+
+designWorks:
+  - type: "video"
+    src: "design-works/book-ocean.mp4"
+    alt: "Conceptual book library animation"
+    caption: "Conceptual book library for readers to share their notes written virtually on the book pages."
+    section: "main-left"
+  - type: "image"
+    src: "design-works/google-chart.png"
+    alt: "Heatmap showing the distribution of latency distribution over time."
+    caption: "Heatmap showing distribution over time. Used by Google Cloud."
+    section: "main-left"
+  - type: "image"
+    src: "design-works/rapidstream-logo.png"
+    alt: "A logo with a wave-like pattern for the startup RapidStream."
+    section: "side"
+  - type: "image"
+    src: "design-works/cat-logo.png"
+    alt: "A logo showing a cat with a cute heart."
+    section: "side"
+  - type: "image"
+    src: "design-works/tex-user-group.jpg"
+    alt: "A logo with texts of 'TeX' surrounding the main text for a TeX user group event."
+    caption: "TeX user group event"
+    section: "side"
+  - type: "video"
+    src: "design-works/seasons.mp4"
+    alt: "Impression of seasons animation"
+    caption: "Impression of seasons"
+    colSpan: 3
+  - type: "image"
+    src: "design-works/your-image.jpg"
+    alt: "Photo showing a person standing in front of a screen, displaying their face in a digital art style."
+    caption: "How you would see yourself in the AI era?"
+    colSpan: 5
+  - type: "image"
+    src: "design-works/self-image.png"
+    alt: "Photo showing how artists depict themselves in their works."
+    caption: "This is how artists viewed themselves in their works. We averaged their self-portraits. Left: Renaissance, Right: Modern."
+    colSpan: 4
+  - type: "image"
+    src: "design-works/uploaded-image.jpg"
+    alt: "Photo showing how students see themselves by comparing on-site capture and self-uploaded images."
+    caption: "This is how young adults viewed themselves in their portraits. We averaged their photos. Left: On-site capture, Right: Self-uploaded."
+    colSpan: 4
+  - type: "image"
+    src: "design-works/tuna-icons.png"
+    alt: "Icons designed for TUNA association, featuring the icon for the mirror site, DNS service, NTP service, and the danmaku service."
+    caption: "Icons designed for Tsinghua University TUNA association."
+    colSpan: 6
+  - type: "image"
+    src: "design-works/pika-logo.png"
+    alt: "A polyline drawing of a pikachu holding the number 42."
+    caption: "Logo 42"
+    colSpan: 2
+    section: "logo-small"
+  - type: "image"
+    src: "design-works/thermal-printer.jpg"
+    alt: "An experiment with thermal printer, printing a photo in black and white."
+    caption: "An experiment with thermal printer before the popularization of Paperang (喵喵机). It prints out a photo on the go with an QR code attached for the original image, allowing sharing of the photo with someone met on the street."
+    section: "thermal"

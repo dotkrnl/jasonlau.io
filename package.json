@@ -5,7 +5,8 @@
     "build": "npx @11ty/eleventy",
     "serve": "npx @11ty/eleventy --serve",
     "cv": "node scripts/generate-cv.js",
-    "update-citations": "node scripts/update-citations.js"
+    "update-citations": "node scripts/update-citations.js",
+    "deploy": "npm run build && npx wrangler deploy"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",

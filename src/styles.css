@@ -55,6 +55,456 @@ body.pdf-active article.active-paper {
   pointer-events: auto;
 }
 
+/* Print styles for professional CV output */
+@media print {
+  @page {
+    margin: 1in;
+    size: letter;
+  }
+
+  /* Safari scaling fix: lock viewport to printable width */
+  html {
+    width: 6.5in !important;
+  }
+
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  body {
+    padding: 0 !important;
+    margin: 0 !important;
+    min-height: auto !important;
+    min-width: auto !important;
+    width: 6.5in !important;
+    font-family: "Times New Roman", Times, Georgia, serif !important;
+    font-size: 10pt;
+    line-height: 1.4;
+    color: black !important;
+    background: white !important;
+  }
+
+  html, body, #app {
+    overflow: visible !important;
+    height: auto !important;
+    max-height: none !important;
+    max-width: none !important;
+    position: static !important;
+  }
+
+  a { color: inherit !important; text-decoration: none !important; }
+  .button-underline { padding-bottom: 0; }
+  .button-underline::after { display: none !important; }
+
+  /* ── Hide non-print elements ── */
+  a[href="#main-content"],
+  #pdf-panel,
+  #app > svg,
+  video,
+  footer,
+  nav[aria-label="External links"],
+  svg[aria-hidden="true"],
+  .intro-text {
+    display: none !important;
+  }
+
+  header > div:nth-child(2) {
+    display: none !important;
+  }
+
+  /* Hide aside's Services & Reviews in print (print-only copies come after pubs) */
+  aside > section:nth-child(3),
+  aside > section:nth-child(4) {
+    display: none !important;
+  }
+
+  /* Show print-only duplicates */
+  .print-after-pubs {
+    display: block !important;
+  }
+
+  /* ── HEADER ── */
+  header {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0 !important;
+    margin: 0 0 6pt 0 !important;
+    padding: 0 0 6pt 0 !important;
+    border-bottom: 1.5pt solid black !important;
+  }
+
+  header > div:first-child {
+    order: 1;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    flex: 1 1 auto;
+  }
+
+  .print-header { display: block !important; }
+
+  .print-name {
+    font-family: "Times New Roman", Times, Georgia, serif !important;
+    font-size: 22pt !important;
+    font-weight: bold !important;
+    line-height: 1.15 !important;
+  }
+
+  .print-subtitle {
+    font-family: "Times New Roman", Times, Georgia, serif !important;
+    font-size: 11pt !important;
+    font-weight: normal !important;
+    line-height: 1.3 !important;
+    margin: 2pt 0 0 0 !important;
+  }
+
+  .print-contact {
+    display: block !important;
+    order: 2;
+    text-align: right !important;
+    flex: 0 0 auto;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 9pt !important;
+    line-height: 1.6 !important;
+  }
+
+  /* ── LAYOUT: simple block flow, no grid/flex ── */
+  main,
+  aside,
+  #main-div,
+  main > div,
+  main > section {
+    display: block !important;
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    gap: 0 !important;
+    float: none !important;
+    columns: auto !important;
+  }
+
+  /* ── Reset Tailwind spacing ── */
+  [class*="-mt-"],
+  [class*="-ml-"],
+  [class*="-mr-"] {
+    margin: 0 !important;
+  }
+
+  [class*="pr-16"],
+  [class*="pl-24"],
+  [class*="md:pr-[16.666%]"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  [class*="gap-"] {
+    gap: 0 !important;
+  }
+
+  [class*="mb-6"],
+  [class*="mb-8"],
+  [class*="mb-12"] {
+    margin-bottom: 0 !important;
+  }
+
+  /* Zero medium/large top margins; keep mt-1 for small internal gaps */
+  [class~="mt-2"],
+  [class~="mt-3"],
+  [class~="mt-4"],
+  [class~="mt-12"],
+  [class~="mt-24"] {
+    margin-top: 0 !important;
+  }
+
+  .space-y-12 > :not(:first-child),
+  .space-y-10 > :not(:first-child),
+  .space-y-4 > :not(:first-child),
+  .space-y-2 > :not(:first-child) {
+    margin-top: 0 !important;
+  }
+
+  /* Tailwind v4 space-y uses margin-block-end, zero that too */
+  :where(.space-y-12) > :not(:last-child),
+  :where(.space-y-10) > :not(:last-child),
+  :where(.space-y-4) > :not(:last-child),
+  :where(.space-y-2) > :not(:last-child) {
+    margin-block-end: 0 !important;
+    margin-block-start: 0 !important;
+  }
+
+  /* ── SECTION HEADINGS ── */
+  h2[class],
+  section.print-after-pubs > h2 {
+    font-family: "Times New Roman", Times, Georgia, serif !important;
+    font-size: 12pt !important;
+    font-weight: bold !important;
+    text-transform: capitalize !important;
+    letter-spacing: normal !important;
+    color: black !important;
+    margin: 10pt 0 8pt 0 !important;
+    padding: 0 0 3pt 0 !important;
+    border-bottom: 0.75pt solid black;
+  }
+
+  /* Wrapper div around h2 + co-first-author note */
+  .flex.items-baseline {
+    display: block !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .flex.items-baseline > span {
+    display: block !important;
+    font-family: "Times New Roman", Times, Georgia, serif !important;
+    font-size: 8pt !important;
+    margin: 1pt 0 6pt 0 !important;
+    color: #444 !important;
+    font-style: italic;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+  }
+
+  /* ── SECTIONS ── */
+  section {
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    break-inside: auto;
+  }
+
+  /* ── ENTRIES (articles) ── */
+  article {
+    padding: 0 !important;
+    break-inside: avoid;
+  }
+
+  /* Publication entries — higher specificity to beat .space-y-12 > :not(:first-child) */
+  #publication-list > article {
+    margin: 0 !important;
+    margin-bottom: 10pt !important;
+    margin-block-end: 10pt !important;
+  }
+
+  aside[class] > section > article,
+  section.print-after-pubs > article {
+    margin: 0 0 7pt 0 !important;
+  }
+
+  h3 {
+    font-family: "Times New Roman", Times, Georgia, serif !important;
+    font-size: 10pt !important;
+    font-weight: bold !important;
+    line-height: 1.3 !important;
+    margin: 0 0 1pt 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Body text in content areas */
+  main p,
+  main time,
+  main .text-sm,
+  main .text-gray-800,
+  main .text-gray-500,
+  aside p,
+  aside time,
+  aside .text-sm,
+  aside .text-gray-800,
+  aside .text-gray-500,
+  section.print-after-pubs p,
+  section.print-after-pubs .text-sm,
+  section.print-after-pubs .text-gray-800 {
+    font-family: "Times New Roman", Times, Georgia, serif !important;
+    font-size: 9pt !important;
+    line-height: 1.35 !important;
+    color: black !important;
+  }
+
+  /* Entry sub-items (education degrees, experience roles)
+     Specificity 0,1,3 to beat [class*="mb-8"] at 0,1,0 */
+  aside[class] > section > div,
+  aside[class] > section > article,
+  section.print-after-pubs > div,
+  section.print-after-pubs > article {
+    margin: 0 0 7pt 0 !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Hide experience descriptions in print */
+  aside[class] > section > article > p {
+    display: none !important;
+  }
+
+  /* Zero mt-1 inside sidebar entries for consistent line spacing */
+  aside[class] > section > div > div,
+  aside[class] > section > article > div,
+  aside[class] > section > article > time {
+    margin-top: 0 !important;
+  }
+
+  aside[class] > section > div:last-child,
+  aside[class] > section > article:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  /* li spacing — higher specificity to beat space-y-* at 0,2,0 */
+  aside[class] li,
+  section.print-after-pubs li,
+  #publication-list li {
+    margin: 0 0 3pt 0 !important;
+  }
+
+  /* Bold labels in sidebar (degree names, job titles) — not publication authors */
+  aside .font-bold,
+  section.print-after-pubs .font-bold {
+    font-size: 10pt !important;
+  }
+
+  /* Lists */
+  ul {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* ── DEVELOPER PAGE ── */
+  /* Experience & project entries — beat [class*="mb-12"] and space-y-10 */
+  main section > article[class],
+  main div > section > article[class] {
+    margin: 0 !important;
+    margin-bottom: 10pt !important;
+    margin-block-end: 10pt !important;
+  }
+
+  div.space-y-10 > article {
+    margin: 0 !important;
+    margin-bottom: 10pt !important;
+    margin-block-end: 10pt !important;
+  }
+
+  /* Inner grid in experience entries */
+  main article[class] .grid {
+    display: block !important;
+  }
+
+  /* Hide border-t on section header wrappers */
+  .flex.items-baseline.justify-between {
+    border: none !important;
+  }
+
+  /* ── PUBLICATIONS ── */
+  article .grid {
+    display: block !important;
+  }
+
+  /* Publication inner content: flex column to reorder venue before authors */
+  #publication-list article .grid > div:first-child {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  #publication-list article h3 {
+    order: 1;
+  }
+
+  .pub-pages {
+    display: none !important;
+  }
+
+  .pub-venue {
+    order: 2;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+    font-weight: bold !important;
+    margin-bottom: 2pt !important;
+  }
+
+  .pub-authors {
+    order: 3;
+  }
+
+  #publication-list article .grid > div:last-child:not(:first-child) {
+    display: none !important;
+  }
+
+  /* Publication abstracts: keep visible, compact */
+  #publication-list article > div[class*="mt-3"],
+  .space-y-12 > article > div[class*="mt-3"] {
+    margin: 2pt 0 0 0 !important;
+  }
+
+  /* Reviews summary: small italic, one line, lowercase */
+  .reviews-summary {
+    margin: 0 0 4pt 0 !important;
+    font-size: 0 !important; /* collapse whitespace between inline h3s */
+  }
+
+  .reviews-summary h3 {
+    display: inline !important;
+    font-family: "Times New Roman", Times, Georgia, serif !important;
+    font-size: 8pt !important;
+    font-weight: normal !important;
+    font-style: italic !important;
+    color: #444 !important;
+    text-transform: lowercase !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .reviews-summary h3 + h3::before {
+    content: ", ";
+    text-transform: none !important;
+  }
+
+  span[class*="bg-black"] {
+    border: 0.5pt solid black;
+    background: white !important;
+    color: black !important;
+    font-size: 7pt !important;
+    padding: 0 3pt !important;
+    text-transform: uppercase !important;
+  }
+
+  /* ── PAGE BREAKS ── */
+  h2, h3 {
+    break-after: avoid;
+  }
+
+  h2 + *, h3 + * {
+    break-before: avoid;
+  }
+
+  /* ── PDF-ACTIVE STATE RESET ── */
+  body.pdf-active aside,
+  body.pdf-active footer,
+  body.pdf-active article {
+    opacity: 1 !important;
+  }
+
+  body.pdf-active #main-div {
+    position: static !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* ── DESIGNER PAGE ── */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+    break-inside: avoid;
+  }
+
+  section.grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8pt !important;
+  }
+}
+
 /* Respect reduced motion preferences */
 @media (prefers-reduced-motion: reduce) {
   .button-underline::after {

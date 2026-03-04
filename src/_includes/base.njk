@@ -12,7 +12,24 @@
     <meta property="og:title" content="{{ title }}">
     <meta property="og:description" content="{{ description }}">
     <meta property="og:image" content="{{ site.url }}/profile-picture.png">
+    <meta property="og:image:alt" content="Profile picture of {{ site.name }}">
     <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="{{ site.url }}/profile-picture.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "{{ site.name }}",
+      "url": "{{ site.url }}",
+      "image": "{{ site.url }}/profile-picture.png",
+      "email": "{{ site.email }}",
+      "sameAs": [
+        "https://scholar.google.com/citations?user=8mKFNtUAAAAJ",
+        "https://github.com/dotkrnl",
+        "https://orcid.org/0000-0003-0751-8227"
+      ]
+    }
+    </script>
     <link rel="stylesheet" href="/styles.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">

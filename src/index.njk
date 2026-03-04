@@ -206,6 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (parentArticle) parentArticle.classList.add('active-paper');
     pdfFrame.src = pdfUrl;
     downloadBtn.href = pdfUrl;
+    closeBtn.focus();
   };
 
   paperTitles.forEach(title => {
@@ -218,6 +219,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   closeBtn.addEventListener('click', (e) => { e.stopPropagation(); closePreview(); });
   app.addEventListener('click', () => { if (body.classList.contains('pdf-active')) closePreview(); });
-  document.addEventListener('keydown', (e) => { if (e.key === "Escape" && body.classList.contains('pdf-active')) closePreview(); });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === "Escape" && body.classList.contains('pdf-active')) closePreview();
+    if (e.key === "Tab" && body.classList.contains('pdf-active')) {
+      const focusable = [downloadBtn, closeBtn];
+      const idx = focusable.indexOf(document.activeElement);
+      if (e.shiftKey) {
+        focusable[(idx <= 0 ? focusable.length : idx) - 1].focus();
+      } else {
+        focusable[(idx + 1) % focusable.length].focus();
+      }
+      e.preventDefault();
+    }
+  });
 });
 </script>

@@ -38,14 +38,41 @@ try {
   process.exit(1);
 }
 
+// Apply developer overrides for CV entries
+function applyOverrides(entry) {
+  const dev = typeof entry.developer === "object" ? entry.developer : {};
+  return { ...entry, ...dev };
+}
+
 // Combine all data, stripping HTML
 const data = stripHtmlDeep({
   name: site.name,
   phone: site.phone,
   email: site.email,
   github: site.github,
-  education: site.developerEducation,
-  experience: site.developerExperience,
+  education: site.education
+    .filter((e) => e.cv)
+    .map((e) => {
+      const merged = applyOverrides(e);
+      return {
+        degree: merged.degree,
+        school: merged.school,
+        time: merged.time,
+        details: merged.details || [],
+      };
+    }),
+  experience: site.experience
+    .filter((e) => e.cv)
+    .map((e) => {
+      const merged = applyOverrides(e);
+      return {
+        title: merged.title,
+        org: merged.org,
+        time: merged.time,
+        desc: merged.desc,
+        location: merged.location,
+      };
+    }),
   publications: site.publications.map((p) => ({
     title: `${p.titleStart} ${p.titleEnd}`,
     authors: p.authors,

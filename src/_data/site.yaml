@@ -26,36 +26,98 @@ navLinks:
   - label: "Email"
     external: false
 
-# --- Researcher page ---
+# --- Education (unified, page-filtered) ---
 education:
   - degree: "Ph.D. Computer Science"
     school: "University of California, Los Angeles"
     time: "2018 – 2024"
     details:
       - 'Advisor: <a href="https://scholar.google.com/citations?user=UVGe0gQAAAAJ&hl=en">Prof. Jason Cong</a>'
+    researcher: true
+    developer:
+      time: "2018 – 2024, Major GPA 4.0/4.0"
+      details:
+        - "Advisor: Prof. Jason Cong"
+    designerLine: "Ph.D. from UCLA"
+    cv: true
+
   - degree: "B.Eng. Computer Science"
     school: "Tsinghua University"
     time: "2014 – 2018"
     details:
       - "with a B.A. Design Media Art"
+    researcher: true
+    developer:
+      time: "2014 – 2018, Major GPA 93/100"
+      details: []
+    designerLine: "B.Eng. from Tsinghua University"
+    cv: true
 
+  - degree: "B.A. Digital Media Arts"
+    school: "Tsinghua University, Academy of Arts & Design"
+    time: "2015 – 2018"
+    developer:
+      time: "2015 – 2018, Major GPA 88/100"
+    designer:
+      school: "Tsinghua University"
+      schoolSub: "Academy of Arts & Design"
+    cv: true
+
+  - degree: "Exchange Student"
+    school: "Hong Kong University of Science and Technology"
+    time: "2016 – 2017"
+    developer:
+      time: "2016 – 2017, Major GPA 4.0/4.0"
+    cv: true
+
+# --- Experience (unified, page-filtered) ---
 experience:
   - title: "Hardware Engineer"
     org: "Jump Trading Group"
     time: "2025 – Present"
     desc: "Research in high-level synthesis algorithms and high-performance designs for high-frequency trading."
+    researcher: true
+    developer:
+      time: "Aug 2025 – Present"
+      desc: "Researching and developing high-level synthesis algorithms for high-frequency trading, and creating high-performance FPGA and ARM hardware accelerators based on the developed toolchain. Developing low-latency hardware logic and integration for modern multi-die FPGAs to optimize trading performance."
+      location: "Sunnyvale, CA"
+    cv: true
   - title: "CTO & Co-Founder"
     org: "RapidStream Design Automation (Acquired)"
     time: "2023 – 2025"
     desc: "Developed compiler solutions for low-latency FPGA accelerators. Led research enabling efficient high-level physical designs from software specifications."
+    researcher: true
+    developer:
+      title: "Chief Technology Officer & Co-Founder"
+      org: "RapidStream Design Automation (Acquired by a Leading Global HFT Firm)"
+      time: "Jan 2023 – Aug 2025"
+      desc: "Devise the technical strategy and development of compiler solutions that deliver low-latency, high-performance FPGA accelerators. Engineered systems enabling efficient high-level physical designs directly from software specifications, significantly reducing compilation cycles."
+      location: "Sunnyvale, CA"
+    cv: true
   - title: "Compilation Researcher"
     org: "AMD Xilinx"
     time: "2022 (Intern)"
     desc: "Researched and designed a physical layout aware MLIR flow for AMD Versal devices."
+    researcher: true
+    developer:
+      title: "Compilation Researcher (Intern)"
+      org: "Advanced Micro Devices (AMD), Xilinx"
+      time: "Jun 2022 – Sep 2022"
+      desc: "Researched and implemented an MLIR compiler that is hardware physical aware for AMD Versal devices, targeting the AI Engine array. Designed flows enabling high-performance application acceleration on next-generation SoCs."
+      location: "Longmont, CO"
+    cv: true
   - title: "Doctoral Researcher"
     org: "UCLA VAST Lab"
     time: "2018 – 2022"
     desc: "Developed methodologies and tools for high-level synthesis, enabling efficient hardware acceleration for software developers. Focused on lowering barriers to entry for FPGA programming."
+    researcher: true
+  - title: "Cloud Software Engineer (Intern)"
+    org: "Google"
+    time: "Jun 2016 – Sep 2016"
+    desc: 'Created "AwesomeChart," a cloud performance data analytical platform and visualization library capable of rendering millions of time series smoothly. The platform was integrated into Google Cloud Platform and remains in use by customers for monitoring critical metrics.'
+    developer:
+      location: "Cambridge, MA"
+    cv: true
 
 services:
   - role: "TPC Member"
@@ -222,44 +284,6 @@ publications:
     abstract: "We present an evaluation of the Tersoff potential's performance portability on Intel Skylake and NVIDIA Volta architectures. While the original study claimed high efficiency and scalability through reduced precision and cross-platform vectorization, our experiments with updated datasets show inconsistent results. Analysis reveals that communication bottlenecks, triggered by specific characteristics of the new input data, significantly limit the reproducibility of the original performance gains."
 
 # --- Developer page ---
-developerEducation:
-  - degree: "Ph.D. Computer Science"
-    school: "University of California, Los Angeles"
-    time: "2018 – 2024, Major GPA 4.0/4.0"
-    details:
-      - "Advisor: Prof. Jason Cong"
-  - degree: "B.Eng. Computer Science"
-    school: "Tsinghua University"
-    time: "2014 – 2018, Major GPA 93/100"
-  - degree: "B.A. Digital Media Arts"
-    school: "Tsinghua University, Academy of Arts & Design"
-    time: "2015 – 2018, Major GPA 88/100"
-  - degree: "Exchange Student"
-    school: "Hong Kong University of Science and Technology"
-    time: "2016 – 2017, Major GPA 4.0/4.0"
-
-developerExperience:
-  - title: "Hardware Engineer"
-    org: "Jump Trading Group"
-    location: "Sunnyvale, CA"
-    time: "Aug 2025 – Present"
-    desc: "Researching and developing high-level synthesis algorithms for high-frequency trading, and creating high-performance FPGA and ARM hardware accelerators based on the developed toolchain. Developing low-latency hardware logic and integration for modern multi-die FPGAs to optimize trading performance."
-  - title: "Chief Technology Officer & Co-Founder"
-    org: "RapidStream Design Automation (Acquired by a Leading Global HFT Firm)"
-    location: "Sunnyvale, CA"
-    time: "Jan 2023 – Aug 2025"
-    desc: "Devise the technical strategy and development of compiler solutions that deliver low-latency, high-performance FPGA accelerators. Engineered systems enabling efficient high-level physical designs directly from software specifications, significantly reducing compilation cycles."
-  - title: "Compilation Researcher (Intern)"
-    org: "Advanced Micro Devices (AMD), Xilinx"
-    location: "Longmont, CO"
-    time: "Jun 2022 – Sep 2022"
-    desc: "Researched and implemented an MLIR compiler that is hardware physical aware for AMD Versal devices, targeting the AI Engine array. Designed flows enabling high-performance application acceleration on next-generation SoCs."
-  - title: "Cloud Software Engineer (Intern)"
-    org: "Google"
-    location: "Cambridge, MA"
-    time: "Jun 2016 – Sep 2016"
-    desc: 'Created "AwesomeChart," a cloud performance data analytical platform and visualization library capable of rendering millions of time series smoothly. The platform was integrated into Google Cloud Platform and remains in use by customers for monitoring critical metrics.'
-
 projects:
   - title: "TAPA: Task-Parallel FPGA Compiler"
     role: "Maintainer and Co-Author"
@@ -323,72 +347,3 @@ awards:
   - name: "International Silver Medal"
     org: "Asia-Pacific Informatics Olympiad, China Region (2013)"
 
-# --- Designer page ---
-designerEducation:
-  - degree: "B.A. Digital Media Arts"
-    school: "Tsinghua University"
-    schoolSub: "Academy of Arts & Design"
-    time: "2015 – 2018"
-  - line: "Ph.D. from UCLA"
-  - line: "B.Eng. from Tsinghua University"
-
-designWorks:
-  - type: "video"
-    src: "design-works/book-ocean.mp4"
-    alt: "Conceptual book library animation"
-    caption: "Conceptual book library for readers to share their notes written virtually on the book pages."
-    section: "main-left"
-  - type: "image"
-    src: "design-works/google-chart.png"
-    alt: "Heatmap showing the distribution of latency over time."
-    caption: "Heatmap showing distribution over time. Used by Google Cloud."
-    section: "main-left"
-  - type: "image"
-    src: "design-works/rapidstream-logo.png"
-    alt: "A logo with a wave-like pattern for the startup RapidStream."
-    section: "side"
-  - type: "image"
-    src: "design-works/cat-logo.png"
-    alt: "A logo showing a cat with a cute heart."
-    section: "side"
-  - type: "image"
-    src: "design-works/tex-user-group.jpg"
-    alt: "A logo with texts of 'TeX' surrounding the main text for a TeX user group event."
-    caption: "TeX user group event"
-    section: "side"
-  - type: "video"
-    src: "design-works/seasons.mp4"
-    alt: "Impression of seasons animation"
-    caption: "Impression of seasons"
-    colSpan: 3
-  - type: "image"
-    src: "design-works/your-image.jpg"
-    alt: "Photo showing a person standing in front of a screen, displaying their face in a digital art style."
-    caption: "How you would see yourself in the AI era?"
-    colSpan: 5
-  - type: "image"
-    src: "design-works/self-image.png"
-    alt: "Photo showing how artists depict themselves in their works."
-    caption: "This is how artists viewed themselves in their works. We averaged their self-portraits. Left: Renaissance, Right: Modern."
-    colSpan: 4
-  - type: "image"
-    src: "design-works/uploaded-image.jpg"
-    alt: "Photo showing how students see themselves by comparing on-site capture and self-uploaded images."
-    caption: "This is how young adults viewed themselves in their portraits. We averaged their photos. Left: On-site capture, Right: Self-uploaded."
-    colSpan: 4
-  - type: "image"
-    src: "design-works/tuna-icons.png"
-    alt: "Icons designed for TUNA association, featuring the icon for the mirror site, DNS service, NTP service, and the danmaku service."
-    caption: "Icons designed for Tsinghua University TUNA association."
-    colSpan: 6
-  - type: "image"
-    src: "design-works/pika-logo.png"
-    alt: "A polyline drawing of a pikachu holding the number 42."
-    caption: "Logo 42"
-    colSpan: 2
-    section: "logo-small"
-  - type: "image"
-    src: "design-works/thermal-printer.jpg"
-    alt: "An experiment with thermal printer, printing a photo in black and white."
-    caption: "An experiment with thermal printer before the popularization of Paperang (喵喵机). It prints out a photo on the go with a QR code attached for the original image, allowing sharing of the photo with someone met on the street."
-    section: "thermal"

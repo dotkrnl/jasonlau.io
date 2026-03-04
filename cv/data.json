@@ -15,47 +15,50 @@
     {
       "degree": "B.Eng. Computer Science",
       "school": "Tsinghua University",
-      "time": "2014 – 2018, Major GPA 93/100"
+      "time": "2014 – 2018, Major GPA 93/100",
+      "details": []
     },
     {
       "degree": "B.A. Digital Media Arts",
       "school": "Tsinghua University, Academy of Arts & Design",
-      "time": "2015 – 2018, Major GPA 88/100"
+      "time": "2015 – 2018, Major GPA 88/100",
+      "details": []
     },
     {
       "degree": "Exchange Student",
       "school": "Hong Kong University of Science and Technology",
-      "time": "2016 – 2017, Major GPA 4.0/4.0"
+      "time": "2016 – 2017, Major GPA 4.0/4.0",
+      "details": []
     }
   ],
   "experience": [
     {
       "title": "Hardware Engineer",
       "org": "Jump Trading Group",
-      "location": "Sunnyvale, CA",
       "time": "Aug 2025 – Present",
-      "desc": "Researching and developing high-level synthesis algorithms for high-frequency trading, and creating high-performance FPGA and ARM hardware accelerators based on the developed toolchain. Developing low-latency hardware logic and integration for modern multi-die FPGAs to optimize trading performance."
+      "desc": "Researching and developing high-level synthesis algorithms for high-frequency trading, and creating high-performance FPGA and ARM hardware accelerators based on the developed toolchain. Developing low-latency hardware logic and integration for modern multi-die FPGAs to optimize trading performance.",
+      "location": "Sunnyvale, CA"
     },
     {
       "title": "Chief Technology Officer & Co-Founder",
       "org": "RapidStream Design Automation (Acquired by a Leading Global HFT Firm)",
-      "location": "Sunnyvale, CA",
       "time": "Jan 2023 – Aug 2025",
-      "desc": "Devise the technical strategy and development of compiler solutions that deliver low-latency, high-performance FPGA accelerators. Engineered systems enabling efficient high-level physical designs directly from software specifications, significantly reducing compilation cycles."
+      "desc": "Devise the technical strategy and development of compiler solutions that deliver low-latency, high-performance FPGA accelerators. Engineered systems enabling efficient high-level physical designs directly from software specifications, significantly reducing compilation cycles.",
+      "location": "Sunnyvale, CA"
     },
     {
       "title": "Compilation Researcher (Intern)",
       "org": "Advanced Micro Devices (AMD), Xilinx",
-      "location": "Longmont, CO",
       "time": "Jun 2022 – Sep 2022",
-      "desc": "Researched and implemented an MLIR compiler that is hardware physical aware for AMD Versal devices, targeting the AI Engine array. Designed flows enabling high-performance application acceleration on next-generation SoCs."
+      "desc": "Researched and implemented an MLIR compiler that is hardware physical aware for AMD Versal devices, targeting the AI Engine array. Designed flows enabling high-performance application acceleration on next-generation SoCs.",
+      "location": "Longmont, CO"
     },
     {
       "title": "Cloud Software Engineer (Intern)",
       "org": "Google",
-      "location": "Cambridge, MA",
       "time": "Jun 2016 – Sep 2016",
-      "desc": "Created \"AwesomeChart,\" a cloud performance data analytical platform and visualization library capable of rendering millions of time series smoothly. The platform was integrated into Google Cloud Platform and remains in use by customers for monitoring critical metrics."
+      "desc": "Created \"AwesomeChart,\" a cloud performance data analytical platform and visualization library capable of rendering millions of time series smoothly. The platform was integrated into Google Cloud Platform and remains in use by customers for monitoring critical metrics.",
+      "location": "Cambridge, MA"
     }
   ],
   "publications": [

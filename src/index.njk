@@ -5,15 +5,9 @@ description: "Jason Lau is a researcher interested in High-Level Synthesis, Cust
 keywords: "Jason Lau, Researcher, Developer, Design, HLS, High-Level Synthesis, Hardware Engineer, Jump Trading, UCLA, Tsinghua"
 h1: "Jason Lau - An FPGA HLS Researcher"
 activeRole: "Researcher"
-tagline: "interested in High-Level Synthesis, Customized Computing, and FPGA Abstraction."
+tagline: 'whose research focuses on High-Level Synthesis, Customized Computing, and FPGA Abstraction. Currently creating low-latency hardware logic at <a href="https://www.jumptrading.com" target="_blank">Jump Trading Group</a>.'
 email: "lau@cs.ucla.edu"
-extraBodyStyle: "overflow-x: hidden;"
-extraStyle: |
-  body.pdf-active aside { opacity: 0; }
-  body.pdf-active #main-div { position: absolute; padding-bottom: 200px; }
-  body.pdf-active footer { opacity: 0; }
-  body.pdf-active article { opacity: 0.3; transition: opacity 0.25s; }
-  body.pdf-active article.active-paper { opacity: 1 !important; pointer-events: auto; }
+extraBodyClass: "overflow-x-hidden"
 bodyOpen: |
   <div id="app" class="relative w-full">
   <svg class="hidden">
@@ -285,7 +279,8 @@ publications:
 </main>
 
 <div id="pdf-panel"
-     class="fixed inset-0 z-50 hidden translate-x-full flex-col bg-white shadow-2xl lg:left-auto lg:right-0 lg:w-3/4">
+     class="fixed inset-0 z-50 hidden flex-col bg-white shadow-2xl lg:left-auto lg:right-0 lg:w-3/4"
+     style="translate: 100% 0; transition: translate 0.3s ease-in-out">
   <div class="flex items-center justify-between border-b border-gray-200 bg-white p-4">
     <span class="text-xs font-bold uppercase tracking-widest text-gray-500">Paper Preview</span>
     <div class="flex items-center gap-4">
@@ -323,19 +318,25 @@ document.addEventListener('DOMContentLoaded', () => {
   const closePreview = () => {
     body.classList.remove('pdf-active');
     mainDiv.style.width = '';
-    pdfPanel.classList.add('translate-x-full');
+    pdfPanel.style.translate = '100% 0';
     allArticles.forEach(art => art.classList.remove('active-paper'));
     setTimeout(() => {
-      if (!body.classList.contains('pdf-active')) pdfFrame.src = "";
+      if (!body.classList.contains('pdf-active')) {
+        pdfFrame.src = "";
+        pdfPanel.classList.remove('flex');
+        pdfPanel.classList.add('hidden');
+      }
     }, 300);
   };
 
   const openPreview = (pdfUrl, titleElement) => {
     mainDiv.style.width = `${mainDiv.offsetWidth}px`;
     body.classList.add('pdf-active');
-    pdfPanel.classList.add('transform', 'transition-transform', 'duration-300', 'ease-in-out');
     pdfPanel.classList.remove('hidden');
-    pdfPanel.classList.remove('translate-x-full');
+    pdfPanel.classList.add('flex');
+    requestAnimationFrame(() => {
+      pdfPanel.style.translate = '0 0';
+    });
     allArticles.forEach(art => art.classList.remove('active-paper'));
     const parentArticle = titleElement.closest('article');
     if (parentArticle) parentArticle.classList.add('active-paper');

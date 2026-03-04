@@ -37,12 +37,14 @@ publications:
     titleEnd: "Architecture"
     authors: 'Jinming Zhuang, <span class="font-bold text-black">Jason Lau</span>, Hanchen Ye, Zhuoping Yang, Shixin Ji, Jack Lo, Kristof Denolf, Stephen Neuendorffer, Alex Jones, Jingtong Hu, Yiyu Shi, Deming Chen, Jason Cong, Peipei Zhou'
     venue: "TRETS '24 - ACM Transactions on Reconfigurable Technology and Systems, Volume 17, Issue 3, Article No. 51<span class=\"pub-pages\">, Pages 1 - 31</span>"
+    cvYear: "2024"
     abstract: "We propose CHARM, a framework designed to optimize throughput for end-to-end deep learning applications on the AMD/Xilinx Versal ACAP. To overcome the performance bottlenecks caused by executing small matrix multiply (MM) layers on monolithic accelerators, CHARM composes multiple diverse, concurrent accelerator architectures tailored to varied layer sizes. By utilizing analytical models for design space exploration and automated code generation, CHARM achieves throughput gains of up to 32.51x over monolithic designs across models like BERT and ViT."
   - pdf: "research-papers/thesis.pdf"
     titleStart: "Enabling Heterogeneous Computing for Software"
     titleEnd: "Developers"
     authors: '<span class="font-bold text-black">Jason Lau</span> advised by Jason Cong'
     venue: "Ph.D. Dissertation, University of California, Los Angeles"
+    cvYear: "2024"
     abstract: "We introduce Heterosys, an end-to-end framework designed to bridge the gap between high-level software and efficient FPGA implementation. By decoupling algorithmic descriptions from underlying hardware, Heterosys utilizes three core components—HeteroRefactor for automated refactoring and selective offloading, Adroit for frequency-driven architectural optimization, and RapidIR for high-level physical synthesis and floorplanning. Our research demonstrates frequency improvements of 30% to over 100%, resource reductions up to 90%, and a 51% decrease in manual code effort, significantly lowering the barrier to entry for heterogeneous computing."
   - pdf: "research-papers/10.1145-3609335.pdf"
     titleStart: "TAPA: A Scalable Task-Parallel Dataflow Programming Framework for Modern FPGAs with Co-Optimization of HLS and Physical"
@@ -58,12 +60,14 @@ publications:
     titleEnd: "Reconfiguration"
     authors: 'Licheng Guo, Pongstorn Maidee, Yun Zhou, Chris Lavin, Eddie Hung, Wuxi Li, <span class="font-bold text-black">Jason Lau</span>, Weikang Qiao, Yuze Chi, Linghao Song, Yuanlong Xiao, Alireza Kaviani, Zhiru Zhang, Jason Cong'
     venue: "TRETS '23 - ACM Transactions on Reconfigurable Technology and Systems, Volume 16, Issue 4, Article No. 59<span class=\"pub-pages\">, Pages 1 - 30</span>"
+    cvYear: "2023"
     abstract: "We present RapidStream, a parallelized, physical-integrated compilation framework designed to drastically reduce FPGA compilation cycles. By co-optimizing HLS with back-end physical implementation, RapidStream partitions latency-insensitive C/C++ programs for parallel placement and routing. RapidStream achieves a 5–7× reduction in compile time and up to a 1.3× increase in frequency compared to commercial toolchains."
   - pdf: "research-papers/10.1145-3543622.3573210.pdf"
     titleStart: "CHARM: Composing Heterogeneous Accelerators for Matrix Multiply on Versal ACAP"
     titleEnd: "Architecture"
     authors: 'Jinming Zhuang, <span class="font-bold text-black">Jason Lau</span>, Hanchen Ye, Zhuoping Yang, Yubo Du, Jack Lo, Kristof Denolf, Stephen Neuendorffer, Alex Jones, Jingtong Hu, Deming Chen, Jason Cong, Peipei Zhou'
     venue: "FPGA '23 - The 2023 ACM/SIGDA International Symposium on Field Programmable Gate Arrays"
+    cvYear: "2023"
     abstract: "We propose CHARM, a framework for composing heterogeneous matrix multiply (MM) accelerators to optimize deep learning throughput on platforms like the AMD/Xilinx Versal ACAP. While monolithic accelerators struggle with the small, diverse MM layers found in models like BERT—often achieving less than 5% peak performance—CHARM utilizes analytical models to partition resources and schedule layers across multiple concurrent, specialized architectures. By automating code generation and design space exploration, CHARM achieves up to 32.5x throughput gains over monolithic designs across BERT, ViT, NCF, and MLP benchmarks."
     badges:
       - "Cited 50+ times"
@@ -81,6 +85,7 @@ publications:
     titleEnd: "Multiplication"
     authors: 'Linghao Song, Yuze Chi, Atefeh Sohrabizadeh, Young-kyu Choi, <span class="font-bold text-black">Jason Lau</span>, Jason Cong'
     venue: "FPGA '22 - The 2022 ACM/SIGDA International Symposium on Field-Programmable Gate Arrays"
+    cvYear: "2022"
     abstract: "We present Sextans, a flexible FPGA accelerator for general-purpose SpMM that addresses challenges in random memory access, data movement, and workload balancing. By leveraging HBM and PE-aware scheduling, Sextans enables streaming access and balanced pipelining for arbitrary matrix sizes. Evaluation on 1,400 benchmarks shows that Sextans achieves up to a 2.50x speedup over K80 GPUs, with projected optimizations outperforming V100 GPUs."
     badges:
       - "Cited 100+ times"
@@ -89,6 +94,7 @@ publications:
     titleEnd: "Synthesis"
     authors: 'Young-kyu Choi, Yuze Chi, <span class="font-bold text-black">Jason Lau</span>, Jason Cong'
     venue: "TCAD '22 - IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems"
+    cvYear: "2022"
     abstract: "We present TARO, an automated framework for applying free-running optimization to HLS-based streaming applications. By regulating tasks via data streams rather than complex global control, TARO simplifies hardware logic while preserving original functionality and performance. On the Alveo U250, TARO achieves an average reduction of 16% in LUTs and 45% in FFs for systolic array designs."
   - pdf: "research-papers/10.1145-3431920.3439289.pdf"
     titleStart: "AutoBridge: Coupling Coarse-Grained Floorplanning and Pipelining for High-Frequency HLS Design on Multi-Die"
@@ -105,6 +111,7 @@ publications:
     titleEnd: "Programs"
     authors: 'Yuze Chi, Licheng Guo, <span class="font-bold text-black">Jason Lau</span>, Young-kyu Choi, Jie Wang, Jason Cong'
     venue: "FCCM '21 - The 29th IEEE Annual International Symposium on Field-Programmable Custom Computing Machines"
+    cvYear: "2021"
     abstract: "We present TAPA, an automated HLS framework designed to enhance the productivity of task-parallel FPGA accelerators. While traditional HLS struggles with the complexities of parallel task communication and slow development cycles, TAPA introduces a programmer-friendly C++ interface, unconstrained software simulation, and fast hierarchical code generation. By streamlining the development and verification process, TAPA reduces kernel and host code by 22% and 51% respectively, while accelerating correctness verification by 3.2× and QoR tuning by 6.8×."
     badges:
       - "Cited 50+ times"
@@ -120,6 +127,7 @@ publications:
     titleEnd: "Frequency"
     authors: '<span class="underline">{Licheng Guo*, <span class="font-bold text-black">Jason Lau*</span></span>}, Yuze Chi, Jie Wang, Cody Hao Yu, Zhe Chen, Zhiru Zhang, Jason Cong'
     venue: "DAC '20 - The 2020 57th ACM/IEEE Design Automation Conference"
+    cvYear: "2020"
     abstract: "We present a study on frequency degradation in HLS-generated FPGA designs, identifying broadcast structures—specifically high-fanout data, flow control, and synchronization signals—as the primary bottlenecks. By addressing HLS compiler limitations through broadcast-aware scheduling, synchronization pruning, and skid-buffer integration, our approach improves the maximum frequency of representative benchmarks by 53% on average, with gains exceeding 100 MHz in several cases."
     badges:
       - "Best Paper Candidate"

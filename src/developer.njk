@@ -12,7 +12,7 @@ permalink: "developer.html"
 
 {% from "macros.njk" import sectionHeading %}
 <main id="main-content" class="grid grid-cols-1 gap-y-16 md:grid-cols-12 md:gap-x-12">
-  <aside class="order-2 flex flex-col max-w-[400px] gap-16 pr-16 md:order-1 md:col-span-4 lg:-mt-[120px] xl:-mt-[140px] 2xl:col-span-3">
+  <aside class="order-2 flex flex-col md:max-w-[400px] gap-16 md:pr-16 md:order-1 md:col-span-4 lg:-mt-[120px] xl:-mt-[140px] 2xl:col-span-3">
     <section>
       {{ sectionHeading("Education") }}
       {% set developerEdu = site.education | selectattr("developer") | list %}

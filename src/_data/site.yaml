@@ -5,7 +5,7 @@ email: "i@jasonlau.io"
 github: "github.com/dotkrnl"
 copyright: "2026"
 lastmod: "2026-03-03"
-publicationsCitations: "980"
+publicationsCitations: "985"
 
 roles:
   - name: "Researcher"
@@ -137,6 +137,8 @@ services:
     event: "International Conference on Field-Programmable Logic and Applications 2026"
   - role: "Technical Program Committee Member"
     event: "IEEE International Symposium On Field-Programmable Custom Computing Machines 2026"
+  - role: "Technical Program Committee Member"
+    event: "Great Lakes Symposium on VLSI 2026"
   - role: "Technical Program Committee Member"
     event: "Design Automation Conference 2026"
   - role: "Technical Program Committee Member"

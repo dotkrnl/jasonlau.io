@@ -36,9 +36,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
   </head>
-  <body class="min-h-screen px-8 py-6 font-sans antialiased leading-snug text-justify hyphens-auto text-black bg-white md:p-12 md:text-left md:hyphens-none selection:bg-black selection:text-white {{ extraBodyClass }}">
+  <body class="min-h-screen overflow-x-hidden px-8 py-6 font-sans antialiased leading-snug text-justify hyphens-auto text-black bg-white md:p-12 md:text-left md:hyphens-none selection:bg-black selection:text-white">
     <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-white focus:px-4 focus:py-2 focus:text-black focus:shadow-lg">Skip to main content</a>
-    {{ bodyOpen | safe }}
+    <div id="app" class="relative w-full">
     <header class="relative grid grid-cols-1 gap-y-8 mb-12 md:grid-cols-12 md:gap-x-12 md:mb-24">
       <div class="order-2 col-span-4 flex flex-col justify-between md:order-1 md:col-span-7 2xl:col-span-9">
         <div class="print-header hidden" aria-hidden="true">
@@ -93,9 +93,9 @@
 
     {{ content | safe }}
 
+    </div>{# close #app #}
     <footer class="mt-24 border-t border-gray-100 pt-12 text-center md:text-left">
       <p class="text-xs uppercase tracking-widest text-gray-500">&copy; {{ site.copyright }} {{ site.name }}. Designed by {{ site.name }}.</p>
     </footer>
-    {{ bodyClose | safe }}
   </body>
 </html>

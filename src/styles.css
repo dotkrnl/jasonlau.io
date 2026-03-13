@@ -107,7 +107,6 @@ body.pdf-active article.active-paper {
   /* ── Hide non-print elements ── */
   a[href="#main-content"],
   #pdf-panel,
-  #app > svg,
   video,
   footer,
   .nav-external,

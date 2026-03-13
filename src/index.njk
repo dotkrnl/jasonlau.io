@@ -8,14 +8,6 @@ printSubtitle: "FPGA HLS Researcher"
 activeRole: "Researcher"
 tagline: 'whose research focuses on High-Level Synthesis, Customized Computing, and FPGA Abstraction. Currently creating low-latency hardware logic at <a href="https://www.jumptrading.com" target="_blank">Jump Trading Group</a>.'
 email: "lau@cs.ucla.edu"
-extraBodyClass: "overflow-x-hidden"
-bodyOpen: |
-  <div id="app" class="relative w-full">
-  <svg aria-hidden="true" class="hidden">
-    <symbol id="icon-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-    </symbol>
-  </svg>
 permalink: "index.html"
 ---
 
@@ -71,8 +63,8 @@ permalink: "index.html"
                    data-pdf="{{ pub.pdf }}">
                   {{ pub.titleStart }}
                   <span class="whitespace-nowrap">{{ pub.titleEnd }}
-                    <svg aria-hidden="true" class="inline-flex h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100">
-                      <use href="#icon-arrow-right"></use>
+                    <svg aria-hidden="true" class="inline-flex h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                     </svg>
                   </span>
                 </a>
@@ -138,7 +130,7 @@ permalink: "index.html"
     <iframe id="pdf-frame" src="" title="Paper PDF viewer" class="h-full w-full border border-gray-200 bg-white"></iframe>
   </div>
 </div>
-</div>{# close #app #}
+</div>
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {

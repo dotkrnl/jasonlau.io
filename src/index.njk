@@ -43,7 +43,7 @@ permalink: "index.html"
 
     <section class="aside-print-hide">
       {{ sectionHeading("Reviews") }}
-{{ reviewsSection(site.reviews, true) }}
+{{ reviewsSection(site.reviews) }}
     </section>
   </aside>
 
@@ -96,14 +96,14 @@ permalink: "index.html"
 
   <section class="print-after-pubs hidden">
     <h2>Services</h2>
-    <ul>
+    <ul class="list-inside space-y-2">
 {{ servicesItems(site.services) }}
     </ul>
   </section>
 
   <section class="print-after-pubs hidden">
     <h2>Reviews</h2>
-{{ reviewsSection(site.reviews, false) }}
+{{ reviewsSection(site.reviews) }}
   </section>
 </main>
 

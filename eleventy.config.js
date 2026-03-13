@@ -3,14 +3,21 @@ const yaml = require("js-yaml");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addDataExtension("yaml,yml", (contents) => yaml.load(contents));
-  eleventyConfig.addPassthroughCopy("src/*.png");
-  eleventyConfig.addPassthroughCopy("src/*.ico");
-  eleventyConfig.addPassthroughCopy("src/site.webmanifest");
-  eleventyConfig.addPassthroughCopy("src/profile-picture.png");
-  eleventyConfig.addPassthroughCopy("src/design-works");
-  eleventyConfig.addPassthroughCopy("src/research-papers");
-  eleventyConfig.addPassthroughCopy("src/robots.txt");
-  eleventyConfig.addPassthroughCopy("src/jason-lau-cv.pdf");
+
+  // Static assets (src/ relative paths)
+  for (const pattern of [
+    "src/*.png",
+    "src/*.ico",
+    "src/site.webmanifest",
+    "src/robots.txt",
+    "src/design-works",
+    "src/research-papers",
+  ]) {
+    eleventyConfig.addPassthroughCopy(pattern);
+  }
+
+  // CV PDF lives in cv/, copy to site root
+  eleventyConfig.addPassthroughCopy({ "cv/jason-lau-cv.pdf": "jason-lau-cv.pdf" });
 
   // Build Tailwind CSS after Eleventy generates HTML (so it scans final output)
   eleventyConfig.on("eleventy.after", () => {

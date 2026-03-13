@@ -105,7 +105,3 @@ console.log("Compiling PDF...");
 execSync(`typst compile "${templatePath}" "${PDF_OUT}"`, { stdio: "inherit" });
 console.log(`Generated ${PDF_OUT}`);
 
-// Copy PDF to src/ for site deployment
-const SITE_COPY = path.join(ROOT, "src", "jason-lau-cv.pdf");
-fs.copyFileSync(PDF_OUT, SITE_COPY);
-console.log(`Copied to ${SITE_COPY}`);

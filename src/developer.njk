@@ -10,25 +10,12 @@ tagline: "who has full-stack expertise in Hardware Design, Compiler, Devops, HPC
 permalink: "developer.html"
 ---
 
-{% from "macros.njk" import sectionHeading %}
+{% from "macros.njk" import sectionHeading, educationList %}
 <main id="main-content" class="grid grid-cols-1 gap-y-16 md:grid-cols-12 md:gap-x-12">
   <aside class="order-2 flex flex-col md:max-w-[400px] gap-16 md:pr-16 md:order-1 md:col-span-4 lg:-mt-[120px] xl:-mt-[140px] 2xl:col-span-3">
     <section>
       {{ sectionHeading("Education") }}
-      {% set developerEdu = site.education | selectattr("developer") | list %}
-      {% for edu in developerEdu %}
-      <div{% if not loop.last %} class="mb-8"{% endif %}>
-        <div class="font-bold">{{ edu.degree }}</div>
-        <div class="text-gray-800">{{ edu.developer.school or edu.school }}</div>
-        <div class="mt-1 text-sm text-gray-500">{{ edu.developer.time or edu.time }}</div>
-        {% set details = edu.developer.details or edu.details %}
-        {% if details %}
-        {% for detail in details %}
-        <div class="mt-1 text-sm text-gray-500">{{ detail | safe }}</div>
-        {% endfor %}
-        {% endif %}
-      </div>
-      {% endfor %}
+{{ educationList(site.education | selectattr("developer") | list, "developer") }}
     </section>
 
     <section>

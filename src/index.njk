@@ -19,22 +19,12 @@ bodyOpen: |
 permalink: "index.html"
 ---
 
-{% from "macros.njk" import sectionHeading, servicesItems, reviewsSection %}
+{% from "macros.njk" import sectionHeading, educationList, servicesItems, reviewsSection %}
 <main id="main-content" class="grid grid-cols-1 gap-y-16 md:grid-cols-12 md:gap-x-12">
   <aside class="flex flex-col md:max-w-[400px] gap-16 md:pr-16 md:col-span-4 lg:-mt-[120px] xl:-mt-[140px] 2xl:col-span-3">
     <section>
       {{ sectionHeading("Education") }}
-      {% set researcherEdu = site.education | selectattr("researcher") | list %}
-      {% for edu in researcherEdu %}
-      <div{% if not loop.last %} class="mb-8"{% endif %}>
-        <div class="font-bold">{{ edu.degree }}</div>
-        <div class="text-gray-800">{{ edu.school }}</div>
-        <div class="mt-1 text-sm text-gray-500">{{ edu.time }}</div>
-        {% for detail in edu.details %}
-        <div class="mt-1 text-sm text-gray-500">{{ detail | safe }}</div>
-        {% endfor %}
-      </div>
-      {% endfor %}
+{{ educationList(site.education | selectattr("researcher") | list) }}
     </section>
 
     <section>

@@ -2,6 +2,23 @@
 <h2 class="mb-6 text-xs font-bold uppercase tracking-[0.2em] text-gray-500">{{ title }}</h2>
 {%- endmacro -%}
 
+{%- macro educationList(entries, overrideKey) -%}
+{% for edu in entries %}
+{% set ov = edu[overrideKey] if overrideKey and edu[overrideKey] is mapping else {} %}
+      <div{% if not loop.last %} class="mb-8"{% endif %}>
+        <div class="font-bold">{{ edu.degree }}</div>
+        <div class="text-gray-800">{{ ov.school or edu.school }}</div>
+        <div class="mt-1 text-sm text-gray-500">{{ ov.time or edu.time }}</div>
+        {% set details = ov.details if ov.details is defined else edu.details %}
+        {% if details %}
+        {% for detail in details %}
+        <div class="mt-1 text-sm text-gray-500">{{ detail | safe }}</div>
+        {% endfor %}
+        {% endif %}
+      </div>
+{% endfor %}
+{%- endmacro -%}
+
 {%- macro servicesItems(services) -%}
 {% for svc in services %}
         <li><span class="font-bold">{{ svc.role }}</span> of {{ svc.event }}</li>

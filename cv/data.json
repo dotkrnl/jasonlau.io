@@ -306,33 +306,38 @@
   ],
   "services": [
     {
-      "role": "TPC Member",
-      "event": "FPL 2026"
+      "role": "Technical Program Committee Member",
+      "event": "IEEE International Conference on Omni-Layer Intelligent Systems 2026"
     },
     {
-      "role": "TPC Member",
-      "event": "FCCM 2026"
+      "role": "Technical Program Committee Member",
+      "event": "International Conference on Field-Programmable Logic and Applications 2026"
     },
     {
-      "role": "TPC Member",
-      "event": "DAC 2026"
+      "role": "Technical Program Committee Member",
+      "event": "IEEE International Symposium On Field-Programmable Custom Computing Machines 2026"
     },
     {
-      "role": "TPC Member",
-      "event": "FPL 2025"
+      "role": "Technical Program Committee Member",
+      "event": "Design Automation Conference 2026"
     },
     {
-      "role": "TPC Member",
-      "event": "FPL 2024"
+      "role": "Technical Program Committee Member",
+      "event": "International Conference on Field-Programmable Logic and Applications 2025"
+    },
+    {
+      "role": "Technical Program Committee Member",
+      "event": "International Conference on Field-Programmable Logic and Applications 2024"
     },
     {
       "role": "Invited Reviewer",
-      "event": "DAC 2022"
+      "event": "Design Automation Conference 2022"
     }
   ],
   "reviews": {
-    "count": 97,
+    "count": 98,
     "journals": [
+      "ACM Transactions on Architecture and Code Optimization (TACO)",
       "ACM Transactions on Design Automation of Electronic Systems (TODAES)",
       "ACM Transactions on Reconfigurable Technology and Systems (TRETS)",
       "Design Automation Conference (DAC)",

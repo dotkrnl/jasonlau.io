@@ -5,7 +5,7 @@ email: "i@jasonlau.io"
 github: "github.com/dotkrnl"
 copyright: "2026"
 lastmod: "2026-03-03"
-publicationsCitations: "974"
+publicationsCitations: "980"
 
 roles:
   - name: "Researcher"
@@ -131,22 +131,25 @@ experience:
     cv: true
 
 services:
-  - role: "TPC Member"
-    event: "FPL 2026"
-  - role: "TPC Member"
-    event: "FCCM 2026"
-  - role: "TPC Member"
-    event: "DAC 2026"
-  - role: "TPC Member"
-    event: "FPL 2025"
-  - role: "TPC Member"
-    event: "FPL 2024"
+  - role: "Technical Program Committee Member"
+    event: "IEEE International Conference on Omni-Layer Intelligent Systems 2026"
+  - role: "Technical Program Committee Member"
+    event: "International Conference on Field-Programmable Logic and Applications 2026"
+  - role: "Technical Program Committee Member"
+    event: "IEEE International Symposium On Field-Programmable Custom Computing Machines 2026"
+  - role: "Technical Program Committee Member"
+    event: "Design Automation Conference 2026"
+  - role: "Technical Program Committee Member"
+    event: "International Conference on Field-Programmable Logic and Applications 2025"
+  - role: "Technical Program Committee Member"
+    event: "International Conference on Field-Programmable Logic and Applications 2024"
   - role: "Invited Reviewer"
-    event: "DAC 2022"
+    event: "Design Automation Conference 2022"
 
 reviews:
-  count: 97
+  count: 98
   journals:
+    - "ACM Transactions on Architecture and Code Optimization (TACO)"
     - "ACM Transactions on Design Automation of Electronic Systems (TODAES)"
     - "ACM Transactions on Reconfigurable Technology and Systems (TRETS)"
     - "Design Automation Conference (DAC)"
@@ -184,7 +187,7 @@ publications:
     titleStart: "CHARM 2.0: Composing Heterogeneous Accelerators for Deep Learning on Versal ACAP"
     titleEnd: "Architecture"
     authors: 'Jinming Zhuang, <span class="font-bold text-black">Jason Lau</span>, Hanchen Ye, Zhuoping Yang, Shixin Ji, Jack Lo, Kristof Denolf, Stephen Neuendorffer, Alex Jones, Jingtong Hu, Yiyu Shi, Deming Chen, Jason Cong, Peipei Zhou'
-    venue: "TRETS '24 - ACM Transactions on Reconfigurable Technology and Systems, Volume 17, Issue 3, Article No. 51<span class=\"pub-pages\">, Pages 1 - 31</span>"
+    venue: 'TRETS ''24 - ACM Transactions on Reconfigurable Technology and Systems, Volume 17, Issue 3, Article No. 51<span class="pub-pages">, Pages 1 - 31</span>'
     cvYear: "2024"
     abstract: "We propose CHARM, a framework designed to optimize throughput for end-to-end deep learning applications on the AMD/Xilinx Versal ACAP. To overcome the performance bottlenecks caused by executing small matrix multiply (MM) layers on monolithic accelerators, CHARM composes multiple diverse, concurrent accelerator architectures tailored to varied layer sizes. By utilizing analytical models for design space exploration and automated code generation, CHARM achieves throughput gains of up to 32.51x over monolithic designs across models like BERT and ViT."
   - pdf: "research-papers/thesis.pdf"
@@ -198,7 +201,7 @@ publications:
     titleStart: "TAPA: A Scalable Task-Parallel Dataflow Programming Framework for Modern FPGAs with Co-Optimization of HLS and Physical"
     titleEnd: "Design"
     authors: '<span class="underline">{Licheng Guo*, Yuze Chi*, <span class="font-bold text-black">Jason Lau*</span>}</span>, Linghao Song, Xingyu Tian, Moazin Khatti, Weikang Qiao, Jie Wang, Ecenur Ustun, Zhenman Fang, Zhiru Zhang, Jason Cong'
-    venue: "TRETS '23 - ACM Transactions on Reconfigurable Technology and Systems, Volume 16, Issue 4, Article No. 63<span class=\"pub-pages\">, Pages 1 - 31</span>"
+    venue: 'TRETS ''23 - ACM Transactions on Reconfigurable Technology and Systems, Volume 16, Issue 4, Article No. 63<span class="pub-pages">, Pages 1 - 31</span>'
     year: "2023"
     abstract: "We propose TAPA, an end-to-end framework for compiling C++ task-parallel programs into high-frequency FPGA accelerators. By utilizing flexible communication APIs and coarse-grained floorplanning during compilation, TAPA enables accurate pipelining of critical paths and optimizes designs for HBM-based FPGAs. Experimental results across 43 designs demonstrate a 102% average frequency improvement, including successful implementation of previously unroutable designs with minimal resource impact."
     badges:
@@ -207,7 +210,7 @@ publications:
     titleStart: "RapidStream 2.0: Automated Parallel Implementation of Latency–Insensitive FPGA Designs Through Partial"
     titleEnd: "Reconfiguration"
     authors: 'Licheng Guo, Pongstorn Maidee, Yun Zhou, Chris Lavin, Eddie Hung, Wuxi Li, <span class="font-bold text-black">Jason Lau</span>, Weikang Qiao, Yuze Chi, Linghao Song, Yuanlong Xiao, Alireza Kaviani, Zhiru Zhang, Jason Cong'
-    venue: "TRETS '23 - ACM Transactions on Reconfigurable Technology and Systems, Volume 16, Issue 4, Article No. 59<span class=\"pub-pages\">, Pages 1 - 30</span>"
+    venue: 'TRETS ''23 - ACM Transactions on Reconfigurable Technology and Systems, Volume 16, Issue 4, Article No. 59<span class="pub-pages">, Pages 1 - 30</span>'
     cvYear: "2023"
     abstract: "We present RapidStream, a parallelized, physical-integrated compilation framework designed to drastically reduce FPGA compilation cycles. By co-optimizing HLS with back-end physical implementation, RapidStream partitions latency-insensitive C/C++ programs for parallel placement and routing. RapidStream achieves a 5–7× reduction in compile time and up to a 1.3× increase in frequency compared to commercial toolchains."
   - pdf: "research-papers/10.1145-3543622.3573210.pdf"
@@ -223,7 +226,7 @@ publications:
     titleStart: "FPGA HLS Today: Successes, Challenges, and"
     titleEnd: "Opportunities"
     authors: 'Jason Cong, <span class="font-bold text-black">Jason Lau</span>, Gai Liu, Stephen Neuendorffer, Peichen Pan, Kees Vissers, Zhiru Zhang'
-    venue: "TRETS '22 - ACM Transactions on Reconfigurable Technology and Systems, Volume 15, Issue 4, Article No. 51<span class=\"pub-pages\">, Pages 1 - 4</span>"
+    venue: 'TRETS ''22 - ACM Transactions on Reconfigurable Technology and Systems, Volume 15, Issue 4, Article No. 51<span class="pub-pages">, Pages 1 - 4</span>'
     year: "2022"
     abstract: "We evaluate the decade-long evolution of FPGA HLS from prototype to industrial deployment across domains like deep learning and genomics. While highlighting HLS successes, we identify critical bottlenecks in clock frequency, system integration, and code legacy, proposing a roadmap for future research centered on open-source infrastructures and standardization."
     badges:
@@ -293,7 +296,7 @@ publications:
     titleStart: "Reproducing Vectorization of the Tersoff Multi-Body Potential on the Intel Skylake and NVIDIA Volta"
     titleEnd: "Architectures"
     authors: '<span class="font-bold text-black">Jason Lau</span>, Yuxuan Li, Lei Xie, Qian Xie, Beichen Li, Yu Chen, Guanyu Feng, Jiping Yu, Xinjian Yu, Miao Wang, Wentao Han, Jidong Zhai'
-    venue: "Parallel Computing, Volume 78, October 2018<span class=\"pub-pages\">, Pages 47-53</span>"
+    venue: 'Parallel Computing, Volume 78, October 2018<span class="pub-pages">, Pages 47-53</span>'
     year: "2018"
     abstract: "We present an evaluation of the Tersoff potential's performance portability on Intel Skylake and NVIDIA Volta architectures. While the original study claimed high efficiency and scalability through reduced precision and cross-platform vectorization, our experiments with updated datasets show inconsistent results. Analysis reveals that communication bottlenecks, triggered by specific characteristics of the new input data, significantly limit the reproducibility of the original performance gains."
 
@@ -360,4 +363,3 @@ awards:
     org: "National Olympiad in Informatics (2013)"
   - name: "International Silver Medal"
     org: "Asia-Pacific Informatics Olympiad, China Region (2013)"
-

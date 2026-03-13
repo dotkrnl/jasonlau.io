@@ -6,9 +6,10 @@
     <meta name="description" content="{{ description }}">
     <meta name="keywords" content="{{ keywords }}">
     <title>{{ title }}</title>
-    <link rel="canonical" href="{{ site.url }}/{{ permalink }}">
+    {% set canonicalPath = permalink | replace("index.html", "") %}
+    <link rel="canonical" href="{{ site.url }}/{{ canonicalPath }}">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ site.url }}/{{ permalink }}">
+    <meta property="og:url" content="{{ site.url }}/{{ canonicalPath }}">
     <meta property="og:title" content="{{ title }}">
     <meta property="og:description" content="{{ description }}">
     <meta property="og:image" content="{{ site.url }}/profile-picture.png">
@@ -23,10 +24,8 @@
       "url": "{{ site.url }}",
       "image": "{{ site.url }}/profile-picture.png",
       "email": "{{ site.email }}",
-      "sameAs": [
-        "https://scholar.google.com/citations?user=8mKFNtUAAAAJ",
-        "https://github.com/dotkrnl",
-        "https://orcid.org/0000-0003-0751-8227"
+      "sameAs": [{% set comma = joiner(", ") %}
+        {% for link in site.navLinks %}{% if link.external and link.url and link.url.startsWith("https://") %}{{ comma() }}"{{ link.url }}"{% endif %}{% endfor %}
       ]
     }
     </script>

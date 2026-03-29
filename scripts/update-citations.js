@@ -39,9 +39,15 @@ const updated = yaml.replace(
   `publicationsCitations: "${count}"`,
 );
 
-if (updated === yaml) {
+const today = new Date().toISOString().slice(0, 10);
+const updated2 = updated.replace(/^lastmod:.*$/m, `lastmod: "${today}"`);
+
+if (updated2 === yaml) {
   console.log("site.yaml already up to date.");
 } else {
-  fs.writeFileSync(SITE_YAML, updated);
-  console.log(`Updated publicationsCitations to "${count}" in site.yaml`);
+  fs.writeFileSync(SITE_YAML, updated2);
+  if (updated !== yaml)
+    console.log(`Updated publicationsCitations to "${count}" in site.yaml`);
+  if (updated2 !== updated)
+    console.log(`Updated lastmod to "${today}" in site.yaml`);
 }

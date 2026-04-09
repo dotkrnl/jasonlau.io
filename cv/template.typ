@@ -39,6 +39,7 @@
     [*#edu.degree* --- #edu.school],
     edu.time,
   )
+  v(-2pt)
   if edu.at("details", default: none) != none {
     for detail in edu.details {
       text(size: 9pt, fill: luma(80), detail)
@@ -57,7 +58,7 @@
       [*#exp.title* --- #exp.org],
       [#exp.time #if exp.at("location", default: none) != none { [ | #exp.location] }],
     )
-    #v(1pt)
+    #v(-2pt)
     #text(size: 9pt, exp.desc)
   ]
   if i < data.experience.len() - 1 { v(5pt) }
@@ -76,6 +77,7 @@
       text(weight: "bold", size: 9.5pt, pub.title),
       if pub.year != "" { align(right, text(size: 9pt, fill: luma(100), pub.year)) },
     )
+    #v(-2pt)
     #text(size: 9pt, fill: luma(60), pub.authors)
     #linebreak()
     #text(size: 8.5pt, fill: luma(100), style: "italic", pub.venue)

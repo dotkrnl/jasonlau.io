@@ -4,8 +4,8 @@ phone: "(929) 273-1217"
 email: "i@jasonlau.io"
 github: "github.com/dotkrnl"
 copyright: "2026"
-lastmod: "2026-03-03"
-publicationsCitations: "1001"
+lastmod: "2026-04-09"
+publicationsCitations: "1012"
 
 roles:
   - name: "Researcher"
@@ -147,11 +147,11 @@ services:
     event: "International Conference on Field-Programmable Logic and Applications 2025"
   - role: "Technical Program Committee Member"
     event: "International Conference on Field-Programmable Logic and Applications 2024"
-  - role: "Invited Reviewer"
+  - role: "Technical Program Committee Member"
     event: "Design Automation Conference 2022"
 
 reviews:
-  count: 102
+  count: 104
   journals:
     - "ACM Transactions on Architecture and Code Optimization (TACO)"
     - "ACM Transactions on Design Automation of Electronic Systems (TODAES)"
@@ -234,7 +234,7 @@ publications:
     year: "2022"
     abstract: "We evaluate the decade-long evolution of FPGA HLS from prototype to industrial deployment across domains like deep learning and genomics. While highlighting HLS successes, we identify critical bottlenecks in clock frequency, system integration, and code legacy, proposing a roadmap for future research centered on open-source infrastructures and standardization."
     badges:
-      - "Cited 200+ times"
+      - "Cited 250+ times"
   - pdf: "research-papers/10.1145-3490422.3502357.pdf"
     titleStart: "Sextans: A Streaming Accelerator for General-Purpose Sparse-Matrix Dense-Matrix"
     titleEnd: "Multiplication"

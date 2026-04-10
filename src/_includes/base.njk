@@ -71,7 +71,7 @@
           <li class="flex justify-end">
             <a href="{{ linkUrl }}"
                {% if link.external %}target="_blank" rel="noopener noreferrer"{% endif %}
-               class="button-underline group inline-flex items-center gap-2">
+               class="button-underline group inline-flex items-center gap-2 whitespace-nowrap">
               {{ link.label }}
               <svg aria-hidden="true" class="h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -82,7 +82,7 @@
           {% for localeItem in siteView.locales %}
           {% if not localeItem.isCurrent %}
           <li class="flex justify-end">
-            <a href="{{ localeItem.url }}" class="button-underline group inline-flex items-center gap-2">
+            <a href="{{ localeItem.url }}" class="button-underline group inline-flex items-center gap-2 whitespace-nowrap">
               {{ localeItem.label }}
               <svg aria-hidden="true" class="h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>

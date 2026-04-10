@@ -31,7 +31,20 @@
   transform-origin: bottom left;
 }
 
-/* PDF preview panel focus styles */
+/* Hide focus ring for mouse/programmatic focus; keep for keyboard nav */
+.paper-title:focus {
+  outline: none;
+}
+
+.paper-title:focus-visible {
+  outline: 2px solid black;
+  outline-offset: 2px;
+}
+
+#pdf-panel :focus {
+  outline: none;
+}
+
 #pdf-panel :focus-visible {
   outline: 2px solid black;
   outline-offset: 2px;

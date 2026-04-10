@@ -6,3 +6,13 @@ _site/
 .env.local
 .wrangler/
 .claude/
+
+# CV build artifacts (keep .pdf)
+cv/data.json
+cv/cv.tex
+cv/cv.aux
+cv/cv.log
+cv/cv.out
+cv/cv.fls
+cv/cv.fdb_latexmk
+cv/cv.synctex.gz

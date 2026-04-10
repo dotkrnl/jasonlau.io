@@ -66,6 +66,12 @@ ui:
   closePaperPreview:
     en: "Close paper preview"
     cn: "关闭论文预览"
+  switchToOriginal:
+    en: "English"
+    cn: "English"
+  switchToTranslation:
+    en: "中文"
+    cn: "中文"
   paperViewerTitle:
     en: "Paper PDF viewer"
     cn: "论文 PDF 阅读器"
@@ -119,10 +125,10 @@ pages:
       cn: "刘家昌 - FPGA 高层次综合研究员"
     description:
       en: "Jason Lau is a researcher interested in High-Level Synthesis, Customized Computing, and FPGA Abstraction."
-      cn: "刘家昌是一位专注于高层次综合、定制计算与 FPGA 抽象的研究者。"
+      cn: "刘家昌是一位专注于高层次综合、客制化计算与 FPGA 抽象化的研究者。"
     keywords:
       en: "Jason Lau, Researcher, Developer, Design, HLS, High-Level Synthesis, Hardware Engineer, Jump Trading, UCLA, Tsinghua"
-      cn: "刘家昌、研究员、开发者、设计师、高层次综合、硬件工程师、Jump Trading Group、加州大学洛杉矶分校、清华大学"
+      cn: "刘家昌、研究员、开发者、设计师、高层次综合、客制化计算、FPGA 抽象化、硬件工程师、Jump Trading Group、加州大学洛杉矶分校、清华大学"
     h1:
       en: "Jason Lau - An FPGA HLS Researcher"
       cn: "刘家昌 - FPGA 高层次综合研究员"
@@ -134,7 +140,7 @@ pages:
       cn: "研究员"
     tagline:
       en: 'whose research focuses on High-Level Synthesis, Customized Computing, and FPGA Abstraction. Currently creating low-latency hardware logic at <a href="https://www.jumptrading.com" target="_blank">Jump Trading Group</a>.'
-      cn: '研究方向聚焦于高层次综合、定制计算与 FPGA 抽象。目前就职于 <a href="https://www.jumptrading.com" target="_blank">Jump Trading Group</a>，从事超低时延硬件逻辑设计。'
+      cn: '研究方向聚焦于高层次综合、客制化计算与 FPGA 抽象化。目前就职于 <a href="https://www.jumptrading.com" target="_blank">Jump Trading Group</a>，从事超低时延硬件逻辑设计。'
     email:
       en: "lau@cs.ucla.edu"
       cn: "lau@cs.ucla.edu"
@@ -463,7 +469,7 @@ experience:
       cn: "2023 – 2025"
     desc:
       en: "Developed compiler solutions for low-latency FPGA accelerators. Led research enabling efficient high-level physical designs from software specifications."
-      cn: "主导面向低时延 FPGA 加速器的编译器解决方案研发，并推动从软件规格高效生成高层物理设计的关键研究。"
+      cn: "主导面向低时延 FPGA 加速器的编译器解决方案研发，并推动从软件规格高效生成高层次物理设计的关键研究。"
     researcher: true
     developer:
       title:
@@ -477,7 +483,7 @@ experience:
         cn: "2023 年 1 月 – 2025 年 8 月"
       desc:
         en: "Devise the technical strategy and development of compiler solutions that deliver low-latency, high-performance FPGA accelerators. Engineered systems enabling efficient high-level physical designs directly from software specifications, significantly reducing compilation cycles."
-        cn: "负责制定技术战略并推进编译器产品研发，以交付低时延、高性能 FPGA 加速器。构建可直接由软件规格生成高层物理设计的系统，大幅缩短编译迭代周期。"
+        cn: "负责制定技术战略并推进编译器产品研发，以交付低时延、高性能 FPGA 加速器。构建可直接由软件规格生成高层次物理设计的系统，大幅缩短编译迭代周期。"
       location: "Sunnyvale, CA"
     cv: true
   - title:
@@ -634,7 +640,7 @@ publications:
   - pdf: "research-papers/10.1109-ICCAD66269.2025.11240757.pdf"
     titleStart:
       en: "Automated Design Space Exploration in High-Level Physical"
-      cn: "面向高层物理综合的自动化设计空间"
+      cn: "面向高层次物理综合的自动化设计空间"
     titleEnd:
       en: "Synthesis"
       cn: "探索"
@@ -645,11 +651,12 @@ publications:
     year: "2025"
     abstract:
       en: "We propose a robust Design Space Exploration (DSE) framework to address the instability and manual complexity of existing High-Level Physical Synthesis (HLPS) for multi-die FPGAs. By automating iterative parameter tuning through physical implementation metrics and tailored heuristics, our framework ensures consistent timing closure and eliminates user intervention. In evaluations on large-scale designs, the framework achieved an average frequency of 311.06 MHz, outperforming the AMD Vitis/Vivado toolchain by 2.42× and leading academic solutions by 1.67×."
-      cn: "本文提出一套稳健的设计空间探索（DSE）框架，以解决现有面向多芯粒 FPGA 的高层物理综合（HLPS）在稳定性不足与人工调参复杂方面的问题。该框架基于物理实现指标与定制启发式策略实现迭代参数自动优化，从而稳定实现时序收敛并消除人工调参的需求。在大规模设计评估中，框架取得了 311.06 MHz 的平均频率，性能较 AMD Vitis/Vivado 工具链提升 2.42 倍，较现有学术方案提升 1.67 倍。"
+      cn: "本文提出一套稳健的设计空间探索（DSE）框架，以解决现有面向多芯粒 FPGA 的高层次物理综合（HLPS）在稳定性不足与人工调参复杂方面的问题。该框架基于物理实现指标与定制启发式策略实现迭代参数自动优化，从而稳定实现时序收敛并消除人工调参的需求。在大规模设计评估中，框架取得了 311.06 MHz 的平均频率，性能较 AMD Vitis/Vivado 工具链提升 2.42 倍，较现有学术方案提升 1.67 倍。"
   - pdf: "research-papers/10.1145-3676536.3676649.pdf"
+    translationPdf: "research-papers/10.1145-3676536.3676649-cn.pdf"
     titleStart:
       en: "RapidStream IR: Infrastructure for FPGA High-Level Physical"
-      cn: "RapidStream IR：面向 FPGA 高层物理综合的基础"
+      cn: "RapidStream IR：面向 FPGA 高层次物理综合的基础"
     titleEnd:
       en: "Synthesis"
       cn: "设施"
@@ -690,7 +697,7 @@ publications:
     cvYear: "2024"
     abstract:
       en: "We introduce Heterosys, an end-to-end framework designed to bridge the gap between high-level software and efficient FPGA implementation. By decoupling algorithmic descriptions from underlying hardware, Heterosys utilizes three core components—HeteroRefactor for automated refactoring and selective offloading, Adroit for frequency-driven architectural optimization, and RapidIR for high-level physical synthesis and floorplanning. Our research demonstrates frequency improvements of 30% to over 100%, resource reductions up to 90%, and a 51% decrease in manual code effort, significantly lowering the barrier to entry for heterogeneous computing."
-      cn: "本文提出 Heterosys，一套旨在弥合高层软件与高效 FPGA 实现之间鸿沟的端到端框架。通过将算法描述与底层硬件解耦，Heterosys 集成了三个核心组件：用于自动重构与选择性交由 CPU 执行的 HeteroRefactor、用于频率驱动架构优化的 Adroit，以及用于高层物理综合与布局规划的 RapidIR。研究结果表明，该体系可带来 30% 至超过 100% 的频率提升、最高 90% 的资源节省，并将人工代码工作量降低 51%，显著降低异构计算的使用门槛。"
+      cn: "本文提出 Heterosys，一套旨在弥合高层软件与高效 FPGA 实现之间鸿沟的端到端框架。通过将算法描述与底层硬件解耦，Heterosys 集成了三个核心组件：用于自动重构与选择性交由 CPU 执行的 HeteroRefactor、用于频率驱动架构优化的 Adroit，以及用于高层次物理综合与布局规划的 RapidIR。研究结果表明，该体系可带来 30% 至超过 100% 的频率提升、最高 90% 的资源节省，并将人工代码工作量降低 51%，显著降低异构计算的使用门槛。"
   - pdf: "research-papers/10.1145-3609335.pdf"
     titleStart:
       en: "TAPA: A Scalable Task-Parallel Dataflow Programming Framework for Modern FPGAs with Co-Optimization of HLS and Physical"

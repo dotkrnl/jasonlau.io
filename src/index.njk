@@ -49,6 +49,28 @@ layout: base.njk
         <article>
           <div class="grid grid-cols-1 gap-2 md:grid-cols-12">
             <div class="md:col-span-10">
+              {% if pub.translationPdf and siteView.locale == "cn" %}
+              <h3 class="mb-1 text-lg font-bold leading-snug">
+                <a href="{{ pub.translationPdf }}" class="paper-title button-underline group cursor-pointer"
+                   data-pdf="{{ pub.translationPdf }}" data-alt-pdf="{{ pub.pdf }}">
+                  {{ pub.titleStartCn }}<span class="whitespace-nowrap">{{ pub.titleEndCn }}（中文翻译）
+                    <svg aria-hidden="true" class="inline-flex h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                  </span>
+                </a>
+              </h3>
+              <h3 class="mb-1 text-base leading-snug text-gray-600">
+                <a href="{{ pub.pdf }}" class="paper-title button-underline group cursor-pointer"
+                   data-pdf="{{ pub.pdf }}" data-alt-pdf="{{ pub.translationPdf }}">
+                  {{ pub.titleStartEn }} <span class="whitespace-nowrap">{{ pub.titleEndEn }}
+                    <svg aria-hidden="true" class="inline-flex h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                  </span>
+                </a>
+              </h3>
+              {% else %}
               <h3 class="mb-1 text-lg font-bold leading-snug">
                 <a href="{{ pub.pdf }}" class="paper-title button-underline group cursor-pointer"
                    data-pdf="{{ pub.pdf }}">
@@ -59,6 +81,12 @@ layout: base.njk
                   </span>
                 </a>
               </h3>
+              {% if siteView.locale == "cn" %}
+              <p class="mb-1 text-sm leading-snug text-gray-500">
+                {{ pub.titleStartEn }} {{ pub.titleEndEn }}
+              </p>
+              {% endif %}
+              {% endif %}
               <p class="pub-authors mb-1 text-sm leading-snug text-gray-800">{{ pub.authors | safe }}</p>
               <div class="pub-venue text-sm uppercase tracking-wide text-gray-500">{{ pub.venue | safe }}</div>
             </div>
@@ -103,6 +131,9 @@ layout: base.njk
   <div class="flex items-center justify-between border-b border-gray-200 bg-white p-4">
     <span class="text-xs font-bold uppercase tracking-widest text-gray-500">{{ ui.paperPreview }}</span>
     <div class="flex items-center gap-4">
+      <button id="switch-btn" class="hidden text-xs font-bold uppercase tracking-widest text-gray-500 transition-colors hover:text-black"
+              data-label-original="{{ ui.switchToOriginal }}" data-label-translation="{{ ui.switchToTranslation }}">
+      </button>
       <a id="download-btn" href="#" download target="_blank" rel="noopener noreferrer"
          aria-label="{{ ui.downloadPaper }}" class="text-gray-500 transition-colors hover:text-black">
         <svg aria-hidden="true" class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -129,12 +160,29 @@ document.addEventListener('DOMContentLoaded', () => {
   const pdfFrame = document.getElementById('pdf-frame');
   const downloadBtn = document.getElementById('download-btn');
   const closeBtn = document.getElementById('close-btn');
+  const switchBtn = document.getElementById('switch-btn');
   const app = document.getElementById('app');
   const mainDiv = document.getElementById('main-div');
   const paperTitles = document.querySelectorAll('.paper-title');
   const allArticles = document.querySelectorAll('#publication-list article');
   const PANEL_TRANSITION_MS = 300;
   let triggerElement = null;
+  let currentPdf = null;
+  let altPdf = null;
+  let showingTranslation = false;
+
+  const updateSwitchBtn = () => {
+    if (!altPdf) {
+      switchBtn.classList.add('hidden');
+      return;
+    }
+    switchBtn.classList.remove('hidden');
+    switchBtn.textContent = showingTranslation
+      ? switchBtn.dataset.labelOriginal
+      : switchBtn.dataset.labelTranslation;
+  };
+
+  const isTranslationPdf = (url) => url && url.endsWith('-cn.pdf');
 
   const closePreview = () => {
     body.classList.remove('pdf-active');
@@ -164,10 +212,25 @@ document.addEventListener('DOMContentLoaded', () => {
     allArticles.forEach(art => art.classList.remove('active-paper'));
     const parentArticle = titleElement.closest('article');
     if (parentArticle) parentArticle.classList.add('active-paper');
+    currentPdf = pdfUrl;
+    altPdf = titleElement.getAttribute('data-alt-pdf') || null;
+    showingTranslation = isTranslationPdf(pdfUrl);
     pdfFrame.src = pdfUrl;
     downloadBtn.href = pdfUrl;
+    updateSwitchBtn();
     closeBtn.focus();
   };
+
+  switchBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const tmp = currentPdf;
+    currentPdf = altPdf;
+    altPdf = tmp;
+    showingTranslation = !showingTranslation;
+    pdfFrame.src = currentPdf;
+    downloadBtn.href = currentPdf;
+    updateSwitchBtn();
+  });
 
   paperTitles.forEach(title => {
     title.addEventListener('click', (e) => {

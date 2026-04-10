@@ -5,10 +5,12 @@ const path = require("path");
 const { execSync } = require("child_process");
 const yaml = require("js-yaml");
 const { buildCvData } = require("../src/_data/site-utils");
+const { generateTeX } = require("../cv/template");
 
 const ROOT = path.resolve(__dirname, "..");
 const CV_DIR = path.join(ROOT, "cv");
 const DATA_OUT = path.join(CV_DIR, "data.json");
+const TEX_OUT = path.join(CV_DIR, "cv.tex");
 const PDF_OUT = {
   en: path.join(CV_DIR, "jason-lau-cv.pdf"),
   cn: path.join(CV_DIR, "jason-lau-cv-cn.pdf"),
@@ -59,16 +61,15 @@ try {
 
 fs.mkdirSync(CV_DIR, { recursive: true });
 
-// Check for typst
+// Check for xelatex
 try {
-  execSync("which typst", { stdio: "ignore" });
+  execSync("which xelatex", { stdio: "ignore" });
 } catch {
-  console.error("Error: typst not found. Install with: brew install typst");
+  console.error("Error: xelatex not found. Install texlive or run: brew install --cask mactex");
   process.exit(1);
 }
 
 // Compile PDF
-const templatePath = path.join(CV_DIR, "template.typ");
 const locales = options.locale ? [options.locale] : ["en", "cn"];
 
 for (const locale of locales) {
@@ -80,7 +81,26 @@ for (const locale of locales) {
 
   fs.writeFileSync(DATA_OUT, JSON.stringify(data, null, 2));
   console.log(`Wrote ${DATA_OUT} for ${locale.toUpperCase()}`);
-  console.log(`Compiling ${locale.toUpperCase()} CV...`);
-  execSync(`typst compile "${templatePath}" "${outputPath}"`, { stdio: "inherit" });
+
+  const texContent = generateTeX(data);
+  fs.writeFileSync(TEX_OUT, texContent);
+  console.log(`Wrote ${TEX_OUT} for ${locale.toUpperCase()}`);
+
+  console.log(`Compiling ${locale.toUpperCase()} CV with XeLaTeX...`);
+  execSync(`cd "${CV_DIR}" && xelatex -interaction=nonstopmode cv.tex`, { stdio: "inherit" });
+  // Second pass for correct page totals (lastpage)
+  execSync(`cd "${CV_DIR}" && xelatex -interaction=nonstopmode cv.tex`, { stdio: "inherit" });
+
+  // Move compiled PDF to output path
+  const compiledPdf = path.join(CV_DIR, "cv.pdf");
+  if (compiledPdf !== outputPath) {
+    fs.renameSync(compiledPdf, outputPath);
+  }
   console.log(`Generated ${outputPath}`);
+
+  // Clean up auxiliary files
+  for (const ext of [".aux", ".log", ".out", ".fls", ".fdb_latexmk", ".synctex.gz"]) {
+    const auxFile = path.join(CV_DIR, `cv${ext}`);
+    if (fs.existsSync(auxFile)) fs.unlinkSync(auxFile);
+  }
 }

@@ -71,12 +71,29 @@
 
 #for (i, pub) in data.publications.enumerate() {
   block(breakable: false)[
-    #grid(
-      columns: (1fr, auto),
-      column-gutter: 8pt,
-      text(weight: "bold", size: 9.5pt, pub.title),
-      if pub.year != "" { align(right, text(size: 9pt, fill: luma(100), pub.year)) },
-    )
+    #if pub.at("hasTranslation", default: false) and data.locale == "cn" {
+      grid(
+        columns: (1fr, auto),
+        column-gutter: 8pt,
+        text(weight: "bold", size: 9.5pt, pub.titleCn + "（中文翻译）"),
+        if pub.year != "" { align(right, text(size: 9pt, fill: luma(100), pub.year)) },
+      )
+      v(-2pt)
+      text(size: 9pt, fill: luma(100), pub.titleEn)
+      linebreak()
+    } else {
+      grid(
+        columns: (1fr, auto),
+        column-gutter: 8pt,
+        text(weight: "bold", size: 9.5pt, pub.title),
+        if pub.year != "" { align(right, text(size: 9pt, fill: luma(100), pub.year)) },
+      )
+      if pub.at("titleEn", default: none) != none {
+        v(-2pt)
+        text(size: 9pt, fill: luma(100), pub.titleEn)
+        linebreak()
+      }
+    }
     #v(-2pt)
     #text(size: 9pt, fill: luma(60), pub.authors)
     #linebreak()

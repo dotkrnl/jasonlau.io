@@ -91,10 +91,21 @@ function buildLocalizedSite(rawSite, locale, pageKey) {
       ...link,
       url: link.cv ? rawSite.cv.files[locale] : link.url,
     })),
-    publications: site.publications.map((publication) => ({
-      ...publication,
-      pdf: toRootRelative(publication.pdf),
-    })),
+    publications: site.publications.map((publication, index) => {
+      const rawPub = rawSite.publications[index];
+      const result = {
+        ...publication,
+        pdf: toRootRelative(publication.pdf),
+        titleStartEn: localizeValue(rawPub.titleStart, "en"),
+        titleEndEn: localizeValue(rawPub.titleEnd, "en"),
+      };
+      if (rawPub.translationPdf) {
+        result.translationPdf = toRootRelative(rawPub.translationPdf);
+        result.titleStartCn = localizeValue(rawPub.titleStart, "cn");
+        result.titleEndCn = localizeValue(rawPub.titleEnd, "cn");
+      }
+      return result;
+    }),
     locales: site.locales.map((entry) => ({
       ...entry,
       url: getPageUrl(pageKey, entry.code),
@@ -154,13 +165,24 @@ function buildCvData(rawSite, locale, options = {}) {
           location: merged.location || "",
         };
       }),
-    publications: site.publications.map((publication) => ({
-      title: `${publication.titleStart}${publicationTitleSeparator}${publication.titleEnd}`.trim(),
-      authors: stripHtmlForCv(publication.authors),
-      venue: stripHtmlForCv(publication.venue),
-      year: publication.year || publication.cvYear || "",
-      badges: publication.badges || [],
-    })),
+    publications: site.publications.map((publication, index) => {
+      const rawPub = rawSite.publications[index];
+      const result = {
+        title: `${publication.titleStart}${publicationTitleSeparator}${publication.titleEnd}`.trim(),
+        authors: stripHtmlForCv(publication.authors),
+        venue: stripHtmlForCv(publication.venue),
+        year: publication.year || publication.cvYear || "",
+        badges: publication.badges || [],
+      };
+      if (locale === "cn") {
+        result.titleEn = `${localizeValue(rawPub.titleStart, "en")} ${localizeValue(rawPub.titleEnd, "en")}`.trim();
+      }
+      if (rawPub.translationPdf) {
+        result.titleCn = `${localizeValue(rawPub.titleStart, "cn")}${publicationTitleSeparator}${localizeValue(rawPub.titleEnd, "cn")}`.trim();
+        result.hasTranslation = true;
+      }
+      return result;
+    }),
     projects: omitProjectsSkills ? [] : site.projects,
     skills: omitProjectsSkills ? [] : site.skills,
     awards: site.awards,

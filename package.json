@@ -4,6 +4,7 @@
   "scripts": {
     "build": "npx @11ty/eleventy",
     "serve": "npx @11ty/eleventy --serve",
+    "test": "node --test",
     "cv": "node scripts/generate-cv.js",
     "update-citations": "node scripts/update-citations.js",
     "deploy": "npm run update-citations && npm run cv && npm run build && npx wrangler deploy"

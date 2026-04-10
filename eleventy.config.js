@@ -18,6 +18,7 @@ module.exports = function (eleventyConfig) {
 
   // CV PDF lives in cv/, copy to site root
   eleventyConfig.addPassthroughCopy({ "cv/jason-lau-cv.pdf": "jason-lau-cv.pdf" });
+  eleventyConfig.addPassthroughCopy({ "cv/jason-lau-cv-cn.pdf": "jason-lau-cv-cn.pdf" });
 
   // Build Tailwind CSS after Eleventy generates HTML (so it scans final output)
   eleventyConfig.on("eleventy.after", () => {

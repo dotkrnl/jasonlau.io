@@ -1,20 +1,12 @@
 ---
 layout: base.njk
-title: "Jason Lau - Digital Media Designer"
-description: "Jason Lau is a multidisciplinary designer, mainly creating projects in the form of graphical expression."
-keywords: "Jason Lau, designer, art, graphics, creative, digital art, illustrations"
-h1: "Jason Lau - A Multidisciplinary Designer"
-printSubtitle: "Multidisciplinary Designer"
-activeRole: "Designer"
-tagline: "a multidisciplinary graphic designer aiming to make technologies expressive."
-introMaxWidthClass: "max-w-[580px]"
-permalink: "designer.html"
 ---
 
 <main id="main-content" class="grid grid-cols-1 gap-x-4 gap-y-16 md:grid-cols-12">
   <aside class="order-2 flex flex-col md:max-w-[400px] gap-16 md:col-span-4 md:pl-24 2xl:col-span-3 2xl:-mt-[140px]">
     <section>
-      {% set designerEdu = site.education | selectattr("designer") | list %}
+      {% set designerEdu = siteView.education | selectattr("designer") | list %}
+      {% set works = pageContent.designWorks %}
       {% for edu in designerEdu %}
       <div class="mb-8">
         <div class="font-bold">{{ edu.degree }}</div>
@@ -26,7 +18,7 @@ permalink: "designer.html"
       </div>
       {% endfor %}
       <div>
-        {% for edu in site.education %}
+        {% for edu in siteView.education %}
         {% if edu.designerLine %}
         <div class="text-gray-800">{{ edu.designerLine }}</div>
         {% endif %}
@@ -40,98 +32,92 @@ permalink: "designer.html"
 
       <section class="col-span-1 grid gap-x-12 gap-y-12 md:col-span-6">
         <article class="col-span-1 mb-6 h-auto w-full md:col-span-6">
-          <video aria-label="Conceptual book library animation" class="h-auto w-full rounded-lg shadow-lg" autoplay loop muted playsinline preload="metadata">
-            <source src="design-works/book-ocean.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+          <video aria-label="{{ works.bookOcean.alt }}" class="h-auto w-full rounded-lg shadow-lg" autoplay loop muted playsinline preload="metadata">
+            <source src="/design-works/book-ocean.mp4" type="video/mp4">
+            {{ ui.browserDoesNotSupportVideo }}
           </video>
           <h3 class="mt-4 text-center text-sm">
-            Conceptual book library for readers to share their notes written virtually on the book pages.
+            {{ works.bookOcean.caption }}
           </h3>
         </article>
         <article class="col-span-1 mb-6 h-auto w-full md:col-span-6">
-          <img src="design-works/google-chart.png"
-               alt="Heatmap showing the distribution of latency over time."
+          <img src="/design-works/google-chart.png"
+               alt="{{ works.googleChart.alt }}"
                class="h-auto w-full rounded-lg shadow-lg">
-          <h3 class="mt-4 text-center text-sm">Heatmap showing distribution over time. Used by Google Cloud.</h3>
+          <h3 class="mt-4 text-center text-sm">{{ works.googleChart.caption }}</h3>
         </article>
       </section>
 
       <section class="col-span-1 grid gap-x-12 gap-y-6 md:col-span-2">
         <article class="col-span-1 mb-6 pl-32 pr-32 md:col-span-2 md:pl-6 md:pr-6">
-          <img src="design-works/rapidstream-logo.png"
-               alt="A logo with a wave-like pattern for the startup RapidStream."
+          <img src="/design-works/rapidstream-logo.png"
+               alt="{{ works.rapidstreamLogo.alt }}"
                class="h-auto w-full" loading="lazy">
         </article>
         <article class="col-span-1 mb-6 pl-32 pr-32 md:col-span-2 md:pl-4 md:pr-4">
-          <img src="design-works/cat-logo.png"
-               alt="A logo showing a cat with a cute heart."
+          <img src="/design-works/cat-logo.png"
+               alt="{{ works.catLogo.alt }}"
                class="h-auto w-full" loading="lazy">
         </article>
         <article class="col-span-1 mb-6 md:col-span-2 md:pb-24 md:pl-2 md:pr-2">
-          <img src="design-works/tex-user-group.jpg"
-               alt="A logo with texts of 'TeX' surrounding the main text for a TeX user group event."
+          <img src="/design-works/tex-user-group.jpg"
+               alt="{{ works.texUserGroup.alt }}"
                class="h-auto w-full" loading="lazy">
-          <h3 class="-mt-6 text-center text-sm md:mt-0">TeX user group event</h3>
+          <h3 class="-mt-6 text-center text-sm md:mt-0">{{ works.texUserGroup.caption }}</h3>
         </article>
       </section>
 
       <article class="col-span-1 mb-6 md:col-span-3">
-        <video aria-label="Impression of seasons animation" class="h-auto w-full rounded-lg shadow-lg" autoplay loop muted playsinline preload="metadata">
-          <source src="design-works/seasons.mp4" type="video/mp4">
-          Your browser does not support the video tag.
+        <video aria-label="{{ works.seasons.alt }}" class="h-auto w-full rounded-lg shadow-lg" autoplay loop muted playsinline preload="metadata">
+          <source src="/design-works/seasons.mp4" type="video/mp4">
+          {{ ui.browserDoesNotSupportVideo }}
         </video>
-        <h3 class="mt-4 text-center text-sm">Impression of seasons</h3>
+        <h3 class="mt-4 text-center text-sm">{{ works.seasons.caption }}</h3>
       </article>
 
       <article class="col-span-1 mb-6 md:col-span-5">
-        <img src="design-works/your-image.jpg"
-             alt="Photo showing a person standing in front of a screen, displaying their face in a digital art style."
+        <img src="/design-works/your-image.jpg"
+             alt="{{ works.yourImage.alt }}"
              class="h-auto w-full rounded-lg shadow-lg" loading="lazy">
-        <h3 class="mt-4 text-center text-sm">How you would see yourself in the AI era?</h3>
+        <h3 class="mt-4 text-center text-sm">{{ works.yourImage.caption }}</h3>
       </article>
 
       <article class="col-span-1 mb-6 md:col-span-4">
-        <img src="design-works/self-image.png"
-             alt="Photo showing how artists depict themselves in their works."
+        <img src="/design-works/self-image.png"
+             alt="{{ works.selfImage.alt }}"
              class="h-auto w-full" loading="lazy">
-        <h3 class="mt-4 text-center text-sm">
-          This is how artists viewed themselves in their works. We averaged their self-portraits.
-          Left: Renaissance, Right: Modern.
-        </h3>
+        <h3 class="mt-4 text-center text-sm">{{ works.selfImage.caption }}</h3>
       </article>
 
       <article class="col-span-1 mb-6 md:col-span-4">
-        <img src="design-works/uploaded-image.jpg"
-             alt="Photo showing how students see themselves by comparing on-site capture and self-uploaded images."
+        <img src="/design-works/uploaded-image.jpg"
+             alt="{{ works.uploadedImage.alt }}"
              class="h-auto w-full" loading="lazy">
-        <h3 class="mt-4 text-center text-sm">
-          This is how young adults viewed themselves in their portraits. We averaged their photos.
-          Left: On-site capture, Right: Self-uploaded.
-        </h3>
+        <h3 class="mt-4 text-center text-sm">{{ works.uploadedImage.caption }}</h3>
       </article>
 
       <article class="col-span-1 mb-6 md:col-span-6">
-        <img src="design-works/tuna-icons.png"
-             alt="Icons designed for TUNA association, featuring the icon for the mirror site, DNS service, NTP service, and the danmaku service."
+        <img src="/design-works/tuna-icons.png"
+             alt="{{ works.tunaIcons.alt }}"
              class="h-auto w-full" loading="lazy">
-        <h3 class="mt-4 text-center text-sm">Icons designed for Tsinghua University TUNA association.</h3>
+        <h3 class="mt-4 text-center text-sm">{{ works.tunaIcons.caption }}</h3>
       </article>
 
       <article class="col-span-1 mb-6 pl-32 pr-32 md:col-span-2 md:pl-0 md:pr-0">
-        <img src="design-works/pika-logo.png"
-             alt="A polyline drawing of a pikachu holding the number 42."
+        <img src="/design-works/pika-logo.png"
+             alt="{{ works.pikaLogo.alt }}"
              class="h-auto w-full" loading="lazy">
-        <h3 class="mt-4 text-center text-sm">Logo 42</h3>
+        <h3 class="mt-4 text-center text-sm">{{ works.pikaLogo.caption }}</h3>
       </article>
 
       <article class="col-span-1 mb-6 grid grid-cols-1 items-end gap-x-12 md:col-span-6 md:grid-cols-2">
         <div class="col-span-1">
-          <img src="design-works/thermal-printer.jpg"
-               alt="An experiment with thermal printer, printing a photo in black and white."
+          <img src="/design-works/thermal-printer.jpg"
+               alt="{{ works.thermalPrinter.alt }}"
                class="h-auto w-full" loading="lazy">
         </div>
         <div class="col-span-1 text-center text-sm md:text-left">
-          An experiment with thermal printer before the popularization of Paperang (喵喵机). It prints out a photo on the go with a QR code attached for the original image, allowing sharing of the photo with someone met on the street.
+          {{ works.thermalPrinter.caption }}
         </div>
       </article>
 

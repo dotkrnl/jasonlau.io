@@ -4,27 +4,46 @@ const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
 const yaml = require("js-yaml");
+const { buildCvData } = require("../src/_data/site-utils");
 
 const ROOT = path.resolve(__dirname, "..");
 const CV_DIR = path.join(ROOT, "cv");
 const DATA_OUT = path.join(CV_DIR, "data.json");
-const PDF_OUT = path.join(CV_DIR, "jason-lau-cv.pdf");
+const PDF_OUT = {
+  en: path.join(CV_DIR, "jason-lau-cv.pdf"),
+  cn: path.join(CV_DIR, "jason-lau-cv-cn.pdf"),
+};
 
-// Strip HTML tags from a string
-function stripHtml(str) {
-  return str.replace(/<[^>]*>/g, "");
+const args = process.argv.slice(2);
+const options = {
+  locale: null,
+  omitProjectsSkills: false,
+  output: null,
+};
+
+for (let index = 0; index < args.length; index += 1) {
+  const arg = args[index];
+
+  if (arg === "--locale") {
+    options.locale = args[index + 1] || null;
+    index += 1;
+    continue;
+  }
+
+  if (arg === "--output") {
+    options.output = args[index + 1] || null;
+    index += 1;
+    continue;
+  }
+
+  if (arg === "--omit-projects-skills") {
+    options.omitProjectsSkills = true;
+  }
 }
 
-// Strip HTML recursively from strings in an object/array
-function stripHtmlDeep(obj) {
-  if (typeof obj === "string") return stripHtml(obj);
-  if (Array.isArray(obj)) return obj.map(stripHtmlDeep);
-  if (obj && typeof obj === "object") {
-    const out = {};
-    for (const [k, v] of Object.entries(obj)) out[k] = stripHtmlDeep(v);
-    return out;
-  }
-  return obj;
+if (options.locale && !["en", "cn"].includes(options.locale)) {
+  console.error(`Unsupported locale: ${options.locale}`);
+  process.exit(1);
 }
 
 // Read site data (single source of truth)
@@ -38,58 +57,7 @@ try {
   process.exit(1);
 }
 
-// Apply developer overrides for CV entries
-function applyOverrides(entry) {
-  const dev = typeof entry.developer === "object" ? entry.developer : {};
-  return { ...entry, ...dev };
-}
-
-// Combine all data, stripping HTML
-const data = stripHtmlDeep({
-  name: site.name,
-  phone: site.phone,
-  email: site.email,
-  github: site.github,
-  education: site.education
-    .filter((e) => e.cv)
-    .map((e) => {
-      const merged = applyOverrides(e);
-      return {
-        degree: merged.degree,
-        school: merged.school,
-        time: merged.time,
-        details: merged.details || [],
-      };
-    }),
-  experience: site.experience
-    .filter((e) => e.cv)
-    .map((e) => {
-      const merged = applyOverrides(e);
-      return {
-        title: merged.title,
-        org: merged.org,
-        time: merged.time,
-        desc: merged.desc,
-        location: merged.location || "",
-      };
-    }),
-  publications: site.publications.map((p) => ({
-    title: `${p.titleStart} ${p.titleEnd}`,
-    authors: p.authors,
-    venue: p.venue,
-    year: p.year || p.cvYear || "",
-    badges: p.badges || [],
-  })),
-  projects: site.projects,
-  skills: site.skills,
-  awards: site.awards,
-  services: site.services,
-  reviews: site.reviews,
-});
-
 fs.mkdirSync(CV_DIR, { recursive: true });
-fs.writeFileSync(DATA_OUT, JSON.stringify(data, null, 2));
-console.log(`Wrote ${DATA_OUT}`);
 
 // Check for typst
 try {
@@ -101,7 +69,18 @@ try {
 
 // Compile PDF
 const templatePath = path.join(CV_DIR, "template.typ");
-console.log("Compiling PDF...");
-execSync(`typst compile "${templatePath}" "${PDF_OUT}"`, { stdio: "inherit" });
-console.log(`Generated ${PDF_OUT}`);
+const locales = options.locale ? [options.locale] : ["en", "cn"];
 
+for (const locale of locales) {
+  const data = buildCvData(site, locale, {
+    omitProjectsSkills: options.omitProjectsSkills,
+  });
+  const outputPath =
+    locales.length === 1 && options.output ? path.resolve(ROOT, options.output) : PDF_OUT[locale];
+
+  fs.writeFileSync(DATA_OUT, JSON.stringify(data, null, 2));
+  console.log(`Wrote ${DATA_OUT} for ${locale.toUpperCase()}`);
+  console.log(`Compiling ${locale.toUpperCase()} CV...`);
+  execSync(`typst compile "${templatePath}" "${outputPath}"`, { stdio: "inherit" });
+  console.log(`Generated ${outputPath}`);
+}

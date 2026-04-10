@@ -5,5 +5,4 @@ _site/
 .env
 .env.local
 .wrangler/
-cv/data.json
 .claude/

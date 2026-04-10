@@ -1,31 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ lang }}">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{ description }}">
     <meta name="keywords" content="{{ keywords }}">
     <title>{{ title }}</title>
-    {% set canonicalPath = permalink | replace("index.html", "") %}
-    <link rel="canonical" href="{{ site.url }}/{{ canonicalPath }}">
+    {% set canonicalPath = siteView.currentUrl %}
+    <link rel="canonical" href="{{ siteView.url }}{{ canonicalPath }}">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ site.url }}/{{ canonicalPath }}">
+    <meta property="og:url" content="{{ siteView.url }}{{ canonicalPath }}">
     <meta property="og:title" content="{{ title }}">
     <meta property="og:description" content="{{ description }}">
-    <meta property="og:image" content="{{ site.url }}/profile-picture.png">
-    <meta property="og:image:alt" content="Profile picture of {{ site.name }}">
+    <meta property="og:image" content="{{ siteView.url }}/profile-picture.png">
+    <meta property="og:image:alt" content="Profile picture of {{ siteView.name }}">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:image" content="{{ site.url }}/profile-picture.png">
+    <meta name="twitter:image" content="{{ siteView.url }}/profile-picture.png">
+    {% for localeItem in siteView.locales %}
+    <link rel="alternate" hreflang="{{ localeItem.htmlLang }}" href="{{ siteView.url }}{{ localeItem.url }}">
+    {% endfor %}
+    <link rel="alternate" hreflang="x-default" href="{{ siteView.url }}/">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
-      "name": "{{ site.name }}",
-      "url": "{{ site.url }}",
-      "image": "{{ site.url }}/profile-picture.png",
-      "email": "{{ site.email }}",
+      "name": "{{ siteView.name }}",
+      "url": "{{ siteView.url }}",
+      "image": "{{ siteView.url }}/profile-picture.png",
+      "email": "{{ siteView.email }}",
       "sameAs": [{% set comma = joiner(", ") %}
-        {% for link in site.navLinks %}{% if link.external and link.url and link.url.startsWith("https://") %}{{ comma() }}"{{ link.url }}"{% endif %}{% endfor %}
+        {% for link in siteView.navLinks %}{% if link.external and link.url and link.url.startsWith("https://") %}{{ comma() }}"{{ link.url }}"{% endif %}{% endfor %}
       ]
     }
     </script>
@@ -36,45 +40,34 @@
     <link rel="manifest" href="/site.webmanifest">
   </head>
   <body class="min-h-screen overflow-x-hidden px-8 py-6 font-sans antialiased leading-snug text-justify hyphens-auto text-black bg-white md:p-12 md:text-left md:hyphens-none selection:bg-black selection:text-white">
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-white focus:px-4 focus:py-2 focus:text-black focus:shadow-lg">Skip to main content</a>
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-white focus:px-4 focus:py-2 focus:text-black focus:shadow-lg">{{ ui.skipToContent }}</a>
     <div id="app" class="relative w-full">
     <header class="relative grid grid-cols-1 gap-y-8 mb-12 md:grid-cols-12 md:gap-x-12 md:mb-24">
       <div class="order-2 col-span-4 flex flex-col justify-between md:order-1 md:col-span-7 2xl:col-span-9">
         <div class="print-header hidden" aria-hidden="true">
-          <div class="print-name">{{ site.name }}</div>
+          <div class="print-name">{{ siteView.name }}</div>
           <div class="print-subtitle">{{ printSubtitle | default("") }}</div>
         </div>
         <div class="{{ introMaxWidthClass | default('max-w-[620px]') }} text-2xl font-light leading-tight text-black text-left hyphens-none intro-text">
           <h1 class="sr-only">{{ h1 }}</h1>
-          <span class="font-bold">{{ site.name }}</span> is a
-          <nav class="inline">
-            {% for role in site.roles %}
-              {%- if role.name == activeRole -%}
-                <span class="role-link role-active border-b-2 border-black font-bold" aria-current="page">{{ role.name }}</span>
-              {%- else -%}
-                <a href="{{ role.url }}" class="role-link role-inactive border-b-2 border-gray-500 text-gray-500 hover:text-black">{{ role.name }}</a>
-              {%- endif -%}
-              {%- if loop.index == 1 %},
-              {% elif loop.index == 2 %}, and
-              {% endif -%}
-            {% endfor %}</nav>,
-          <span class="inline">{{ tagline | safe }}</span>
+          <span class="font-bold">{{ siteView.name }}</span>{% if locale == "cn" %}{{ ui.personIntroLead }}{% else %} {{ ui.personIntroLead }} {% endif %}<nav class="inline">{% for role in siteView.roles -%}{%- if role.name == activeRole -%}<span class="role-link role-active border-b-2 border-black font-bold" aria-current="page">{{ role.name }}</span>{%- else -%}<a href="{{ role.url }}" class="role-link role-inactive border-b-2 border-gray-500 text-gray-500 hover:text-black">{{ role.name }}</a>{%- endif -%}{%- if not loop.last and loop.revindex > 2 -%}{{ ui.roleSeparator }}{%- elif not loop.last and loop.revindex == 2 -%}{{ ui.roleFinalSeparator }}{%- endif -%}{%- endfor %}</nav>{{ ui.afterRolesPunctuation }}<span class="inline">{% if locale != "cn" %} {% endif %}{{ tagline | safe }}</span>
         </div>
       </div>
       <div class="order-1 col-span-4 flex justify-start -ml-[30px] -mt-5 md:order-2 md:col-span-4 md:justify-end md:ml-0 md:mt-0 xl:-mr-[50px] 2xl:col-span-2 2xl:-mr-20">
-        <img src="profile-picture.png" alt="{{ site.name }}" width="320" height="360"
+        <img src="/profile-picture.png" alt="{{ siteView.name }}" width="320" height="360"
              class="h-40 w-40 object-contain md:h-auto md:w-full md:max-w-[200px]">
       </div>
       <div class="print-contact hidden" aria-hidden="true">
-        <div><strong>Phone:</strong> {{ site.phone }}</div>
-        <div><strong>Email:</strong> {{ site.email }}</div>
-        <div><strong>GitHub:</strong> {{ site.github }}</div>
+        <div><strong>Phone:</strong> {{ siteView.phone }}</div>
+        <div><strong>Email:</strong> {{ siteView.email }}</div>
+        <div><strong>GitHub:</strong> {{ siteView.github }}</div>
       </div>
-      <nav aria-label="External links" class="nav-external absolute right-0 top-0 order-3 text-right md:relative md:right-auto md:top-auto md:col-span-1">
+      <div class="absolute right-0 top-0 order-3 text-right md:relative md:right-auto md:top-auto md:col-span-1">
+      <nav aria-label="{{ ui.externalLinksAriaLabel }}" class="nav-external">
         <ul>
-          {% set emailAddr = email | default(site.email) %}
-          {% for link in site.navLinks %}
-          {% set linkUrl = ("mailto:" + emailAddr) if not link.external and link.label == "Email" else link.url %}
+          {% set emailAddr = email | default(siteView.email) %}
+          {% for link in siteView.navLinks %}
+          {% set linkUrl = ("mailto:" + emailAddr) if link.email else link.url %}
           <li class="flex justify-end">
             <a href="{{ linkUrl }}"
                {% if link.external %}target="_blank" rel="noopener noreferrer"{% endif %}
@@ -83,18 +76,31 @@
               <svg aria-hidden="true" class="h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
               </svg>
-            </a>{% if link.external %}<span class="sr-only"> (opens in new tab)</span>{% endif %}
+            </a>{% if link.external %}<span class="sr-only"> {{ ui.opensInNewTab }}</span>{% endif %}
           </li>
+          {% endfor %}
+          {% for localeItem in siteView.locales %}
+          {% if not localeItem.isCurrent %}
+          <li class="flex justify-end">
+            <a href="{{ localeItem.url }}" class="button-underline group inline-flex items-center gap-2">
+              {{ localeItem.label }}
+              <svg aria-hidden="true" class="h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </a>
+          </li>
+          {% endif %}
           {% endfor %}
         </ul>
       </nav>
+      </div>
     </header>
 
     {{ content | safe }}
 
     </div>{# close #app #}
     <footer class="mt-24 border-t border-gray-100 pt-12 text-center md:text-left">
-      <p class="text-xs uppercase tracking-widest text-gray-500">&copy; {{ site.copyright }} {{ site.name }}. Designed by {{ site.name }}.</p>
+      <p class="text-xs uppercase tracking-widest text-gray-500">&copy; {{ siteView.copyright }} {{ siteView.name }}. {% if locale == "cn" %}{{ ui.designedBy }}.{% else %}{{ ui.designedBy }} {{ siteView.name }}.{% endif %}</p>
     </footer>
   </body>
 </html>

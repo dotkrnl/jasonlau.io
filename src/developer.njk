@@ -1,26 +1,18 @@
 ---
 layout: base.njk
-title: "Jason Lau - Full-Stack Developer"
-description: "Jason Lau is a full-stack developer specializing in Hardware Design, Compiler, Devops, HPC, Algorithm, and Web Frontend and Backend."
-keywords: "Jason Lau, Developer, Hardware Engineer, Jump Trading, RapidStream, Google, FPGA, HLS, C++, Python, System Architecture, AMD, Xilinx"
-h1: "Jason Lau - A Full-Stack Developer"
-printSubtitle: "Full-Stack Developer"
-activeRole: "Developer"
-tagline: "who has full-stack expertise in Hardware Design, Compiler, Devops, HPC, Algorithm, and Web Frontend and Backend."
-permalink: "developer.html"
 ---
 
 {% from "macros.njk" import sectionHeading, educationList %}
 <main id="main-content" class="grid grid-cols-1 gap-y-16 md:grid-cols-12 md:gap-x-12">
   <aside class="order-2 flex flex-col md:max-w-[400px] gap-16 md:pr-16 md:order-1 md:col-span-4 lg:-mt-[120px] xl:-mt-[140px] 2xl:col-span-3">
     <section>
-      {{ sectionHeading("Education") }}
-{{ educationList(site.education | selectattr("developer") | list, "developer") }}
+      {{ sectionHeading(pageContent.headings.education) }}
+{{ educationList(siteView.education | selectattr("developer") | list, "developer") }}
     </section>
 
     <section>
-      {{ sectionHeading("Technical Skills") }}
-      {% for skill in site.skills %}
+      {{ sectionHeading(pageContent.headings.technicalSkills) }}
+      {% for skill in siteView.skills %}
       <div{% if not loop.last %} class="mb-6"{% endif %}>
         <h3 class="font-bold">{{ skill.category }}</h3>
         <p class="text-sm leading-relaxed text-gray-800">{{ skill.items }}</p>
@@ -29,9 +21,9 @@ permalink: "developer.html"
     </section>
 
     <section>
-      {{ sectionHeading("Selected Awards") }}
+      {{ sectionHeading(pageContent.headings.selectedAwards) }}
       <ul class="space-y-4 text-gray-800">
-        {% for award in site.awards %}
+        {% for award in siteView.awards %}
         <li>
           <span class="block font-bold text-black">{{ award.name }}</span>
           {{ award.org }}
@@ -44,9 +36,9 @@ permalink: "developer.html"
   <div class="order-1 flex flex-col max-w-[1400px] gap-16 md:order-2 md:col-span-8 2xl:col-span-6 2xl:-mt-[140px]">
     <section class="w-full">
       <div class="mb-8 flex items-baseline justify-between border-t border-gray-100 pt-4 md:border-none md:pt-0">
-        <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-gray-500">Professional Experience</h2>
+        <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-gray-500">{{ pageContent.headings.professionalExperience }}</h2>
       </div>
-      {% set developerExp = site.experience | selectattr("developer") | list %}
+      {% set developerExp = siteView.experience | selectattr("developer") | list %}
       {% for exp in developerExp %}
       <article class="{% if not loop.last %}mb-12{% endif %} group">
         <div class="grid grid-cols-1 gap-2 md:grid-cols-12">
@@ -65,10 +57,10 @@ permalink: "developer.html"
 
     <section class="w-full">
       <div class="mb-8 flex items-baseline justify-between border-t border-gray-100 pt-4 md:border-none md:pt-0">
-        <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-gray-500">Key Engineering &amp; Systems Projects</h2>
+        <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-gray-500">{{ pageContent.headings.projects }}</h2>
       </div>
       <div class="space-y-10">
-        {% for proj in site.projects %}
+        {% for proj in siteView.projects %}
         <article class="group">
           <h3 class="mb-1 text-lg font-bold leading-snug">{{ proj.title }}</h3>
           <div class="mb-1 text-sm leading-snug text-gray-800">

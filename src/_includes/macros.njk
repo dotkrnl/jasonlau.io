@@ -19,16 +19,16 @@
 {% endfor %}
 {%- endmacro -%}
 
-{%- macro servicesItems(services) -%}
+{%- macro servicesItems(services, ui) -%}
 {% for svc in services %}
-        <li><span class="font-bold">{{ svc.role }}</span> of {{ svc.event }}</li>
+        <li><span class="font-bold">{{ svc.role }}</span>{{ " " + ui.serviceConnector + " " if ui.serviceConnector != "，" else ui.serviceConnector }}{{ svc.event }}</li>
 {%- endfor %}
 {%- endmacro -%}
 
-{%- macro reviewsSection(reviews) -%}
+{%- macro reviewsSection(reviews, ui) -%}
       <div class="reviews-summary">
-        <h3 class="font-bold">Reviewed {{ reviews.count }} Papers</h3>
-        <h3 class="mb-2 text-sm text-gray-800">Excluding Subreviews</h3>
+        <h3 class="font-bold">{{ ui.reviewedPapers | replace("{{count}}", reviews.count) }}</h3>
+        <h3 class="mb-2 text-sm text-gray-800">{{ ui.excludingSubreviews }}</h3>
       </div>
       <ul class="list-inside space-y-2 text-sm text-gray-800">
         {% for journal in reviews.journals %}

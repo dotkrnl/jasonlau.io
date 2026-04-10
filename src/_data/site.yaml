@@ -1,34 +1,348 @@
-name: "Jason Lau"
+name:
+  en: "Jason Lau"
+  cn: "刘家昌"
 url: "https://jasonlau.io"
 phone: "(929) 273-1217"
 email: "i@jasonlau.io"
 github: "github.com/dotkrnl"
 copyright: "2026"
-lastmod: "2026-04-09"
+lastmod: "2026-04-10"
 publicationsCitations: "1012"
 
+locales:
+  - code: "en"
+    label: "EN"
+    htmlLang: "en"
+  - code: "cn"
+    label: "中文"
+    htmlLang: "zh-Hans"
+
+ui:
+  skipToContent:
+    en: "Skip to main content"
+    cn: "跳转至主要内容"
+  externalLinksAriaLabel:
+    en: "External links"
+    cn: "外部链接"
+  opensInNewTab:
+    en: "(opens in new tab)"
+    cn: "（在新标签页中打开）"
+  languageSwitcherLabel:
+    en: "Language"
+    cn: "语言"
+  personIntroLead:
+    en: "is a"
+    cn: "是一名"
+  roleSeparator:
+    en: ", "
+    cn: "、"
+  roleFinalSeparator:
+    en: ", and "
+    cn: "与"
+  afterRolesPunctuation:
+    en: ","
+    cn: "，"
+  reviewedPapers:
+    en: "Reviewed {{count}} Papers"
+    cn: "评审过 {{count}} 篇论文"
+  excludingSubreviews:
+    en: "Excluding Subreviews"
+    cn: "不含转审稿件"
+  designedBy:
+    en: "Designed by"
+    cn: "刘家昌设计"
+  publicationTitleSeparator:
+    en: " "
+    cn: ""
+  paperPreview:
+    en: "Paper Preview"
+    cn: "论文预览"
+  paperPreviewDialogLabel:
+    en: "Paper Preview"
+    cn: "论文预览"
+  downloadPaper:
+    en: "Download paper"
+    cn: "下载论文"
+  closePaperPreview:
+    en: "Close paper preview"
+    cn: "关闭论文预览"
+  paperViewerTitle:
+    en: "Paper PDF viewer"
+    cn: "论文 PDF 阅读器"
+  browserDoesNotSupportVideo:
+    en: "Your browser does not support the video tag."
+    cn: "当前浏览器不支持视频播放。"
+  serviceConnector:
+    en: " of "
+    cn: "，"
+
+cv:
+  files:
+    en: "/jason-lau-cv.pdf"
+    cn: "/jason-lau-cv-cn.pdf"
+  meta:
+    documentTitle:
+      en: "Jason Lau - CV"
+      cn: "Jason Lau - 中文简历"
+    educationHeading:
+      en: "Education"
+      cn: "教育背景"
+    professionalExperienceHeading:
+      en: "Professional Experience"
+      cn: "专业经历"
+    publicationsHeading:
+      en: "Publications"
+      cn: "论文发表"
+    coFirstAuthorsNote:
+      en: "* indicates co-first authors"
+      cn: "* 表示共同第一作者"
+    projectsHeading:
+      en: "Key Engineering & Systems Projects"
+      cn: "工程与系统项目"
+    technicalSkillsHeading:
+      en: "Technical Skills"
+      cn: "技术能力"
+    selectedAwardsHeading:
+      en: "Selected Awards"
+      cn: "主要奖项"
+    servicesHeading:
+      en: "Services"
+      cn: "学术服务"
+    reviewsHeading:
+      en: "Reviews"
+      cn: "审稿工作"
+
+pages:
+  researcher:
+    title:
+      en: "Jason Lau - FPGA HLS Researcher"
+      cn: "刘家昌 - FPGA 高层次综合研究员"
+    description:
+      en: "Jason Lau is a researcher interested in High-Level Synthesis, Customized Computing, and FPGA Abstraction."
+      cn: "刘家昌是一位专注于高层次综合、定制计算与 FPGA 抽象的研究者。"
+    keywords:
+      en: "Jason Lau, Researcher, Developer, Design, HLS, High-Level Synthesis, Hardware Engineer, Jump Trading, UCLA, Tsinghua"
+      cn: "刘家昌、研究员、开发者、设计师、高层次综合、硬件工程师、Jump Trading Group、加州大学洛杉矶分校、清华大学"
+    h1:
+      en: "Jason Lau - An FPGA HLS Researcher"
+      cn: "刘家昌 - FPGA 高层次综合研究员"
+    printSubtitle:
+      en: "FPGA HLS Researcher"
+      cn: "FPGA 高层次综合研究员"
+    activeRole:
+      en: "Researcher"
+      cn: "研究员"
+    tagline:
+      en: 'whose research focuses on High-Level Synthesis, Customized Computing, and FPGA Abstraction. Currently creating low-latency hardware logic at <a href="https://www.jumptrading.com" target="_blank">Jump Trading Group</a>.'
+      cn: '研究方向聚焦于高层次综合、定制计算与 FPGA 抽象。目前就职于 <a href="https://www.jumptrading.com" target="_blank">Jump Trading Group</a>，从事超低时延硬件逻辑设计。'
+    email:
+      en: "lau@cs.ucla.edu"
+      cn: "lau@cs.ucla.edu"
+    headings:
+      education:
+        en: "Education"
+        cn: "教育背景"
+      experience:
+        en: "Experience"
+        cn: "工作经历"
+      services:
+        en: "Services"
+        cn: "学术服务"
+      reviews:
+        en: "Reviews"
+        cn: "审稿工作"
+      publications:
+        en: "Publications"
+        cn: "论文发表"
+      citedPrefix:
+        en: "Cited"
+        cn: "引用"
+      citedSuffix:
+        en: "times"
+        cn: "次"
+      coFirstAuthorsNote:
+        en: "* indicates co-first authors"
+        cn: "* 表示共同第一作者"
+  developer:
+    title:
+      en: "Jason Lau - Full-Stack Developer"
+      cn: "刘家昌 - 全栈开发者"
+    description:
+      en: "Jason Lau is a full-stack developer specializing in Hardware Design, Compiler, Devops, HPC, Algorithm, and Web Frontend and Backend."
+      cn: "刘家昌是一位全栈开发者，专长涵盖硬件设计、编译器、开发运维、高性能计算、算法以及 Web 前后端开发。"
+    keywords:
+      en: "Jason Lau, Developer, Hardware Engineer, Jump Trading, RapidStream, Google, FPGA, HLS, C++, Python, System Architecture, AMD, Xilinx"
+      cn: "刘家昌、开发者、硬件工程师、Jump Trading Group、RapidStream、谷歌、FPGA、高层次综合、C++、Python、系统架构、AMD、赛灵思"
+    h1:
+      en: "Jason Lau - A Full-Stack Developer"
+      cn: "刘家昌 - 全栈开发者"
+    printSubtitle:
+      en: "Full-Stack Developer"
+      cn: "全栈开发者"
+    activeRole:
+      en: "Developer"
+      cn: "开发者"
+    tagline:
+      en: "who has full-stack expertise in Hardware Design, Compiler, Devops, HPC, Algorithm, and Web Frontend and Backend."
+      cn: "在硬件设计、编译器、开发运维、高性能计算、算法以及 Web 前端与后端开发等领域具备全栈工程能力。"
+    headings:
+      education:
+        en: "Education"
+        cn: "教育背景"
+      technicalSkills:
+        en: "Technical Skills"
+        cn: "技术能力"
+      selectedAwards:
+        en: "Selected Awards"
+        cn: "主要奖项"
+      professionalExperience:
+        en: "Professional Experience"
+        cn: "专业经历"
+      projects:
+        en: "Key Engineering & Systems Projects"
+        cn: "工程与系统项目"
+  designer:
+    title:
+      en: "Jason Lau - Digital Media Designer"
+      cn: "刘家昌 - 数字媒体设计师"
+    description:
+      en: "Jason Lau is a multidisciplinary designer, mainly creating projects in the form of graphical expression."
+      cn: "刘家昌是一位跨学科设计师，主要以图形化表达为媒介进行创作。"
+    keywords:
+      en: "Jason Lau, designer, art, graphics, creative, digital art, illustrations"
+      cn: "刘家昌、设计师、艺术、图形、创意、数字艺术、插画"
+    h1:
+      en: "Jason Lau - A Multidisciplinary Designer"
+      cn: "刘家昌 - 跨学科设计师"
+    printSubtitle:
+      en: "Multidisciplinary Designer"
+      cn: "跨学科设计师"
+    activeRole:
+      en: "Designer"
+      cn: "设计师"
+    tagline:
+      en: "a multidisciplinary graphic designer aiming to make technologies expressive."
+      cn: "致力于让技术拥有更强表达力的跨学科平面设计师。"
+    introMaxWidthClass: "max-w-[580px]"
+    designWorks:
+      bookOcean:
+        caption:
+          en: "Conceptual book library for readers to share their notes written virtually on the book pages."
+          cn: "面向读者的概念书库设计，允许用户将笔记以虚拟形式直接书写在书页上并分享。"
+        alt:
+          en: "Conceptual book library animation"
+          cn: "概念书库动画"
+      googleChart:
+        caption:
+          en: "Heatmap showing distribution over time. Used by Google Cloud."
+          cn: "展示时间维度分布的热力图，已用于 Google Cloud。"
+        alt:
+          en: "Heatmap showing the distribution of latency over time."
+          cn: "展示延迟随时间分布的热力图。"
+      rapidstreamLogo:
+        alt:
+          en: "A logo with a wave-like pattern for the startup RapidStream."
+          cn: "为初创公司 RapidStream 设计的波纹风格标志。"
+      catLogo:
+        alt:
+          en: "A logo showing a cat with a cute heart."
+          cn: "带有爱心元素的猫咪标志。"
+      texUserGroup:
+        caption:
+          en: "TeX user group event"
+          cn: "TeX 用户组活动"
+        alt:
+          en: "A logo with texts of 'TeX' surrounding the main text for a TeX user group event."
+          cn: "为 TeX 用户组活动设计的视觉标识，主标题周围环绕“TeX”字样。"
+      seasons:
+        caption:
+          en: "Impression of seasons"
+          cn: "四季印象"
+        alt:
+          en: "Impression of seasons animation"
+          cn: "四季印象动画"
+      yourImage:
+        caption:
+          en: "How you would see yourself in the AI era?"
+          cn: "在 AI 时代，你的自我映像是怎么样的？"
+        alt:
+          en: "Photo showing a person standing in front of a screen, displaying their face in a digital art style."
+          cn: "人物站在屏幕前，其面部以数字艺术风格呈现。"
+      selfImage:
+        caption:
+          en: "This is how artists viewed themselves in their works. We averaged their self-portraits. Left: Renaissance, Right: Modern."
+          cn: "这是艺术家如何在作品中观看自身的方式。我们对其自画像进行了平均处理。左为文艺复兴时期，右为现代时期。"
+        alt:
+          en: "Photo showing how artists depict themselves in their works."
+          cn: "展示艺术家如何在作品中描绘自身的图像。"
+      uploadedImage:
+        caption:
+          en: "This is how young adults viewed themselves in their portraits. We averaged their photos. Left: On-site capture, Right: Self-uploaded."
+          cn: "这是年轻人对自身形象的认知。我们对其照片进行了平均处理。左为现场拍摄，右为自行上传。"
+        alt:
+          en: "Photo showing how students see themselves by comparing on-site capture and self-uploaded images."
+          cn: "通过现场拍摄与自行上传图像对比，展示学生如何看待自身形象。"
+      tunaIcons:
+        caption:
+          en: "Icons designed for Tsinghua University TUNA association."
+          cn: "为清华大学 TUNA 协会设计的一组图标。"
+        alt:
+          en: "Icons designed for TUNA association, featuring the icon for the mirror site, DNS service, NTP service, and the danmaku service."
+          cn: "为 TUNA 协会设计的图标，包括镜像站、DNS 服务、NTP 服务与弹幕服务等。"
+      pikaLogo:
+        caption:
+          en: "Logo 42"
+          cn: "Logo 42"
+        alt:
+          en: "A polyline drawing of a pikachu holding the number 42."
+          cn: "一只手持数字 42 的皮卡丘折线图形。"
+      thermalPrinter:
+        caption:
+          en: "An experiment with thermal printer before the popularization of Paperang (喵喵机). It prints out a photo on the go with a QR code attached for the original image, allowing sharing of the photo with someone met on the street."
+          cn: "这是在喵喵机发明之前进行的一项热敏打印实验。设备可即时打印照片，并附带原图二维码，便于与街头偶遇的人分享。"
+        alt:
+          en: "An experiment with thermal printer, printing a photo in black and white."
+          cn: "使用热敏打印机输出黑白照片的实验。"
+
 roles:
-  - name: "Researcher"
-    url: "index.html"
-  - name: "Developer"
-    url: "developer.html"
-  - name: "Designer"
-    url: "designer.html"
+  - key: "researcher"
+    name:
+      en: "Researcher"
+      cn: "研究员"
+  - key: "developer"
+    name:
+      en: "Developer"
+      cn: "开发者"
+  - key: "designer"
+    name:
+      en: "Designer"
+      cn: "设计师"
 
 navLinks:
-  - label: "Scholar"
+  - label:
+      en: "Scholar"
+      cn: "学术"
     url: "https://scholar.google.com/citations?user=8mKFNtUAAAAJ"
     external: true
-  - label: "ORCID"
+  - label:
+      en: "ORCID"
+      cn: "ORCID"
     url: "https://orcid.org/0000-0003-0751-8227"
     external: true
-  - label: "GitHub"
+  - label:
+      en: "GitHub"
+      cn: "GitHub"
     url: "https://github.com/dotkrnl"
     external: true
-  - label: "Email"
+  - label:
+      en: "Email"
+      cn: "邮箱"
+    email: true
     external: false
-  - label: "CV"
-    url: "/jason-lau-cv.pdf"
+  - label:
+      en: "CV"
+      cn: "简历"
+    cv: true
     external: true
 
 # --- Education & Experience ---
@@ -39,331 +353,709 @@ navLinks:
 #   designerLine: "..."       — show as summary line on designer page
 #   cv: true                  — include in generated CV (uses developer overrides)
 education:
-  - degree: "Ph.D. Computer Science"
-    school: "University of California, Los Angeles"
+  - degree:
+      en: "Ph.D. Computer Science"
+      cn: "计算机科学博士"
+    school:
+      en: "University of California, Los Angeles"
+      cn: "加州大学洛杉矶分校"
     time: "2018 – 2024"
     details:
-      - 'Advisor: <a href="https://scholar.google.com/citations?user=UVGe0gQAAAAJ&hl=en">Prof. Jason Cong</a>'
+      - en: 'Advisor: <a href="https://scholar.google.com/citations?user=UVGe0gQAAAAJ&hl=en">Prof. Jason Cong</a>'
+        cn: '导师：<a href="https://scholar.google.com/citations?user=UVGe0gQAAAAJ&hl=en">丛京生教授</a>'
     researcher: true
     developer:
-      time: "2018 – 2024, Major GPA 4.0/4.0"
+      time:
+        en: "2018 – 2024, Major GPA 4.0/4.0"
+        cn: "2018 – 2024，专业 GPA 4.0/4.0"
       details:
-        - "Advisor: Prof. Jason Cong"
-    designerLine: "Ph.D. from UCLA"
+        - en: "Advisor: Prof. Jason Cong"
+          cn: "导师：丛京生教授"
+    designerLine:
+      en: "Ph.D. from UCLA"
+      cn: "加州大学洛杉矶分校博士"
     cv: true
 
-  - degree: "B.Eng. Computer Science"
-    school: "Tsinghua University"
+  - degree:
+      en: "B.Eng. Computer Science"
+      cn: "计算机科学工学学士"
+    school:
+      en: "Tsinghua University"
+      cn: "清华大学"
     time: "2014 – 2018"
     details:
-      - "with a B.A. Design Media Art"
+      - en: "with a B.A. Design Media Art"
+        cn: "兼获数字媒体艺术文学学士学位"
     researcher: true
     developer:
-      time: "2014 – 2018, Major GPA 93/100"
+      time:
+        en: "2014 – 2018, Major GPA 93/100"
+        cn: "2014 – 2018，专业 GPA 93/100"
       details: []
-    designerLine: "B.Eng. from Tsinghua University"
+    designerLine:
+      en: "B.Eng. from Tsinghua University"
+      cn: "清华大学工学学士"
     cv: true
 
-  - degree: "B.A. Digital Media Arts"
-    school: "Tsinghua University, Academy of Arts & Design"
+  - degree:
+      en: "B.A. Digital Media Arts"
+      cn: "数字媒体艺术文学学士"
+    school:
+      en: "Tsinghua University, Academy of Arts & Design"
+      cn: "清华大学美术学院"
     time: "2015 – 2018"
     developer:
-      time: "2015 – 2018, Major GPA 88/100"
+      time:
+        en: "2015 – 2018, Major GPA 88/100"
+        cn: "2015 – 2018，专业 GPA 88/100"
     designer:
-      school: "Tsinghua University"
-      schoolSub: "Academy of Arts & Design"
+      school:
+        en: "Tsinghua University"
+        cn: "清华大学"
+      schoolSub:
+        en: "Academy of Arts & Design"
+        cn: "美术学院"
     cv: true
 
-  - degree: "Exchange Student"
-    school: "Hong Kong University of Science and Technology"
+  - degree:
+      en: "Exchange Student"
+      cn: "交换学生"
+    school:
+      en: "Hong Kong University of Science and Technology"
+      cn: "香港科技大学"
     time: "2016 – 2017"
     developer:
-      time: "2016 – 2017, Major GPA 4.0/4.0"
+      time:
+        en: "2016 – 2017, Major GPA 4.0/4.0"
+        cn: "2016 – 2017，专业 GPA 4.0/4.0"
     cv: true
 
 # --- Experience (unified, page-filtered) ---
 experience:
-  - title: "Hardware Engineer"
+  - title:
+      en: "Hardware Engineer"
+      cn: "硬件工程师"
     org: "Jump Trading Group"
-    time: "2025 – Present"
-    desc: "Research in high-level synthesis algorithms and high-performance designs for high-frequency trading."
+    time:
+      en: "2025 – Present"
+      cn: "2025 – 至今"
+    desc:
+      en: "Research in high-level synthesis algorithms and high-performance designs for high-frequency trading."
+      cn: "从事面向高频交易的高层次综合算法与高性能硬件设计研究。"
     researcher: true
     developer:
-      time: "Aug 2025 – Present"
-      desc: "Researching and developing high-level synthesis algorithms for high-frequency trading, and creating high-performance FPGA and ARM hardware accelerators based on the developed toolchain. Developing low-latency hardware logic and integration for modern multi-die FPGAs to optimize trading performance."
+      time:
+        en: "Aug 2025 – Present"
+        cn: "2025 年 8 月 – 至今"
+      desc:
+        en: "Researching and developing high-level synthesis algorithms for high-frequency trading, and creating high-performance FPGA and ARM hardware accelerators based on the developed toolchain. Developing low-latency hardware logic and integration for modern multi-die FPGAs to optimize trading performance."
+        cn: "负责研究与开发面向高频交易的高层次综合算法，并基于所开发工具链构建高性能 FPGA 与 ARM 硬件加速器。同时面向现代多芯粒 FPGA 研发超低时延硬件逻辑与系统集成方案，以优化交易性能。"
       location: "Sunnyvale, CA"
     cv: true
-  - title: "CTO & Co-Founder"
-    org: "RapidStream Design Automation (Acquired)"
-    time: "2023 – 2025"
-    desc: "Developed compiler solutions for low-latency FPGA accelerators. Led research enabling efficient high-level physical designs from software specifications."
+  - title:
+      en: "CTO & Co-Founder"
+      cn: "首席技术官兼联合创始人"
+    org:
+      en: "RapidStream Design Automation (Acquired)"
+      cn: "RapidStream（已被收购）"
+    time:
+      en: "2023 – 2025"
+      cn: "2023 – 2025"
+    desc:
+      en: "Developed compiler solutions for low-latency FPGA accelerators. Led research enabling efficient high-level physical designs from software specifications."
+      cn: "主导面向低时延 FPGA 加速器的编译器解决方案研发，并推动从软件规格高效生成高层物理设计的关键研究。"
     researcher: true
     developer:
-      title: "Chief Technology Officer & Co-Founder"
-      org: "RapidStream Design Automation (Acquired by a Leading Global HFT Firm)"
-      time: "Jan 2023 – Aug 2025"
-      desc: "Devise the technical strategy and development of compiler solutions that deliver low-latency, high-performance FPGA accelerators. Engineered systems enabling efficient high-level physical designs directly from software specifications, significantly reducing compilation cycles."
+      title:
+        en: "Chief Technology Officer & Co-Founder"
+        cn: "首席技术官兼联合创始人"
+      org:
+        en: "RapidStream Design Automation (Acquired by a Leading Global HFT Firm)"
+        cn: "RapidStream Design Automation（被全球领先高频交易公司收购）"
+      time:
+        en: "Jan 2023 – Aug 2025"
+        cn: "2023 年 1 月 – 2025 年 8 月"
+      desc:
+        en: "Devise the technical strategy and development of compiler solutions that deliver low-latency, high-performance FPGA accelerators. Engineered systems enabling efficient high-level physical designs directly from software specifications, significantly reducing compilation cycles."
+        cn: "负责制定技术战略并推进编译器产品研发，以交付低时延、高性能 FPGA 加速器。构建可直接由软件规格生成高层物理设计的系统，大幅缩短编译迭代周期。"
       location: "Sunnyvale, CA"
     cv: true
-  - title: "Compilation Researcher"
-    org: "AMD Xilinx"
-    time: "2022 (Intern)"
-    desc: "Researched and designed a physical layout aware MLIR flow for AMD Versal devices."
+  - title:
+      en: "Compilation Researcher"
+      cn: "编译研究员"
+    org:
+      en: "AMD Xilinx"
+      cn: "AMD 赛灵思"
+    time:
+      en: "2022 (Intern)"
+      cn: "2022（实习）"
+    desc:
+      en: "Researched and designed a physical layout aware MLIR flow for AMD Versal devices."
+      cn: "研究并设计了面向 AMD Versal 器件、具备物理布局感知能力的 MLIR 编译流程。"
     researcher: true
     developer:
-      title: "Compilation Researcher (Intern)"
-      org: "Advanced Micro Devices (AMD), Xilinx"
-      time: "Jun 2022 – Sep 2022"
-      desc: "Researched and implemented an MLIR compiler that is hardware physical aware for AMD Versal devices, targeting the AI Engine array. Designed flows enabling high-performance application acceleration on next-generation SoCs."
+      title:
+        en: "Compilation Researcher (Intern)"
+        cn: "编译研究员（实习）"
+      org:
+        en: "Advanced Micro Devices (AMD), Xilinx"
+        cn: "超威半导体（AMD）、赛灵思（Xilinx）"
+      time:
+        en: "Jun 2022 – Sep 2022"
+        cn: "2022 年 6 月 – 2022 年 9 月"
+      desc:
+        en: "Researched and implemented an MLIR compiler that is hardware physical aware for AMD Versal devices, targeting the AI Engine array. Designed flows enabling high-performance application acceleration on next-generation SoCs."
+        cn: "研究并实现了面向 AMD Versal 器件、针对 AI Engine 阵列的物理感知 MLIR 编译器，并设计了支持下一代系统级芯片（SoC）高性能应用加速的编译流程。"
       location: "Longmont, CO"
     cv: true
-  - title: "Doctoral Researcher"
-    org: "UCLA VAST Lab"
-    time: "2018 – 2022"
-    desc: "Developed methodologies and tools for high-level synthesis, enabling efficient hardware acceleration for software developers. Focused on lowering barriers to entry for FPGA programming."
+  - title:
+      en: "Doctoral Researcher"
+      cn: "博士研究员"
+    org:
+      en: "UCLA VAST Lab"
+      cn: "加州大学洛杉矶分校 VAST 实验室"
+    time:
+      en: "2018 – 2022"
+      cn: "2018 – 2022"
+    desc:
+      en: "Developed methodologies and tools for high-level synthesis, enabling efficient hardware acceleration for software developers. Focused on lowering barriers to entry for FPGA programming."
+      cn: "开发高层次综合相关方法与工具，使软件开发者能够更高效地构建硬件加速方案，重点降低 FPGA 编程门槛。"
     researcher: true
-  - title: "Cloud Software Engineer (Intern)"
-    org: "Google"
-    time: "Jun 2016 – Sep 2016"
-    desc: 'Created "AwesomeChart," a cloud performance data analytical platform and visualization library capable of rendering millions of time series smoothly. The platform was integrated into Google Cloud Platform and remains in use by customers for monitoring critical metrics.'
+  - title:
+      en: "Cloud Software Engineer (Intern)"
+      cn: "云软件工程师（实习）"
+    org:
+      en: "Google"
+      cn: "谷歌"
+    time:
+      en: "Jun 2016 – Sep 2016"
+      cn: "2016 年 6 月 – 2016 年 9 月"
+    desc:
+      en: 'Created "AwesomeChart," a cloud performance data analytical platform and visualization library capable of rendering millions of time series smoothly. The platform was integrated into Google Cloud Platform and remains in use by customers for monitoring critical metrics.'
+      cn: "开发了云性能数据分析平台与可视化库 “AwesomeChart”，可流畅渲染数百万条时间序列。该平台随后集成至谷歌云平台（Google Cloud Platform），至今仍被客户用于关键指标监控。"
     developer:
       location: "Cambridge, MA"
     cv: true
 
 services:
-  - role: "Technical Program Committee Member"
-    event: "International Conference on Field-Programmable Logic and Applications 2026"
-  - role: "Technical Program Committee Member"
-    event: "IEEE International Conference on Omni-Layer Intelligent Systems 2026"
-  - role: "Technical Program Committee Member"
-    event: "Design Automation Conference 2026"
-  - role: "Technical Program Committee Member"
-    event: "Great Lakes Symposium on VLSI 2026"
-  - role: "Technical Program Committee Member"
-    event: "IEEE International Symposium On Field-Programmable Custom Computing Machines 2026"
-  - role: "Artifact Evaluation Committee Member"
-    event: "IEEE International Symposium On Field-Programmable Custom Computing Machines 2026"
-  - role: "Technical Program Committee Member"
-    event: "International Conference on Field-Programmable Logic and Applications 2025"
-  - role: "Technical Program Committee Member"
-    event: "International Conference on Field-Programmable Logic and Applications 2024"
-  - role: "Technical Program Committee Member"
-    event: "Design Automation Conference 2022"
+  - role:
+      en: "Technical Program Committee Member"
+      cn: "论文评审委员会委员（TPC）"
+    event:
+      en: "International Conference on Field-Programmable Logic and Applications 2026"
+      cn: "现场可编程逻辑与应用国际会议（FPL '26）"
+  - role:
+      en: "Technical Program Committee Member"
+      cn: "论文评审委员会委员（TPC）"
+    event:
+      en: "IEEE International Conference on Omni-Layer Intelligent Systems 2026"
+      cn: "IEEE 全层智能系统国际会议（COINS '26）"
+  - role:
+      en: "Technical Program Committee Member"
+      cn: "论文评审委员会委员（TPC）"
+    event:
+      en: "Design Automation Conference 2026"
+      cn: "设计自动化会议（DAC '26）"
+  - role:
+      en: "Technical Program Committee Member"
+      cn: "论文评审委员会委员（TPC）"
+    event:
+      en: "Great Lakes Symposium on VLSI 2026"
+      cn: "五大湖超大规模集成电路研讨会（GLSVLSI '26）"
+  - role:
+      en: "Technical Program Committee Member"
+      cn: "论文评审委员会委员（TPC）"
+    event:
+      en: "IEEE International Symposium On Field-Programmable Custom Computing Machines 2026"
+      cn: "IEEE 现场可编程定制计算机器国际研讨会（FCCM '26）"
+  - role:
+      en: "Artifact Evaluation Committee Member"
+      cn: "实验复现委员会委员（AE）"
+    event:
+      en: "IEEE International Symposium On Field-Programmable Custom Computing Machines 2026"
+      cn: "IEEE 现场可编程定制计算机器国际研讨会（FCCM '26）"
+  - role:
+      en: "Technical Program Committee Member"
+      cn: "论文评审委员会委员（TPC）"
+    event:
+      en: "International Conference on Field-Programmable Logic and Applications 2025"
+      cn: "现场可编程逻辑与应用国际会议（FPL '25）"
+  - role:
+      en: "Technical Program Committee Member"
+      cn: "论文评审委员会委员（TPC）"
+    event:
+      en: "International Conference on Field-Programmable Logic and Applications 2024"
+      cn: "现场可编程逻辑与应用国际会议（FPL '24）"
+  - role:
+      en: "Technical Program Committee Member"
+      cn: "论文评审委员会委员（TPC）"
+    event:
+      en: "Design Automation Conference 2022"
+      cn: "设计自动化会议（DAC '22）"
 
 reviews:
   count: 104
   journals:
-    - "ACM Transactions on Architecture and Code Optimization (TACO)"
-    - "ACM Transactions on Design Automation of Electronic Systems (TODAES)"
-    - "ACM Transactions on Reconfigurable Technology and Systems (TRETS)"
-    - "Design Automation Conference (DAC)"
-    - "Field-Programmable Custom Computing Machines (FCCM)"
-    - "Field-Programmable Logic and Applications (FPL)"
-    - "GigaScience"
-    - "IEEE Access"
-    - "IEEE Open Journal of Circuits and Systems (OJCAS)"
-    - "IEEE Transactions on Aerospace and Electronic Systems (TAES)"
-    - "IEEE Transactions on Circuits and Systems I: Regular Papers (TCAS-I)"
-    - "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD)"
-    - "IEEE Transactions on Computers (TC)"
-    - "IEEE Transactions on Computers, Special Issue (TCSI)"
-    - "IEEE Transactions on Industrial Electronics (TIE)"
+    - en: "ACM Transactions on Architecture and Code Optimization (TACO)"
+      cn: "TACO（ACM 体系结构与代码优化汇刊）"
+    - en: "ACM Transactions on Design Automation of Electronic Systems (TODAES)"
+      cn: "TODAES（ACM 电子系统设计自动化汇刊）"
+    - en: "ACM Transactions on Reconfigurable Technology and Systems (TRETS)"
+      cn: "TRETS（ACM 可重构技术与系统汇刊）"
+    - en: "Design Automation Conference (DAC)"
+      cn: "DAC（设计自动化会议）"
+    - en: "Field-Programmable Custom Computing Machines (FCCM)"
+      cn: "FCCM（现场可编程定制计算机器会议）"
+    - en: "Field-Programmable Logic and Applications (FPL)"
+      cn: "FPL（现场可编程逻辑与应用会议）"
+    - en: "GigaScience"
+      cn: "GigaScience"
+    - en: "IEEE Access"
+      cn: "IEEE Access"
+    - en: "IEEE Open Journal of Circuits and Systems (OJCAS)"
+      cn: "OJCAS（IEEE 电路与系统开放期刊）"
+    - en: "IEEE Transactions on Aerospace and Electronic Systems (TAES)"
+      cn: "TAES（IEEE 航空航天与电子系统汇刊）"
+    - en: "IEEE Transactions on Circuits and Systems I: Regular Papers (TCAS-I)"
+      cn: "TCAS-I（IEEE 电路与系统 I：常规论文）"
+    - en: "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD)"
+      cn: "TCAD（IEEE 集成电路与系统计算机辅助设计汇刊）"
+    - en: "IEEE Transactions on Computers (TC)"
+      cn: "TC（IEEE 计算机汇刊）"
+    - en: "IEEE Transactions on Computers, Special Issue (TCSI)"
+      cn: "TCSI（IEEE 计算机汇刊专题）"
+    - en: "IEEE Transactions on Industrial Electronics (TIE)"
+      cn: "TIE（IEEE 工业电子汇刊）"
 
 # Publications use `year` for the web (shown per year group) and `cvYear` as a
 # fallback for the CV only (every paper gets a year). If `year` is present it is
 # used on both web and CV; if only `cvYear` is set, the web shows no year label.
 publications:
   - pdf: "research-papers/10.1109-ICCAD66269.2025.11240757.pdf"
-    titleStart: "Automated Design Space Exploration in High-Level Physical"
-    titleEnd: "Synthesis"
+    titleStart:
+      en: "Automated Design Space Exploration in High-Level Physical"
+      cn: "面向高层物理综合的自动化设计空间"
+    titleEnd:
+      en: "Synthesis"
+      cn: "探索"
     authors: 'Linfeng Du, Jiawei Liang, <span class="font-bold text-black">Jason Lau</span>, Yuze Chi, Yutong Xie, Chunyou Su, Afzal Ahmad, Zifan He, Jake Ke, Jinming Ge, Jason Cong, Wei Zhang, Licheng Guo'
-    venue: "ICCAD '25 - The 2025 IEEE/ACM International Conference On Computer Aided Design"
+    venue:
+      en: "ICCAD '25 - The 2025 IEEE/ACM International Conference On Computer Aided Design"
+      cn: "ICCAD '25（国际计算机辅助设计会议）"
     year: "2025"
-    abstract: "We propose a robust Design Space Exploration (DSE) framework to address the instability and manual complexity of existing High-Level Physical Synthesis (HLPS) for multi-die FPGAs. By automating iterative parameter tuning through physical implementation metrics and tailored heuristics, our framework ensures consistent timing closure and eliminates user intervention. In evaluations on large-scale designs, the framework achieved an average frequency of 311.06 MHz, outperforming the AMD Vitis/Vivado toolchain by 2.42× and leading academic solutions by 1.67×."
+    abstract:
+      en: "We propose a robust Design Space Exploration (DSE) framework to address the instability and manual complexity of existing High-Level Physical Synthesis (HLPS) for multi-die FPGAs. By automating iterative parameter tuning through physical implementation metrics and tailored heuristics, our framework ensures consistent timing closure and eliminates user intervention. In evaluations on large-scale designs, the framework achieved an average frequency of 311.06 MHz, outperforming the AMD Vitis/Vivado toolchain by 2.42× and leading academic solutions by 1.67×."
+      cn: "本文提出一套稳健的设计空间探索（DSE）框架，以解决现有面向多芯粒 FPGA 的高层物理综合（HLPS）在稳定性不足与人工调参复杂方面的问题。该框架基于物理实现指标与定制启发式策略实现迭代参数自动优化，从而稳定实现时序收敛并消除人工调参的需求。在大规模设计评估中，框架取得了 311.06 MHz 的平均频率，性能较 AMD Vitis/Vivado 工具链提升 2.42 倍，较现有学术方案提升 1.67 倍。"
   - pdf: "research-papers/10.1145-3676536.3676649.pdf"
-    titleStart: "RapidStream IR: Infrastructure for FPGA High-Level Physical"
-    titleEnd: "Synthesis"
+    titleStart:
+      en: "RapidStream IR: Infrastructure for FPGA High-Level Physical"
+      cn: "RapidStream IR：面向 FPGA 高层物理综合的基础"
+    titleEnd:
+      en: "Synthesis"
+      cn: "设施"
     authors: '<span class="font-bold text-black">Jason Lau</span>, Yuanlong Xiao, Yutong Xie, Yuze Chi, Linghao Song, Shaojie Xiang, Michael Lo, Zhiru Zhang, Jason Cong, Licheng Guo'
-    venue: "ICCAD '24 - The 43rd IEEE/ACM International Conference on Computer-Aided Design"
+    venue:
+      en: "ICCAD '24 - The 43rd IEEE/ACM International Conference on Computer-Aided Design"
+      cn: "ICCAD '24（国际计算机辅助设计会议）"
     year: "2024"
-    abstract: "We present the concept of high-level physical synthesis (HLPS), and a practical infrastructure for representing the composition of complex FPGA designs and exploring physical optimizations. Our approach introduces a flexible intermediate representation that captures interconnection protocols at arbitrary hierarchical levels, coarse-grained pipelining, and spatial information, enabling the creation of reusable passes for design frequency optimizations. RapidStream IR improves the frequency of a broad set of mixed-source designs by 7% to 62%."
+    abstract:
+      en: "We present the concept of high-level physical synthesis (HLPS), and a practical infrastructure for representing the composition of complex FPGA designs and exploring physical optimizations. Our approach introduces a flexible intermediate representation that captures interconnection protocols at arbitrary hierarchical levels, coarse-grained pipelining, and spatial information, enabling the creation of reusable passes for design frequency optimizations. RapidStream IR improves the frequency of a broad set of mixed-source designs by 7% to 62%."
+      cn: "本文提出高层次物理综合（HLPS）的概念，并构建了一套面向复杂 FPGA 设计组合表达与物理优化探索的实用基础设施。该方法引入了灵活的中间表示，可在任意层级捕捉互连协议、粗粒度流水线以及空间信息，从而支持可复用的频率优化流程。RapidStream IR 在多类 HLS / RTL / IP 混合设计上带来了 7% 至 62% 的频率提升。"
   - pdf: "research-papers/10.1145-3686163.pdf"
-    titleStart: "CHARM 2.0: Composing Heterogeneous Accelerators for Deep Learning on Versal ACAP"
-    titleEnd: "Architecture"
+    titleStart:
+      en: "CHARM 2.0: Composing Heterogeneous Accelerators for Deep Learning on Versal ACAP"
+      cn: "CHARM 2.0：面向 Versal ACAP 深度学习的异构加速器"
+    titleEnd:
+      en: "Architecture"
+      cn: "架构"
     authors: 'Jinming Zhuang, <span class="font-bold text-black">Jason Lau</span>, Hanchen Ye, Zhuoping Yang, Shixin Ji, Jack Lo, Kristof Denolf, Stephen Neuendorffer, Alex Jones, Jingtong Hu, Yiyu Shi, Deming Chen, Jason Cong, Peipei Zhou'
-    venue: 'TRETS ''24 - ACM Transactions on Reconfigurable Technology and Systems, Volume 17, Issue 3, Article No. 51<span class="pub-pages">, Pages 1 - 31</span>'
+    venue:
+      en: 'TRETS ''24 - ACM Transactions on Reconfigurable Technology and Systems, Volume 17, Issue 3, Article No. 51<span class="pub-pages">, Pages 1 - 31</span>'
+      cn: 'TRETS ''24（ACM 可重构技术与系统汇刊），第 17 卷第 3 期，第 51 篇<span class="pub-pages">，第 1 - 31 页</span>'
     cvYear: "2024"
-    abstract: "We propose CHARM, a framework designed to optimize throughput for end-to-end deep learning applications on the AMD/Xilinx Versal ACAP. To overcome the performance bottlenecks caused by executing small matrix multiply (MM) layers on monolithic accelerators, CHARM composes multiple diverse, concurrent accelerator architectures tailored to varied layer sizes. By utilizing analytical models for design space exploration and automated code generation, CHARM achieves throughput gains of up to 32.51x over monolithic designs across models like BERT and ViT."
+    abstract:
+      en: "We propose CHARM, a framework designed to optimize throughput for end-to-end deep learning applications on the AMD/Xilinx Versal ACAP. To overcome the performance bottlenecks caused by executing small matrix multiply (MM) layers on monolithic accelerators, CHARM composes multiple diverse, concurrent accelerator architectures tailored to varied layer sizes. By utilizing analytical models for design space exploration and automated code generation, CHARM achieves throughput gains of up to 32.51x over monolithic designs across models like BERT and ViT."
+      cn: "本文提出 CHARM 框架，用于优化 AMD/Xilinx Versal ACAP 上端到端深度学习应用的吞吐性能。针对单体加速器在执行小规模矩阵乘法层时面临的性能瓶颈，CHARM 根据不同层规模组合多种可并发执行的异构加速架构。借助分析模型进行设计空间探索与自动代码生成，CHARM 在 BERT、ViT 等模型上相较单体设计实现了最高 32.51 倍的吞吐提升。"
   - pdf: "research-papers/thesis.pdf"
-    titleStart: "Enabling Heterogeneous Computing for Software"
-    titleEnd: "Developers"
+    titleStart:
+      en: "Enabling Heterogeneous Computing for Software"
+      cn: "面向软件开发者的异构计算"
+    titleEnd:
+      en: "Developers"
+      cn: "系统"
     authors: '<span class="font-bold text-black">Jason Lau</span> advised by Jason Cong'
-    venue: "Ph.D. Dissertation, University of California, Los Angeles"
+    venue:
+      en: "Ph.D. Dissertation, University of California, Los Angeles"
+      cn: "加州大学洛杉矶分校博士学位论文"
     cvYear: "2024"
-    abstract: "We introduce Heterosys, an end-to-end framework designed to bridge the gap between high-level software and efficient FPGA implementation. By decoupling algorithmic descriptions from underlying hardware, Heterosys utilizes three core components—HeteroRefactor for automated refactoring and selective offloading, Adroit for frequency-driven architectural optimization, and RapidIR for high-level physical synthesis and floorplanning. Our research demonstrates frequency improvements of 30% to over 100%, resource reductions up to 90%, and a 51% decrease in manual code effort, significantly lowering the barrier to entry for heterogeneous computing."
+    abstract:
+      en: "We introduce Heterosys, an end-to-end framework designed to bridge the gap between high-level software and efficient FPGA implementation. By decoupling algorithmic descriptions from underlying hardware, Heterosys utilizes three core components—HeteroRefactor for automated refactoring and selective offloading, Adroit for frequency-driven architectural optimization, and RapidIR for high-level physical synthesis and floorplanning. Our research demonstrates frequency improvements of 30% to over 100%, resource reductions up to 90%, and a 51% decrease in manual code effort, significantly lowering the barrier to entry for heterogeneous computing."
+      cn: "本文提出 Heterosys，一套旨在弥合高层软件与高效 FPGA 实现之间鸿沟的端到端框架。通过将算法描述与底层硬件解耦，Heterosys 集成了三个核心组件：用于自动重构与选择性交由 CPU 执行的 HeteroRefactor、用于频率驱动架构优化的 Adroit，以及用于高层物理综合与布局规划的 RapidIR。研究结果表明，该体系可带来 30% 至超过 100% 的频率提升、最高 90% 的资源节省，并将人工代码工作量降低 51%，显著降低异构计算的使用门槛。"
   - pdf: "research-papers/10.1145-3609335.pdf"
-    titleStart: "TAPA: A Scalable Task-Parallel Dataflow Programming Framework for Modern FPGAs with Co-Optimization of HLS and Physical"
-    titleEnd: "Design"
+    titleStart:
+      en: "TAPA: A Scalable Task-Parallel Dataflow Programming Framework for Modern FPGAs with Co-Optimization of HLS and Physical"
+      cn: "TAPA：面向现代 FPGA 的可扩展任务并行数据流及高层次综合与物理结构协同优化的编程"
+    titleEnd:
+      en: "Design"
+      cn: "框架"
     authors: '<span class="underline">{Licheng Guo*, Yuze Chi*, <span class="font-bold text-black">Jason Lau*</span>}</span>, Linghao Song, Xingyu Tian, Moazin Khatti, Weikang Qiao, Jie Wang, Ecenur Ustun, Zhenman Fang, Zhiru Zhang, Jason Cong'
-    venue: 'TRETS ''23 - ACM Transactions on Reconfigurable Technology and Systems, Volume 16, Issue 4, Article No. 63<span class="pub-pages">, Pages 1 - 31</span>'
+    venue:
+      en: 'TRETS ''23 - ACM Transactions on Reconfigurable Technology and Systems, Volume 16, Issue 4, Article No. 63<span class="pub-pages">, Pages 1 - 31</span>'
+      cn: 'TRETS ''23（ACM 可重构技术与系统汇刊），第 16 卷第 4 期，第 63 篇<span class="pub-pages">，第 1 - 31 页</span>'
     year: "2023"
-    abstract: "We propose TAPA, an end-to-end framework for compiling C++ task-parallel programs into high-frequency FPGA accelerators. By utilizing flexible communication APIs and coarse-grained floorplanning during compilation, TAPA enables accurate pipelining of critical paths and optimizes designs for HBM-based FPGAs. Experimental results across 43 designs demonstrate a 102% average frequency improvement, including successful implementation of previously unroutable designs with minimal resource impact."
+    abstract:
+      en: "We propose TAPA, an end-to-end framework for compiling C++ task-parallel programs into high-frequency FPGA accelerators. By utilizing flexible communication APIs and coarse-grained floorplanning during compilation, TAPA enables accurate pipelining of critical paths and optimizes designs for HBM-based FPGAs. Experimental results across 43 designs demonstrate a 102% average frequency improvement, including successful implementation of previously unroutable designs with minimal resource impact."
+      cn: "本文提出 TAPA，一套将 C++ 任务并行程序编译为高频 FPGA 加速器的端到端框架。通过在编译过程中引入灵活的通信 API 与粗粒度布局规划，TAPA 能够对关键路径进行精确流水化，并针对基于 HBM 的 FPGA 进行优化。在 43 个设计上的实验表明，TAPA 平均带来了 102% 的频率提升，并以极小资源代价成功实现了此前无法布线的设计。"
     badges:
-      - "Cited 50+ times"
+      - en: "Cited 50+ times"
+        cn: "引用 50+ 次"
   - pdf: "research-papers/10.1145-3593025.pdf"
-    titleStart: "RapidStream 2.0: Automated Parallel Implementation of Latency–Insensitive FPGA Designs Through Partial"
-    titleEnd: "Reconfiguration"
+    titleStart:
+      en: "RapidStream 2.0: Automated Parallel Implementation of Latency–Insensitive FPGA Designs Through Partial"
+      cn: "RapidStream 2.0：通过部分重构实现时延无关 FPGA 设计的自动化并行布局"
+    titleEnd:
+      en: "Reconfiguration"
+      cn: "布线"
     authors: 'Licheng Guo, Pongstorn Maidee, Yun Zhou, Chris Lavin, Eddie Hung, Wuxi Li, <span class="font-bold text-black">Jason Lau</span>, Weikang Qiao, Yuze Chi, Linghao Song, Yuanlong Xiao, Alireza Kaviani, Zhiru Zhang, Jason Cong'
-    venue: 'TRETS ''23 - ACM Transactions on Reconfigurable Technology and Systems, Volume 16, Issue 4, Article No. 59<span class="pub-pages">, Pages 1 - 30</span>'
+    venue:
+      en: 'TRETS ''23 - ACM Transactions on Reconfigurable Technology and Systems, Volume 16, Issue 4, Article No. 59<span class="pub-pages">, Pages 1 - 30</span>'
+      cn: 'TRETS ''23（ACM 可重构技术与系统汇刊），第 16 卷第 4 期，第 59 篇<span class="pub-pages">，第 1 - 30 页</span>'
     cvYear: "2023"
-    abstract: "We present RapidStream, a parallelized, physical-integrated compilation framework designed to drastically reduce FPGA compilation cycles. By co-optimizing HLS with back-end physical implementation, RapidStream partitions latency-insensitive C/C++ programs for parallel placement and routing. RapidStream achieves a 5–7× reduction in compile time and up to a 1.3× increase in frequency compared to commercial toolchains."
+    abstract:
+      en: "We present RapidStream, a parallelized, physical-integrated compilation framework designed to drastically reduce FPGA compilation cycles. By co-optimizing HLS with back-end physical implementation, RapidStream partitions latency-insensitive C/C++ programs for parallel placement and routing. RapidStream achieves a 5–7× reduction in compile time and up to a 1.3× increase in frequency compared to commercial toolchains."
+      cn: "本文提出 RapidStream，一套并行化、物理感知的一体化编译框架，旨在显著缩短 FPGA 编译周期。通过联合优化高层次综合与后端物理实现，RapidStream 将时延无关的 C/C++ 程序划分为可并行布局布线的子模块。与商业工具链相比，RapidStream 可将编译时间缩短 5 至 7 倍，并实现最高 1.3 倍的频率提升。"
   - pdf: "research-papers/10.1145-3543622.3573210.pdf"
-    titleStart: "CHARM: Composing Heterogeneous Accelerators for Matrix Multiply on Versal ACAP"
-    titleEnd: "Architecture"
+    titleStart:
+      en: "CHARM: Composing Heterogeneous Accelerators for Matrix Multiply on Versal ACAP"
+      cn: "CHARM：面向 Versal ACAP 矩阵乘法的异构加速器"
+    titleEnd:
+      en: "Architecture"
+      cn: "架构"
     authors: 'Jinming Zhuang, <span class="font-bold text-black">Jason Lau</span>, Hanchen Ye, Zhuoping Yang, Yubo Du, Jack Lo, Kristof Denolf, Stephen Neuendorffer, Alex Jones, Jingtong Hu, Deming Chen, Jason Cong, Peipei Zhou'
-    venue: "FPGA '23 - The 2023 ACM/SIGDA International Symposium on Field Programmable Gate Arrays"
+    venue:
+      en: "FPGA '23 - The 2023 ACM/SIGDA International Symposium on Field Programmable Gate Arrays"
+      cn: "FPGA '23（现场可编程门阵列国际研讨会）"
     cvYear: "2023"
-    abstract: "We propose CHARM, a framework for composing heterogeneous matrix multiply (MM) accelerators to optimize deep learning throughput on platforms like the AMD/Xilinx Versal ACAP. While monolithic accelerators struggle with the small, diverse MM layers found in models like BERT—often achieving less than 5% peak performance—CHARM utilizes analytical models to partition resources and schedule layers across multiple concurrent, specialized architectures. By automating code generation and design space exploration, CHARM achieves up to 32.5x throughput gains over monolithic designs across BERT, ViT, NCF, and MLP benchmarks."
+    abstract:
+      en: "We propose CHARM, a framework for composing heterogeneous matrix multiply (MM) accelerators to optimize deep learning throughput on platforms like the AMD/Xilinx Versal ACAP. While monolithic accelerators struggle with the small, diverse MM layers found in models like BERT—often achieving less than 5% peak performance—CHARM utilizes analytical models to partition resources and schedule layers across multiple concurrent, specialized architectures. By automating code generation and design space exploration, CHARM achieves up to 32.5x throughput gains over monolithic designs across BERT, ViT, NCF, and MLP benchmarks."
+      cn: "本文提出 CHARM 框架，用于在 AMD/Xilinx Versal ACAP 等平台上组合异构矩阵乘法（MM）加速器，以提升深度学习吞吐性能。单体加速器难以高效处理 BERT 等模型中大量规模较小且形态多样的 MM 层，实际性能往往不足峰值的 5%。CHARM 利用分析模型在多种并发的专用架构之间划分资源并调度层执行，并通过自动代码生成与设计空间探索，在 BERT、ViT、NCF 与 MLP 基准上实现最高 32.5 倍吞吐提升。"
     badges:
-      - "Cited 50+ times"
+      - en: "Cited 50+ times"
+        cn: "引用 50+ 次"
   - pdf: "research-papers/10.1145-3530775.pdf"
-    titleStart: "FPGA HLS Today: Successes, Challenges, and"
-    titleEnd: "Opportunities"
+    titleStart:
+      en: "FPGA HLS Today: Successes, Challenges, and"
+      cn: "当今 FPGA 高层次综合：成就、挑战与"
+    titleEnd:
+      en: "Opportunities"
+      cn: "机遇"
     authors: 'Jason Cong, <span class="font-bold text-black">Jason Lau</span>, Gai Liu, Stephen Neuendorffer, Peichen Pan, Kees Vissers, Zhiru Zhang'
-    venue: 'TRETS ''22 - ACM Transactions on Reconfigurable Technology and Systems, Volume 15, Issue 4, Article No. 51<span class="pub-pages">, Pages 1 - 4</span>'
+    venue:
+      en: 'TRETS ''22 - ACM Transactions on Reconfigurable Technology and Systems, Volume 15, Issue 4, Article No. 51<span class="pub-pages">, Pages 1 - 4</span>'
+      cn: 'TRETS ''22（ACM 可重构技术与系统汇刊），第 15 卷第 4 期，第 51 篇<span class="pub-pages">，第 1 - 4 页</span>'
     year: "2022"
-    abstract: "We evaluate the decade-long evolution of FPGA HLS from prototype to industrial deployment across domains like deep learning and genomics. While highlighting HLS successes, we identify critical bottlenecks in clock frequency, system integration, and code legacy, proposing a roadmap for future research centered on open-source infrastructures and standardization."
+    abstract:
+      en: "We evaluate the decade-long evolution of FPGA HLS from prototype to industrial deployment across domains like deep learning and genomics. While highlighting HLS successes, we identify critical bottlenecks in clock frequency, system integration, and code legacy, proposing a roadmap for future research centered on open-source infrastructures and standardization."
+      cn: "本文回顾了 FPGA 高层次综合在过去十年中从原型验证走向工业部署的发展历程，覆盖深度学习、基因组学等多个应用领域。在总结高层次综合成功经验的同时，我们指出其在时钟频率、系统集成以及代码遗留方面的关键瓶颈，并提出了以后续开放基础设施与标准化为核心的研究路线图。"
     badges:
-      - "Cited 250+ times"
+      - en: "Cited 250+ times"
+        cn: "引用 250+ 次"
   - pdf: "research-papers/10.1145-3490422.3502357.pdf"
-    titleStart: "Sextans: A Streaming Accelerator for General-Purpose Sparse-Matrix Dense-Matrix"
-    titleEnd: "Multiplication"
+    titleStart:
+      en: "Sextans: A Streaming Accelerator for General-Purpose Sparse-Matrix Dense-Matrix"
+      cn: "Sextans：面向通用稀疏矩阵与稠密矩阵"
+    titleEnd:
+      en: "Multiplication"
+      cn: "乘法"
     authors: 'Linghao Song, Yuze Chi, Atefeh Sohrabizadeh, Young-kyu Choi, <span class="font-bold text-black">Jason Lau</span>, Jason Cong'
-    venue: "FPGA '22 - The 2022 ACM/SIGDA International Symposium on Field-Programmable Gate Arrays"
+    venue:
+      en: "FPGA '22 - The 2022 ACM/SIGDA International Symposium on Field-Programmable Gate Arrays"
+      cn: "FPGA '22（现场可编程门阵列国际研讨会）"
     cvYear: "2022"
-    abstract: "We present Sextans, a flexible FPGA accelerator for general-purpose SpMM that addresses challenges in random memory access, data movement, and workload balancing. By leveraging HBM and PE-aware scheduling, Sextans enables streaming access and balanced pipelining for arbitrary matrix sizes. Evaluation on 1,400 benchmarks shows that Sextans achieves up to a 2.50x speedup over K80 GPUs, with projected optimizations outperforming V100 GPUs."
+    abstract:
+      en: "We present Sextans, a flexible FPGA accelerator for general-purpose SpMM that addresses challenges in random memory access, data movement, and workload balancing. By leveraging HBM and PE-aware scheduling, Sextans enables streaming access and balanced pipelining for arbitrary matrix sizes. Evaluation on 1,400 benchmarks shows that Sextans achieves up to a 2.50x speedup over K80 GPUs, with projected optimizations outperforming V100 GPUs."
+      cn: "本文提出 Sextans，一种面向通用稀疏矩阵与稠密矩阵乘法（SpMM）的灵活 FPGA 加速器，用于解决随机访存、数据搬运与负载均衡等挑战。通过利用 HBM 与面向处理单元的调度机制，Sextans 能够针对任意矩阵规模实现流式访问与均衡流水。在 1400 个基准上的评估表明，Sextans 相较 K80 GPU 可实现最高 2.50 倍加速，经进一步优化后性能预计可超过 V100 GPU。"
     badges:
-      - "Cited 100+ times"
+      - en: "Cited 100+ times"
+        cn: "引用 100+ 次"
   - pdf: "research-papers/10.1109-TCAD.2022.3216544.pdf"
-    titleStart: "TARO: Automatic Optimization for Free-Running Kernels in FPGA High-Level"
-    titleEnd: "Synthesis"
+    titleStart:
+      en: "TARO: Automatic Optimization for Free-Running Kernels in FPGA High-Level"
+      cn: "TARO：面向 FPGA 高层次综合中无阻塞内核的自动"
+    titleEnd:
+      en: "Synthesis"
+      cn: "优化"
     authors: 'Young-kyu Choi, Yuze Chi, <span class="font-bold text-black">Jason Lau</span>, Jason Cong'
-    venue: "TCAD '22 - IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems"
+    venue:
+      en: "TCAD '22 - IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems"
+      cn: "TCAD '22（IEEE 集成电路与系统计算机辅助设计汇刊）"
     cvYear: "2022"
-    abstract: "We present TARO, an automated framework for applying free-running optimization to HLS-based streaming applications. By regulating tasks via data streams rather than complex global control, TARO simplifies hardware logic while preserving original functionality and performance. On the Alveo U250, TARO achieves an average reduction of 16% in LUTs and 45% in FFs for systolic array designs."
+    abstract:
+      en: "We present TARO, an automated framework for applying free-running optimization to HLS-based streaming applications. By regulating tasks via data streams rather than complex global control, TARO simplifies hardware logic while preserving original functionality and performance. On the Alveo U250, TARO achieves an average reduction of 16% in LUTs and 45% in FFs for systolic array designs."
+      cn: "本文提出 TARO，一套面向高层次综合流式应用的无阻塞自动优化框架。TARO 以数据流而非复杂的全局控制来调度任务，在保持原有功能与性能的同时显著简化硬件逻辑。在 Alveo U250 平台上的实验表明，TARO 可使脉动阵列设计的 LUT 平均减少 16%，FF 平均减少 45%。"
   - pdf: "research-papers/10.1145-3431920.3439289.pdf"
-    titleStart: "AutoBridge: Coupling Coarse-Grained Floorplanning and Pipelining for High-Frequency HLS Design on Multi-Die"
-    titleEnd: "FPGAs"
+    titleStart:
+      en: "AutoBridge: Coupling Coarse-Grained Floorplanning and Pipelining for High-Frequency HLS Design on Multi-Die"
+      cn: "AutoBridge：面向多芯粒 FPGA 高频高层次综合设计的粗粒度布局规划与流水线协同优化"
+    titleEnd:
+      en: "FPGAs"
+      cn: "的自动化框架"
     authors: 'Licheng Guo, Yuze Chi, Jie Wang, <span class="font-bold text-black">Jason Lau</span>, Weikang Qiao, Ecenur Ustun, Zhiru Zhang, Jason Cong'
-    venue: "FPGA '21 - The 2021 ACM/SIGDA International Symposium on Field-Programmable Gate Arrays"
+    venue:
+      en: "FPGA '21 - The 2021 ACM/SIGDA International Symposium on Field-Programmable Gate Arrays"
+      cn: "FPGA '21（现场可编程门阵列国际研讨会）"
     year: "2021"
-    abstract: "We introduce AutoBridge, an automated framework that closes the frequency gap between HLS-generated and handcrafted RTL designs by integrating coarse-grained floorplanning with pipelining during HLS compilation. By providing global layout awareness, AutoBridge identifies and pipelines long interconnects—particularly die-crossing wires in multi-die FPGAs—while preventing routing congestion. Across 43 configurations, AutoBridge increased average frequency from 147 MHz to 297 MHz (102% improvement) and successfully routed previously unroutable designs with negligible resource overhead and zero throughput loss."
+    abstract:
+      en: "We introduce AutoBridge, an automated framework that closes the frequency gap between HLS-generated and handcrafted RTL designs by integrating coarse-grained floorplanning with pipelining during HLS compilation. By providing global layout awareness, AutoBridge identifies and pipelines long interconnects—particularly die-crossing wires in multi-die FPGAs—while preventing routing congestion. Across 43 configurations, AutoBridge increased average frequency from 147 MHz to 297 MHz (102% improvement) and successfully routed previously unroutable designs with negligible resource overhead and zero throughput loss."
+      cn: "本文提出 AutoBridge，一套在高层次综合编译过程中联合粗粒度布局规划与流水线优化的自动化框架，用于缩小高层次综合生成设计与手写 RTL 之间的频率差距。借助全局布局感知能力，AutoBridge 能够识别并流水化长互连，尤其是多芯粒 FPGA 中跨芯粒连线，同时避免路由拥塞。在 43 组配置上的实验表明，AutoBridge 将平均频率从 147 MHz 提升至 297 MHz（提升 102%），并以可忽略的资源开销、零吞吐损失成功完成了此前不可布线设计的实现。"
     badges:
-      - "Best Paper Award"
-      - "Cited 100+ times"
+      - en: "Best Paper Award"
+        cn: "最佳论文奖"
+      - en: "Cited 100+ times"
+        cn: "引用 100+ 次"
   - pdf: "research-papers/10.1109-FCCM51124.2021.00032.pdf"
-    titleStart: "TAPA: Extending High-Level Synthesis for Task-Parallel"
-    titleEnd: "Programs"
+    titleStart:
+      en: "TAPA: Extending High-Level Synthesis for Task-Parallel"
+      cn: "TAPA：面向任务并行程序的高层次综合"
+    titleEnd:
+      en: "Programs"
+      cn: "扩展"
     authors: 'Yuze Chi, Licheng Guo, <span class="font-bold text-black">Jason Lau</span>, Young-kyu Choi, Jie Wang, Jason Cong'
-    venue: "FCCM '21 - The 29th IEEE Annual International Symposium on Field-Programmable Custom Computing Machines"
+    venue:
+      en: "FCCM '21 - The 29th IEEE Annual International Symposium on Field-Programmable Custom Computing Machines"
+      cn: "FCCM '21（现场可编程定制计算机器国际研讨会）"
     cvYear: "2021"
-    abstract: "We present TAPA, an automated HLS framework designed to enhance the productivity of task-parallel FPGA accelerators. While traditional HLS struggles with the complexities of parallel task communication and slow development cycles, TAPA introduces a programmer-friendly C++ interface, unconstrained software simulation, and fast hierarchical code generation. By streamlining the development and verification process, TAPA reduces kernel and host code by 22% and 51% respectively, while accelerating correctness verification by 3.2× and QoR tuning by 6.8×."
+    abstract:
+      en: "We present TAPA, an automated HLS framework designed to enhance the productivity of task-parallel FPGA accelerators. While traditional HLS struggles with the complexities of parallel task communication and slow development cycles, TAPA introduces a programmer-friendly C++ interface, unconstrained software simulation, and fast hierarchical code generation. By streamlining the development and verification process, TAPA reduces kernel and host code by 22% and 51% respectively, while accelerating correctness verification by 3.2× and QoR tuning by 6.8×."
+      cn: "本文提出 TAPA，一套旨在提升任务并行 FPGA 加速器开发效率的自动化高层次综合框架。针对传统高层次综合在并行任务通信复杂、开发周期漫长等方面的局限，TAPA 提供了更友好的 C++ 编程接口、无约束软件仿真以及快速嵌套代码生成能力。通过简化开发与验证流程，TAPA 分别减少了 22% 的计算内核代码与 51% 的主机端代码，并将正确性验证速度提升 3.2 倍、设计质量（QoR）调优速度提升 6.8 倍。"
     badges:
-      - "Cited 50+ times"
+      - en: "Cited 50+ times"
+        cn: "引用 50+ 次"
   - pdf: "research-papers/10.1145-3377811.3380340.pdf"
-    titleStart: "HeteroRefactor: Refactoring for Heterogeneous Computing with"
-    titleEnd: "FPGA"
+    titleStart:
+      en: "HeteroRefactor: Refactoring for Heterogeneous Computing with"
+      cn: "HeteroRefactor：面向异构计算的 FPGA 重构"
+    titleEnd:
+      en: "FPGA"
+      cn: "框架"
     authors: '<span class="underline">{<span class="font-bold text-black">Jason Lau*</span>, Aishwarya Sivaraman*, Qian Zhang*}</span>, Muhammad Ali Gulzar, Jason Cong, Miryung Kim'
-    venue: "ICSE '20 - The ACM/IEEE 42nd International Conference on Software Engineering"
+    venue:
+      en: "ICSE '20 - The ACM/IEEE 42nd International Conference on Software Engineering"
+      cn: "ICSE '20（国际软件工程会议）"
     year: "2020"
-    abstract: "We propose HeteroRefactor, an automated refactoring framework that enables HLS for traditionally incompatible C/C++ programs containing recursion and dynamic memory. By monitoring FPGA-specific dynamic invariants—such as variable bitwidths and data structure sizes—HeteroRefactor automatically transforms kernels into synthesizable, resource-optimized hardware while using selective CPU offloading to ensure correctness. On Xilinx FPGAs, HeteroRefactor reduces BRAM usage by up to 83% and improves clock frequency by 42%, eliminating the need for extensive manual code refactoring by hardware experts."
+    abstract:
+      en: "We propose HeteroRefactor, an automated refactoring framework that enables HLS for traditionally incompatible C/C++ programs containing recursion and dynamic memory. By monitoring FPGA-specific dynamic invariants—such as variable bitwidths and data structure sizes—HeteroRefactor automatically transforms kernels into synthesizable, resource-optimized hardware while using selective CPU offloading to ensure correctness. On Xilinx FPGAs, HeteroRefactor reduces BRAM usage by up to 83% and improves clock frequency by 42%, eliminating the need for extensive manual code refactoring by hardware experts."
+      cn: "本文提出 HeteroRefactor，一套自动化代码重构框架，使包含递归与动态内存等传统上不适用于高层次综合的 C/C++ 程序也能被高效综合。通过监测变量位宽、数据结构规模等 FPGA 特定动态不变量，HeteroRefactor 能够自动将计算内核转换为可综合且资源优化的硬件实现，并借助选择性交由 CPU 执行的机制确保正确性。在 Xilinx FPGA 上，HeteroRefactor 最高可降低 83% 的 BRAM 使用量，并将时钟频率提升 42%，从而避免硬件专家进行大量手工重构。"
   - pdf: "research-papers/10.1109-DAC18072.2020.9218718.pdf"
-    titleStart: "Analysis and Optimization of the Implicit Broadcasts in FPGA HLS to Improve Maximum"
-    titleEnd: "Frequency"
+    titleStart:
+      en: "Analysis and Optimization of the Implicit Broadcasts in FPGA HLS to Improve Maximum"
+      cn: "面向提升设计频率的 FPGA 高层次综合隐式广播分析与"
+    titleEnd:
+      en: "Frequency"
+      cn: "优化"
     authors: '<span class="underline">{Licheng Guo*, <span class="font-bold text-black">Jason Lau*</span></span>}, Yuze Chi, Jie Wang, Cody Hao Yu, Zhe Chen, Zhiru Zhang, Jason Cong'
-    venue: "DAC '20 - The 2020 57th ACM/IEEE Design Automation Conference"
+    venue:
+      en: "DAC '20 - The 2020 57th ACM/IEEE Design Automation Conference"
+      cn: "DAC '20（设计自动化会议）"
     cvYear: "2020"
-    abstract: "We present a study on frequency degradation in HLS-generated FPGA designs, identifying broadcast structures—specifically high-fanout data, flow control, and synchronization signals—as the primary bottlenecks. By addressing HLS compiler limitations through broadcast-aware scheduling, synchronization pruning, and skid-buffer integration, our approach improves the maximum frequency of representative benchmarks by 53% on average, with gains exceeding 100 MHz in several cases."
+    abstract:
+      en: "We present a study on frequency degradation in HLS-generated FPGA designs, identifying broadcast structures—specifically high-fanout data, flow control, and synchronization signals—as the primary bottlenecks. By addressing HLS compiler limitations through broadcast-aware scheduling, synchronization pruning, and skid-buffer integration, our approach improves the maximum frequency of representative benchmarks by 53% on average, with gains exceeding 100 MHz in several cases."
+      cn: "本文系统研究了高层次综合生成 FPGA 设计中的频率下降问题，并指出广播结构，尤其是高扇出数据、流控信号与同步信号，是主要瓶颈。通过引入广播感知调度、同步裁剪以及滑移缓冲器集成等方法以弥补高层次综合编译器局限，我们的方法在代表性基准上平均将最高频率提升 53%，部分案例增幅超过 100 MHz。"
     badges:
-      - "Best Paper Candidate"
-      - "Cited 50+ times"
+      - en: "Best Paper Candidate"
+        cn: "最佳论文提名"
+      - en: "Cited 50+ times"
+        cn: "引用 50+ 次"
   - pdf: "research-papers/10.1109-FCCM.2019.00027.pdf"
-    titleStart: "Hardware Acceleration of Long Read Pairwise Overlapping in Genome"
-    titleEnd: "Sequencing"
+    titleStart:
+      en: "Hardware Acceleration of Long Read Pairwise Overlapping in Genome Sequencing: A Race Between FPGA and"
+      cn: "针对基因组测序中长读成对重叠分析的硬件加速：FPGA 与 GPU 的"
+    titleEnd:
+      en: "GPU"
+      cn: "竞赛"
     authors: '<span class="underline">{Licheng Guo*, <span class="font-bold text-black">Jason Lau*</span></span>}, Zhenyuan Ruan, Peng Wei, Jason Cong'
-    venue: "FCCM '19 - The 2019 IEEE 27th Annual International Symposium on Field-Programmable Custom Computing Machines"
+    venue:
+      en: "FCCM '19 - The 2019 IEEE 27th Annual International Symposium on Field-Programmable Custom Computing Machines"
+      cn: "FCCM '19（现场可编程定制计算机器国际研讨会）"
     year: "2019"
-    abstract: "We present a high-performance acceleration framework for chaining, the primary bottleneck in genome sequencing that accounts for 70% of execution time. By reordering operation sequences for hardware-friendly parallelism and implementing a fine-grained task dispatching scheme, we overcome the limitations of variable input sizes and poor data dependency. Our fully pipelined streaming architecture on FPGA achieves a 28x speedup over the highly-optimized multi-threaded CPU program and 4x over a fully-utilized GPU, providing a quantitative guide for selecting optimal hardware platforms for genomic workloads."
+    abstract:
+      en: "We present a high-performance acceleration framework for chaining, the primary bottleneck in genome sequencing that accounts for 70% of execution time. By reordering operation sequences for hardware-friendly parallelism and implementing a fine-grained task dispatching scheme, we overcome the limitations of variable input sizes and poor data dependency. Our fully pipelined streaming architecture on FPGA achieves a 28x speedup over the highly-optimized multi-threaded CPU program and 4x over a fully-utilized GPU, providing a quantitative guide for selecting optimal hardware platforms for genomic workloads."
+      cn: "本文提出一套面向基因分析链式比对阶段的高性能加速框架，该阶段是基因组测序流程中的核心瓶颈，占总执行时间的 70%。通过对操作序列进行硬件友好的重排，并设计细粒度任务分发机制，我们克服了输入规模变化大与数据依赖关系复杂带来的限制。所提出的 FPGA 全流水流式架构相较高度优化的多线程 CPU 程序实现了 28 倍加速，相较满负载 GPU 实现了 4 倍加速，为基因组工作负载的最佳硬件平台选择提供了量化依据。"
     badges:
-      - "Cited 100+ times"
+      - en: "Cited 100+ times"
+        cn: "引用 100+ 次"
   - pdf: "research-papers/10.1016-j.parco.2018.07.002.pdf"
-    titleStart: "Reproducing Vectorization of the Tersoff Multi-Body Potential on the Intel Skylake and NVIDIA Volta"
-    titleEnd: "Architectures"
+    titleStart:
+      en: "Reproducing Vectorization of the Tersoff Multi-Body Potential on the Intel Skylake and NVIDIA Volta"
+      cn: "在 Intel Skylake 与 NVIDIA Volta 上复现 Tersoff 多体势的向量化"
+    titleEnd:
+      en: "Architectures"
+      cn: "实现"
     authors: '<span class="font-bold text-black">Jason Lau</span>, Yuxuan Li, Lei Xie, Qian Xie, Beichen Li, Yu Chen, Guanyu Feng, Jiping Yu, Xinjian Yu, Miao Wang, Wentao Han, Jidong Zhai'
-    venue: 'Parallel Computing, Volume 78, October 2018<span class="pub-pages">, Pages 47-53</span>'
+    venue:
+      en: 'Parallel Computing, Volume 78, October 2018<span class="pub-pages">, Pages 47-53</span>'
+      cn: 'Parallel Computing（并行计算），第 78 卷，2018 年 10 月<span class="pub-pages">，第 47 - 53 页</span>'
     year: "2018"
-    abstract: "We present an evaluation of the Tersoff potential's performance portability on Intel Skylake and NVIDIA Volta architectures. While the original study claimed high efficiency and scalability through reduced precision and cross-platform vectorization, our experiments with updated datasets show inconsistent results. Analysis reveals that communication bottlenecks, triggered by specific characteristics of the new input data, significantly limit the reproducibility of the original performance gains."
+    abstract:
+      en: "We present an evaluation of the Tersoff potential's performance portability on Intel Skylake and NVIDIA Volta architectures. While the original study claimed high efficiency and scalability through reduced precision and cross-platform vectorization, our experiments with updated datasets show inconsistent results. Analysis reveals that communication bottlenecks, triggered by specific characteristics of the new input data, significantly limit the reproducibility of the original performance gains."
+      cn: "本文评估了 Tersoff 多体势在 Intel Skylake 与 NVIDIA Volta 架构上的性能可移植性。尽管原始研究宣称通过降低精度与跨平台向量化可实现高效率与良好扩展性，但我们基于更新数据集的实验结果并不一致。进一步分析表明，新输入数据的特定特征引发了通信瓶颈，从而显著限制了原有性能收益的可复现性。"
 
 # --- Developer page ---
 projects:
   - title: "TAPA: Task-Parallel FPGA Compiler"
-    role: "Maintainer and Co-Author"
-    desc: "In collaboration with lab members at UCLA, implemented TAPA, a task-parallel FPGA compiler based on Clang that enables high-level programming of FPGAs using C++ dataflow graph. Extended the compiler with nested tasks supporting complex applications. Implemented with lab members a high-performance parallel RTL co-simulation framework, allowing real-world application mixing HLS and RTL designs. Extended a high-level synthesis tool, AutoSA, to generate TAPA programs that provide higher performance than Vitis HLS."
+    role:
+      en: "Maintainer and Co-Author"
+      cn: "维护者与共同作者"
+    desc:
+      en: "In collaboration with lab members at UCLA, implemented TAPA, a task-parallel FPGA compiler based on Clang that enables high-level programming of FPGAs using C++ dataflow graph. Extended the compiler with nested tasks supporting complex applications. Implemented with lab members a high-performance parallel RTL co-simulation framework, allowing real-world application mixing HLS and RTL designs. Extended a high-level synthesis tool, AutoSA, to generate TAPA programs that provide higher performance than Vitis HLS."
+      cn: "与加州大学洛杉矶分校实验室成员合作实现了基于 Clang 的任务并行 FPGA 编译器 TAPA，使开发者能够以 C++ 数据流图形式对 FPGA 进行高层编程。扩展了编译器的嵌套任务能力以支持复杂应用；与团队共同实现高性能并行 RTL 协同仿真框架，使真实应用可以混合使用高层次综合与 RTL 设计；同时扩展了高层次综合工具 AutoSA，使其生成性能优于 Vitis HLS 的 TAPA 应用。"
   - title: "HeteroRefactor: Source-to-Source Code Refactoring"
-    role: "Automated Code Refactoring Developer"
-    desc: "Developed HeteroRefactor, a ROSE-based source-to-source code refactoring tool that automatically transforms C++ code to use heterogeneous programming models, so that the code's recursion, pointers and dynamic memory allocation are translated to vendor tool supported equivalents."
+    role:
+      en: "Automated Code Refactoring Developer"
+      cn: "自动化代码重构开发者"
+    desc:
+      en: "Developed HeteroRefactor, a ROSE-based source-to-source code refactoring tool that automatically transforms C++ code to use heterogeneous programming models, so that the code's recursion, pointers and dynamic memory allocation are translated to vendor tool supported equivalents."
+      cn: "开发了基于 ROSE 的源到源代码重构工具 HeteroRefactor，可自动将 C++ 代码转换为异构编程模型，使递归、指针与动态内存分配等特性被重写为厂商工具可支持的等价实现。"
   - title: "TUNA Open Source Mirror Site"
-    role: "Maintainer and Organizational Chair"
-    desc: "Maintained the largest open-source mirror site in China (mirrors.tuna.tsinghua.edu.cn). Built a high-performance, reliable multi-server system with fast data storage, serving an average throughput of 3.1 Gbps used by users across China."
+    role:
+      en: "Maintainer and Organizational Chair"
+      cn: "维护者与组织负责人"
+    desc:
+      en: "Maintained the largest open-source mirror site in China (mirrors.tuna.tsinghua.edu.cn). Built a high-performance, reliable multi-server system with fast data storage, serving an average throughput of 3.1 Gbps used by users across China."
+      cn: "维护中国最大的开源软件镜像站之一（mirrors.tuna.tsinghua.edu.cn）。构建了具备高速存储能力的高性能、高可靠多服务器系统，平均吞吐达到 3.1 Gbps，服务全国用户。"
   - title: "NGINXwise: RL-based Congestion Control"
-    role: "Network Software Developer"
-    desc: "Built a production-ready NGINX-based testbed for evaluating reinforcement learning for optimizing the initial congestion control window (CWND). The testbed is used in measuring HTTP request latency on live traffic of a top Chinese website."
+    role:
+      en: "Network Software Developer"
+      cn: "网络软件开发者"
+    desc:
+      en: "Built a production-ready NGINX-based testbed for evaluating reinforcement learning for optimizing the initial congestion control window (CWND). The testbed is used in measuring HTTP request latency on live traffic of a top Chinese website."
+      cn: "构建了可用于生产环境的 NGINX 测试平台，用于评估基于强化学习的初始拥塞窗口（CWND）优化方法。该平台被用于中国头部网站真实流量场景下的 HTTP 请求时延测量。"
   - title: "MPIfuse: Distributed File System"
-    role: "Computer System Researcher"
-    desc: "In collaboration with team members, developed a high-performance distributed file system prototype using MPI and FUSE. Identified bottlenecks in FUSE and achieved 3.6 GB/s parallel write speeds on an 8-machine cluster, outperforming NFS on tmpfs."
+    role:
+      en: "Computer System Researcher"
+      cn: "计算机系统研究者"
+    desc:
+      en: "In collaboration with team members, developed a high-performance distributed file system prototype using MPI and FUSE. Identified bottlenecks in FUSE and achieved 3.6 GB/s parallel write speeds on an 8-machine cluster, outperforming NFS on tmpfs."
+      cn: "与团队成员合作，基于 MPI 与 FUSE 开发了高性能分布式文件系统原型。识别并解决了 FUSE 的关键瓶颈，在 8 台机器组成的集群上实现 3.6 GB/s 的并行写入速度，性能优于运行在 tmpfs 上的 NFS。"
   - title: "CachedMIPS: FPGA-Based Processor"
-    role: "Hardware Design Engineer"
-    desc: "Developed a pipelined write-back L1 cache with AHB protocol for a MIPS32r1 compatible CPU on Xilinx FPGA. Improved interrupt logic and peripheral support to enable full Linux booting in 8.4 seconds, achieving a 50x speedup on general applications."
+    role:
+      en: "Hardware Design Engineer"
+      cn: "硬件设计工程师"
+    desc:
+      en: "Developed a pipelined write-back L1 cache with AHB protocol for a MIPS32r1 compatible CPU on Xilinx FPGA. Improved interrupt logic and peripheral support to enable full Linux booting in 8.4 seconds, achieving a 50x speedup on general applications."
+      cn: "在 Xilinx FPGA 上为兼容 MIPS32r1 的 CPU 开发了带 AHB 协议的流水化写回式 L1 Cache，并改进中断逻辑与外设支持，使系统可在 8.4 秒内完整启动 Linux，在通用应用上实现 50 倍性能提升。"
   - title: "Cherry: Cluster Management System"
-    role: "Full Stack Developer"
-    desc: "Developed a network management system for a cluster used by a Chinese backbone network. Implemented deployment configuration (Puppet), resource management (virtualization, bandwidth), and metrics monitoring using Node.js, Redis, and Nagios."
+    role:
+      en: "Full Stack Developer"
+      cn: "全栈开发者"
+    desc:
+      en: "Developed a network management system for a cluster used by a Chinese backbone network. Implemented deployment configuration (Puppet), resource management (virtualization, bandwidth), and metrics monitoring using Node.js, Redis, and Nagios."
+      cn: "为中国骨干网络使用的集群开发了网络管理系统，涵盖部署配置（Puppet）、资源管理（虚拟化、带宽）以及基于 Node.js、Redis 与 Nagios 的指标监控能力。"
   - title: "iTunet: Automated Network Configuration"
-    role: "iOS Developer"
-    desc: "Developed an iOS widget application that automatically configures settings for the Tsinghua University campus network. The app simplifies the process of connecting to the university's network by automating the connection setup, making the login process transparent on disconnections."
+    role:
+      en: "iOS Developer"
+      cn: "iOS 开发者"
+    desc:
+      en: "Developed an iOS widget application that automatically configures settings for the Tsinghua University campus network. The app simplifies the process of connecting to the university's network by automating the connection setup, making the login process transparent on disconnections."
+      cn: "开发了可自动配置清华大学校园网连接参数的 iOS 小组件应用。该应用通过自动完成连接设置，显著简化校园网接入流程，并在断线重连时尽可能实现无感登录。"
   - title: "Iodine: Online Program Judge System"
-    role: "Full Stack Developer"
-    desc: "In collaboration with the HUSTOJ author, developed an online judge system for programming competitions. Refactored the code to support modern web standards, including a new frontend using Bootstrap and a backend with Laravel PHP. The grading is isolated in Docker containers, allowing for secure and efficient execution of user-submitted code."
+    role:
+      en: "Full Stack Developer"
+      cn: "全栈开发者"
+    desc:
+      en: "In collaboration with the HUSTOJ author, developed an online judge system for programming competitions. Refactored the code to support modern web standards, including a new frontend using Bootstrap and a backend with Laravel PHP. The grading is isolated in Docker containers, allowing for secure and efficient execution of user-submitted code."
+      cn: "与 HUSTOJ 作者合作开发了面向程序设计竞赛的在线评测系统。对原有代码进行现代化重构，包括基于 Bootstrap 的新前端与基于 Laravel PHP 的后端；评测执行则隔离在 Docker 容器中，以确保用户提交代码的安全与高效运行。"
 
 skills:
-  - category: "Programming Languages"
-    items: "C/C++, Python, Rust, Java, JavaScript, TypeScript, Bash, Verilog."
-  - category: "Systems & Cloud"
-    items: "Linux, Docker, Kubernetes, Ansible, Ceph, Nginx, CI/CD, Distributed Systems, Multithreading, SIMD, RDMA, MPI, DevOps."
-  - category: "Hardware & Compilers"
-    items: "LLVM, MLIR, Clang, ROSE, ARM, High-Level Synthesis, FPGA, CAD, EDA, Vivado, CUDA, OpenCL, VTune, Embedded."
-  - category: "Web"
-    items: "Node.js, React, Canvas, SVG, Webpack, Django, G6."
+  - category:
+      en: "Programming Languages"
+      cn: "编程语言"
+    items:
+      en: "C/C++, Python, Rust, Java, JavaScript, TypeScript, Bash, Verilog."
+      cn: "C/C++、Python、Rust、Java、JavaScript、TypeScript、Bash、Verilog。"
+  - category:
+      en: "Systems & Cloud"
+      cn: "系统与云平台"
+    items:
+      en: "Linux, Docker, Kubernetes, Ansible, Ceph, Nginx, CI/CD, Distributed Systems, Multithreading, SIMD, RDMA, MPI, DevOps."
+      cn: "Linux、Docker、Kubernetes、Ansible、Ceph、Nginx、CI/CD、分布式系统、多线程、SIMD、RDMA、MPI、开发运维。"
+  - category:
+      en: "Hardware & Compilers"
+      cn: "硬件与编译器"
+    items:
+      en: "LLVM, MLIR, Clang, ROSE, ARM, High-Level Synthesis, FPGA, CAD, EDA, Vivado, CUDA, OpenCL, VTune, Embedded."
+      cn: "LLVM、MLIR、Clang、ROSE、ARM、高层次综合、FPGA、CAD、EDA、Vivado、CUDA、OpenCL、VTune、嵌入式系统。"
+  - category:
+      en: "Web"
+      cn: "Web 开发"
+    items:
+      en: "Node.js, React, Canvas, SVG, Webpack, Django, G6."
+      cn: "Node.js、React、Canvas、SVG、Webpack、Django、G6。"
 
 awards:
-  - name: "Best Paper Award"
-    org: "International Symposium on Field-Programmable Gate Arrays (2021)"
-  - name: "Outstanding Contributor"
-    org: "Xilinx, Inc. (2021)"
-  - name: "A. Richard Newton Young Student Fellow"
-    org: "Design Automation Conference (2019 & 2020)"
-  - name: "International Champion"
-    org: "ASC Student Supercomputer Challenge (2017 & 2018)"
-  - name: "National Champion"
-    org: "National Student Computer System Challenge (2017)"
-  - name: "International Champion"
-    org: "ISC Student Cluster Competition (2017)"
-  - name: "Dean's List"
-    org: "School of Engineering, HKUST (2017)"
-  - name: "Freshman Award"
-    org: "Tsinghua University (2014)"
-  - name: "National Scholarship"
-    org: "National Youth Science and Technology Innovation Award (2014)"
-  - name: "National Gold Medal"
-    org: "National Olympiad in Informatics (2013)"
-  - name: "International Silver Medal"
-    org: "Asia-Pacific Informatics Olympiad, China Region (2013)"
+  - name:
+      en: "Best Paper Award"
+      cn: "最佳论文奖"
+    org:
+      en: "International Symposium on Field-Programmable Gate Arrays (2021)"
+      cn: "国际现场可编程门阵列研讨会（2021）"
+  - name:
+      en: "Outstanding Contributor"
+      cn: "杰出贡献奖"
+    org:
+      en: "Xilinx, Inc. (2021)"
+      cn: "赛灵思公司（2021）"
+  - name:
+      en: "A. Richard Newton Young Student Fellow"
+      cn: "A. Richard Newton 青年学生学者"
+    org:
+      en: "Design Automation Conference (2019 & 2020)"
+      cn: "设计自动化会议（2019、2020）"
+  - name:
+      en: "International Champion"
+      cn: "国际冠军"
+    org:
+      en: "ASC Student Supercomputer Challenge (2017 & 2018)"
+      cn: "ASC 世界大学生超级计算机竞赛（2017、2018）"
+  - name:
+      en: "National Champion"
+      cn: "全国冠军"
+    org:
+      en: "National Student Computer System Challenge (2017)"
+      cn: "全国大学生计算机系统能力大赛（2017）"
+  - name:
+      en: "International Champion"
+      cn: "国际冠军"
+    org:
+      en: "ISC Student Cluster Competition (2017)"
+      cn: "ISC 国际大学生超算竞赛（2017）"
+  - name:
+      en: "Dean's List"
+      cn: "院长嘉许名单"
+    org:
+      en: "School of Engineering, HKUST (2017)"
+      cn: "香港科技大学工学院（2017）"
+  - name:
+      en: "Freshman Award"
+      cn: "新生奖学金"
+    org:
+      en: "Tsinghua University (2014)"
+      cn: "清华大学（2014）"
+  - name:
+      en: "National Scholarship"
+      cn: "国家奖学金"
+    org:
+      en: "National Youth Science and Technology Innovation Award (2014)"
+      cn: "全国青少年科技创新奖（2014）"
+  - name:
+      en: "National Gold Medal"
+      cn: "全国金牌"
+    org:
+      en: "National Olympiad in Informatics (2013)"
+      cn: "全国信息学奥林匹克竞赛（2013）"
+  - name:
+      en: "International Silver Medal"
+      cn: "银牌"
+    org:
+      en: "Asia-Pacific Informatics Olympiad, China Region (2013)"
+      cn: "亚太地区信息学奥林匹克竞赛中国区（2013）"

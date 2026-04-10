@@ -1,0 +1,384 @@
+{
+  "locale": "cn",
+  "meta": {
+    "documentTitle": "Jason Lau - 中文简历",
+    "educationHeading": "教育背景",
+    "professionalExperienceHeading": "专业经历",
+    "publicationsHeading": "论文发表",
+    "coFirstAuthorsNote": "* 表示共同第一作者",
+    "projectsHeading": "工程与系统项目",
+    "technicalSkillsHeading": "技术能力",
+    "selectedAwardsHeading": "主要奖项",
+    "servicesHeading": "学术服务",
+    "reviewsHeading": "审稿工作"
+  },
+  "labels": {
+    "reviewedPapers": "评审过 104 篇论文",
+    "excludingSubreviews": "不含转审稿件",
+    "serviceConnector": "，",
+    "reviewsLeadIn": "评审过 104 篇论文（不含转审稿件）："
+  },
+  "name": "刘家昌",
+  "phone": "(929) 273-1217",
+  "email": "i@jasonlau.io",
+  "github": "github.com/dotkrnl",
+  "education": [
+    {
+      "degree": "计算机科学博士",
+      "school": "加州大学洛杉矶分校",
+      "time": "2018 – 2024，专业 GPA 4.0/4.0",
+      "details": [
+        "导师：丛京生教授"
+      ]
+    },
+    {
+      "degree": "计算机科学工学学士",
+      "school": "清华大学",
+      "time": "2014 – 2018，专业 GPA 93/100",
+      "details": []
+    },
+    {
+      "degree": "数字媒体艺术文学学士",
+      "school": "清华大学美术学院",
+      "time": "2015 – 2018，专业 GPA 88/100",
+      "details": []
+    },
+    {
+      "degree": "交换学生",
+      "school": "香港科技大学",
+      "time": "2016 – 2017，专业 GPA 4.0/4.0",
+      "details": []
+    }
+  ],
+  "experience": [
+    {
+      "title": "硬件工程师",
+      "org": "Jump Trading Group",
+      "time": "2025 年 8 月 – 至今",
+      "desc": "负责研究与开发面向高频交易的高层次综合算法，并基于所开发工具链构建高性能 FPGA 与 ARM 硬件加速器。同时面向现代多芯粒 FPGA 研发超低时延硬件逻辑与系统集成方案，以优化交易性能。",
+      "location": "Sunnyvale, CA"
+    },
+    {
+      "title": "首席技术官兼联合创始人",
+      "org": "RapidStream Design Automation（被全球领先高频交易公司收购）",
+      "time": "2023 年 1 月 – 2025 年 8 月",
+      "desc": "负责制定技术战略并推进编译器产品研发，以交付低时延、高性能 FPGA 加速器。构建可直接由软件规格生成高层物理设计的系统，大幅缩短编译迭代周期。",
+      "location": "Sunnyvale, CA"
+    },
+    {
+      "title": "编译研究员（实习）",
+      "org": "超威半导体（AMD）、赛灵思（Xilinx）",
+      "time": "2022 年 6 月 – 2022 年 9 月",
+      "desc": "研究并实现了面向 AMD Versal 器件、针对 AI Engine 阵列的物理感知 MLIR 编译器，并设计了支持下一代系统级芯片（SoC）高性能应用加速的编译流程。",
+      "location": "Longmont, CO"
+    },
+    {
+      "title": "云软件工程师（实习）",
+      "org": "谷歌",
+      "time": "2016 年 6 月 – 2016 年 9 月",
+      "desc": "开发了云性能数据分析平台与可视化库 “AwesomeChart”，可流畅渲染数百万条时间序列。该平台随后集成至谷歌云平台（Google Cloud Platform），至今仍被客户用于关键指标监控。",
+      "location": "Cambridge, MA"
+    }
+  ],
+  "publications": [
+    {
+      "title": "面向高层物理综合的自动化设计空间探索",
+      "authors": "Linfeng Du, Jiawei Liang, Jason Lau, Yuze Chi, Yutong Xie, Chunyou Su, Afzal Ahmad, Zifan He, Jake Ke, Jinming Ge, Jason Cong, Wei Zhang, Licheng Guo",
+      "venue": "ICCAD '25（国际计算机辅助设计会议）",
+      "year": "2025",
+      "badges": []
+    },
+    {
+      "title": "RapidStream IR：面向 FPGA 高层物理综合的基础设施",
+      "authors": "Jason Lau, Yuanlong Xiao, Yutong Xie, Yuze Chi, Linghao Song, Shaojie Xiang, Michael Lo, Zhiru Zhang, Jason Cong, Licheng Guo",
+      "venue": "ICCAD '24（国际计算机辅助设计会议）",
+      "year": "2024",
+      "badges": []
+    },
+    {
+      "title": "CHARM 2.0：面向 Versal ACAP 深度学习的异构加速器架构",
+      "authors": "Jinming Zhuang, Jason Lau, Hanchen Ye, Zhuoping Yang, Shixin Ji, Jack Lo, Kristof Denolf, Stephen Neuendorffer, Alex Jones, Jingtong Hu, Yiyu Shi, Deming Chen, Jason Cong, Peipei Zhou",
+      "venue": "TRETS '24（ACM 可重构技术与系统汇刊），第 17 卷第 3 期，第 51 篇，第 1 - 31 页",
+      "year": "2024",
+      "badges": []
+    },
+    {
+      "title": "面向软件开发者的异构计算系统",
+      "authors": "Jason Lau advised by Jason Cong",
+      "venue": "加州大学洛杉矶分校博士学位论文",
+      "year": "2024",
+      "badges": []
+    },
+    {
+      "title": "TAPA：面向现代 FPGA 的可扩展任务并行数据流及高层次综合与物理结构协同优化的编程框架",
+      "authors": "{Licheng Guo*, Yuze Chi*, Jason Lau*}, Linghao Song, Xingyu Tian, Moazin Khatti, Weikang Qiao, Jie Wang, Ecenur Ustun, Zhenman Fang, Zhiru Zhang, Jason Cong",
+      "venue": "TRETS '23（ACM 可重构技术与系统汇刊），第 16 卷第 4 期，第 63 篇，第 1 - 31 页",
+      "year": "2023",
+      "badges": [
+        "引用 50+ 次"
+      ]
+    },
+    {
+      "title": "RapidStream 2.0：通过部分重构实现时延无关 FPGA 设计的自动化并行布局布线",
+      "authors": "Licheng Guo, Pongstorn Maidee, Yun Zhou, Chris Lavin, Eddie Hung, Wuxi Li, Jason Lau, Weikang Qiao, Yuze Chi, Linghao Song, Yuanlong Xiao, Alireza Kaviani, Zhiru Zhang, Jason Cong",
+      "venue": "TRETS '23（ACM 可重构技术与系统汇刊），第 16 卷第 4 期，第 59 篇，第 1 - 30 页",
+      "year": "2023",
+      "badges": []
+    },
+    {
+      "title": "CHARM：面向 Versal ACAP 矩阵乘法的异构加速器架构",
+      "authors": "Jinming Zhuang, Jason Lau, Hanchen Ye, Zhuoping Yang, Yubo Du, Jack Lo, Kristof Denolf, Stephen Neuendorffer, Alex Jones, Jingtong Hu, Deming Chen, Jason Cong, Peipei Zhou",
+      "venue": "FPGA '23（现场可编程门阵列国际研讨会）",
+      "year": "2023",
+      "badges": [
+        "引用 50+ 次"
+      ]
+    },
+    {
+      "title": "当今 FPGA 高层次综合：成就、挑战与机遇",
+      "authors": "Jason Cong, Jason Lau, Gai Liu, Stephen Neuendorffer, Peichen Pan, Kees Vissers, Zhiru Zhang",
+      "venue": "TRETS '22（ACM 可重构技术与系统汇刊），第 15 卷第 4 期，第 51 篇，第 1 - 4 页",
+      "year": "2022",
+      "badges": [
+        "引用 250+ 次"
+      ]
+    },
+    {
+      "title": "Sextans：面向通用稀疏矩阵与稠密矩阵乘法",
+      "authors": "Linghao Song, Yuze Chi, Atefeh Sohrabizadeh, Young-kyu Choi, Jason Lau, Jason Cong",
+      "venue": "FPGA '22（现场可编程门阵列国际研讨会）",
+      "year": "2022",
+      "badges": [
+        "引用 100+ 次"
+      ]
+    },
+    {
+      "title": "TARO：面向 FPGA 高层次综合中无阻塞内核的自动优化",
+      "authors": "Young-kyu Choi, Yuze Chi, Jason Lau, Jason Cong",
+      "venue": "TCAD '22（IEEE 集成电路与系统计算机辅助设计汇刊）",
+      "year": "2022",
+      "badges": []
+    },
+    {
+      "title": "AutoBridge：面向多芯粒 FPGA 高频高层次综合设计的粗粒度布局规划与流水线协同优化的自动化框架",
+      "authors": "Licheng Guo, Yuze Chi, Jie Wang, Jason Lau, Weikang Qiao, Ecenur Ustun, Zhiru Zhang, Jason Cong",
+      "venue": "FPGA '21（现场可编程门阵列国际研讨会）",
+      "year": "2021",
+      "badges": [
+        "最佳论文奖",
+        "引用 100+ 次"
+      ]
+    },
+    {
+      "title": "TAPA：面向任务并行程序的高层次综合扩展",
+      "authors": "Yuze Chi, Licheng Guo, Jason Lau, Young-kyu Choi, Jie Wang, Jason Cong",
+      "venue": "FCCM '21（现场可编程定制计算机器国际研讨会）",
+      "year": "2021",
+      "badges": [
+        "引用 50+ 次"
+      ]
+    },
+    {
+      "title": "HeteroRefactor：面向异构计算的 FPGA 重构框架",
+      "authors": "{Jason Lau*, Aishwarya Sivaraman*, Qian Zhang*}, Muhammad Ali Gulzar, Jason Cong, Miryung Kim",
+      "venue": "ICSE '20（国际软件工程会议）",
+      "year": "2020",
+      "badges": []
+    },
+    {
+      "title": "面向提升设计频率的 FPGA 高层次综合隐式广播分析与优化",
+      "authors": "{Licheng Guo*, Jason Lau*}, Yuze Chi, Jie Wang, Cody Hao Yu, Zhe Chen, Zhiru Zhang, Jason Cong",
+      "venue": "DAC '20（设计自动化会议）",
+      "year": "2020",
+      "badges": [
+        "最佳论文提名",
+        "引用 50+ 次"
+      ]
+    },
+    {
+      "title": "针对基因组测序中长读成对重叠分析的硬件加速：FPGA 与 GPU 的竞赛",
+      "authors": "{Licheng Guo*, Jason Lau*}, Zhenyuan Ruan, Peng Wei, Jason Cong",
+      "venue": "FCCM '19（现场可编程定制计算机器国际研讨会）",
+      "year": "2019",
+      "badges": [
+        "引用 100+ 次"
+      ]
+    },
+    {
+      "title": "在 Intel Skylake 与 NVIDIA Volta 上复现 Tersoff 多体势的向量化实现",
+      "authors": "Jason Lau, Yuxuan Li, Lei Xie, Qian Xie, Beichen Li, Yu Chen, Guanyu Feng, Jiping Yu, Xinjian Yu, Miao Wang, Wentao Han, Jidong Zhai",
+      "venue": "Parallel Computing（并行计算），第 78 卷，2018 年 10 月，第 47 - 53 页",
+      "year": "2018",
+      "badges": []
+    }
+  ],
+  "projects": [
+    {
+      "title": "TAPA: Task-Parallel FPGA Compiler",
+      "role": "维护者与共同作者",
+      "desc": "与加州大学洛杉矶分校实验室成员合作实现了基于 Clang 的任务并行 FPGA 编译器 TAPA，使开发者能够以 C++ 数据流图形式对 FPGA 进行高层编程。扩展了编译器的嵌套任务能力以支持复杂应用；与团队共同实现高性能并行 RTL 协同仿真框架，使真实应用可以混合使用高层次综合与 RTL 设计；同时扩展了高层次综合工具 AutoSA，使其生成性能优于 Vitis HLS 的 TAPA 应用。"
+    },
+    {
+      "title": "HeteroRefactor: Source-to-Source Code Refactoring",
+      "role": "自动化代码重构开发者",
+      "desc": "开发了基于 ROSE 的源到源代码重构工具 HeteroRefactor，可自动将 C++ 代码转换为异构编程模型，使递归、指针与动态内存分配等特性被重写为厂商工具可支持的等价实现。"
+    },
+    {
+      "title": "TUNA Open Source Mirror Site",
+      "role": "维护者与组织负责人",
+      "desc": "维护中国最大的开源软件镜像站之一（mirrors.tuna.tsinghua.edu.cn）。构建了具备高速存储能力的高性能、高可靠多服务器系统，平均吞吐达到 3.1 Gbps，服务全国用户。"
+    },
+    {
+      "title": "NGINXwise: RL-based Congestion Control",
+      "role": "网络软件开发者",
+      "desc": "构建了可用于生产环境的 NGINX 测试平台，用于评估基于强化学习的初始拥塞窗口（CWND）优化方法。该平台被用于中国头部网站真实流量场景下的 HTTP 请求时延测量。"
+    },
+    {
+      "title": "MPIfuse: Distributed File System",
+      "role": "计算机系统研究者",
+      "desc": "与团队成员合作，基于 MPI 与 FUSE 开发了高性能分布式文件系统原型。识别并解决了 FUSE 的关键瓶颈，在 8 台机器组成的集群上实现 3.6 GB/s 的并行写入速度，性能优于运行在 tmpfs 上的 NFS。"
+    },
+    {
+      "title": "CachedMIPS: FPGA-Based Processor",
+      "role": "硬件设计工程师",
+      "desc": "在 Xilinx FPGA 上为兼容 MIPS32r1 的 CPU 开发了带 AHB 协议的流水化写回式 L1 Cache，并改进中断逻辑与外设支持，使系统可在 8.4 秒内完整启动 Linux，在通用应用上实现 50 倍性能提升。"
+    },
+    {
+      "title": "Cherry: Cluster Management System",
+      "role": "全栈开发者",
+      "desc": "为中国骨干网络使用的集群开发了网络管理系统，涵盖部署配置（Puppet）、资源管理（虚拟化、带宽）以及基于 Node.js、Redis 与 Nagios 的指标监控能力。"
+    },
+    {
+      "title": "iTunet: Automated Network Configuration",
+      "role": "iOS 开发者",
+      "desc": "开发了可自动配置清华大学校园网连接参数的 iOS 小组件应用。该应用通过自动完成连接设置，显著简化校园网接入流程，并在断线重连时尽可能实现无感登录。"
+    },
+    {
+      "title": "Iodine: Online Program Judge System",
+      "role": "全栈开发者",
+      "desc": "与 HUSTOJ 作者合作开发了面向程序设计竞赛的在线评测系统。对原有代码进行现代化重构，包括基于 Bootstrap 的新前端与基于 Laravel PHP 的后端；评测执行则隔离在 Docker 容器中，以确保用户提交代码的安全与高效运行。"
+    }
+  ],
+  "skills": [
+    {
+      "category": "编程语言",
+      "items": "C/C++、Python、Rust、Java、JavaScript、TypeScript、Bash、Verilog。"
+    },
+    {
+      "category": "系统与云平台",
+      "items": "Linux、Docker、Kubernetes、Ansible、Ceph、Nginx、CI/CD、分布式系统、多线程、SIMD、RDMA、MPI、开发运维。"
+    },
+    {
+      "category": "硬件与编译器",
+      "items": "LLVM、MLIR、Clang、ROSE、ARM、高层次综合、FPGA、CAD、EDA、Vivado、CUDA、OpenCL、VTune、嵌入式系统。"
+    },
+    {
+      "category": "Web 开发",
+      "items": "Node.js、React、Canvas、SVG、Webpack、Django、G6。"
+    }
+  ],
+  "awards": [
+    {
+      "name": "最佳论文奖",
+      "org": "国际现场可编程门阵列研讨会（2021）"
+    },
+    {
+      "name": "杰出贡献奖",
+      "org": "赛灵思公司（2021）"
+    },
+    {
+      "name": "A. Richard Newton 青年学生学者",
+      "org": "设计自动化会议（2019、2020）"
+    },
+    {
+      "name": "国际冠军",
+      "org": "ASC 世界大学生超级计算机竞赛（2017、2018）"
+    },
+    {
+      "name": "全国冠军",
+      "org": "全国大学生计算机系统能力大赛（2017）"
+    },
+    {
+      "name": "国际冠军",
+      "org": "ISC 国际大学生超算竞赛（2017）"
+    },
+    {
+      "name": "院长嘉许名单",
+      "org": "香港科技大学工学院（2017）"
+    },
+    {
+      "name": "新生奖学金",
+      "org": "清华大学（2014）"
+    },
+    {
+      "name": "国家奖学金",
+      "org": "全国青少年科技创新奖（2014）"
+    },
+    {
+      "name": "全国金牌",
+      "org": "全国信息学奥林匹克竞赛（2013）"
+    },
+    {
+      "name": "银牌",
+      "org": "亚太地区信息学奥林匹克竞赛中国区（2013）"
+    }
+  ],
+  "services": [
+    {
+      "role": "论文评审委员会委员（TPC）",
+      "event": "现场可编程逻辑与应用国际会议（FPL '26）"
+    },
+    {
+      "role": "论文评审委员会委员（TPC）",
+      "event": "IEEE 全层智能系统国际会议（COINS '26）"
+    },
+    {
+      "role": "论文评审委员会委员（TPC）",
+      "event": "设计自动化会议（DAC '26）"
+    },
+    {
+      "role": "论文评审委员会委员（TPC）",
+      "event": "五大湖超大规模集成电路研讨会（GLSVLSI '26）"
+    },
+    {
+      "role": "论文评审委员会委员（TPC）",
+      "event": "IEEE 现场可编程定制计算机器国际研讨会（FCCM '26）"
+    },
+    {
+      "role": "实验复现委员会委员（AE）",
+      "event": "IEEE 现场可编程定制计算机器国际研讨会（FCCM '26）"
+    },
+    {
+      "role": "论文评审委员会委员（TPC）",
+      "event": "现场可编程逻辑与应用国际会议（FPL '25）"
+    },
+    {
+      "role": "论文评审委员会委员（TPC）",
+      "event": "现场可编程逻辑与应用国际会议（FPL '24）"
+    },
+    {
+      "role": "论文评审委员会委员（TPC）",
+      "event": "设计自动化会议（DAC '22）"
+    }
+  ],
+  "reviews": {
+    "count": 104,
+    "journals": [
+      "TACO（ACM 体系结构与代码优化汇刊）",
+      "TODAES（ACM 电子系统设计自动化汇刊）",
+      "TRETS（ACM 可重构技术与系统汇刊）",
+      "DAC（设计自动化会议）",
+      "FCCM（现场可编程定制计算机器会议）",
+      "FPL（现场可编程逻辑与应用会议）",
+      "GigaScience",
+      "IEEE Access",
+      "OJCAS（IEEE 电路与系统开放期刊）",
+      "TAES（IEEE 航空航天与电子系统汇刊）",
+      "TCAS-I（IEEE 电路与系统 I：常规论文）",
+      "TCAD（IEEE 集成电路与系统计算机辅助设计汇刊）",
+      "TC（IEEE 计算机汇刊）",
+      "TCSI（IEEE 计算机汇刊专题）",
+      "TIE（IEEE 工业电子汇刊）"
+    ]
+  }
+}

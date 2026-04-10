@@ -1,6 +1,6 @@
 #let data = json("data.json")
 
-#set document(title: "Jason Lau - CV", author: data.name)
+#set document(title: data.meta.documentTitle, author: data.name)
 #set page(margin: (x: 0.7in, y: 0.6in), paper: "us-letter", numbering: "1")
 #set text(font: "Libertinus Serif", size: 10pt)
 #set par(justify: true, leading: 0.65em)
@@ -32,7 +32,7 @@
 ]
 
 // Education
-#section-heading("Education")
+#section-heading(data.meta.educationHeading)
 
 #for (i, edu) in data.education.enumerate() {
   entry(
@@ -50,7 +50,7 @@
 }
 
 // Experience
-#section-heading("Professional Experience")
+#section-heading(data.meta.professionalExperienceHeading)
 
 #for (i, exp) in data.experience.enumerate() {
   block(breakable: false)[
@@ -65,8 +65,8 @@
 }
 
 // Publications
-#section-heading("Publications")
-#text(size: 8pt, fill: luma(100))[\* indicates co-first authors]
+#section-heading(data.meta.publicationsHeading)
+#text(size: 8pt, fill: luma(100))[#data.meta.coFirstAuthorsNote]
 #v(2pt)
 
 #for (i, pub) in data.publications.enumerate() {
@@ -86,7 +86,9 @@
 }
 
 // Projects
-#section-heading("Key Engineering & Systems Projects")
+#if data.projects.len() > 0 {
+  section-heading(data.meta.projectsHeading)
+}
 
 #for (i, proj) in data.projects.enumerate() {
   block(breakable: false)[
@@ -98,7 +100,9 @@
 }
 
 // Technical Skills
-#section-heading("Technical Skills")
+#if data.skills.len() > 0 {
+  section-heading(data.meta.technicalSkillsHeading)
+}
 
 #for skill in data.skills {
   [*#skill.category:* #text(size: 9pt, skill.items)]
@@ -106,7 +110,7 @@
 }
 
 // Awards
-#section-heading("Selected Awards")
+#section-heading(data.meta.selectedAwardsHeading)
 
 #set list(spacing: 0.5em)
 #block(breakable: false)[
@@ -119,17 +123,17 @@
 ]
 
 // Services
-#section-heading("Services")
+#section-heading(data.meta.servicesHeading)
 
 #for svc in data.services {
-  [- *#svc.role* of #svc.event]
+  [- #text(weight: "bold", svc.role)#text(data.labels.serviceConnector)#svc.event]
 }
 
 // Reviews
 #v(2pt)
-#section-heading("Reviews")
+#section-heading(data.meta.reviewsHeading)
 
-Reviewed *#str(data.reviews.count) papers* (excluding subreviews) for:
+#text(size: 9pt, data.labels.reviewsLeadIn)
 
 #for journal in data.reviews.journals {
   [- #text(size: 9pt, journal)]

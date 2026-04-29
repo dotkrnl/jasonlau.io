@@ -36,7 +36,7 @@ layout: base.njk
             <source src="/design-works/book-ocean.mp4" type="video/mp4">
             {{ ui.browserDoesNotSupportVideo }}
           </video>
-          <h3 class="mt-4 text-center text-sm">
+          <h3 class="work-caption">
             {{ works.bookOcean.caption }}
           </h3>
         </article>
@@ -44,26 +44,26 @@ layout: base.njk
           <img src="/design-works/google-chart.png"
                alt="{{ works.googleChart.alt }}"
                class="h-auto w-full rounded-lg shadow-lg">
-          <h3 class="mt-4 text-center text-sm">{{ works.googleChart.caption }}</h3>
+          <h3 class="work-caption">{{ works.googleChart.caption }}</h3>
         </article>
       </section>
 
       <section class="col-span-1 grid gap-x-12 gap-y-6 md:col-span-2">
-        <article class="col-span-1 mb-6 pl-32 pr-32 md:col-span-2 md:pl-6 md:pr-6">
+        <article class="col-span-1 mb-6 md:col-span-2">
           <img src="/design-works/rapidstream-logo.png"
                alt="{{ works.rapidstreamLogo.alt }}"
-               class="h-auto w-full" loading="lazy">
+               class="logo-work" loading="lazy">
         </article>
-        <article class="col-span-1 mb-6 pl-32 pr-32 md:col-span-2 md:pl-4 md:pr-4">
+        <article class="col-span-1 mb-6 md:col-span-2">
           <img src="/design-works/cat-logo.png"
                alt="{{ works.catLogo.alt }}"
-               class="h-auto w-full" loading="lazy">
+               class="logo-work logo-work-small" loading="lazy">
         </article>
         <article class="col-span-1 mb-6 md:col-span-2 md:pb-24 md:pl-2 md:pr-2">
           <img src="/design-works/tex-user-group.jpg"
                alt="{{ works.texUserGroup.alt }}"
                class="h-auto w-full" loading="lazy">
-          <h3 class="-mt-6 text-center text-sm md:mt-0">{{ works.texUserGroup.caption }}</h3>
+          <h3 class="work-caption">{{ works.texUserGroup.caption }}</h3>
         </article>
       </section>
 
@@ -72,42 +72,42 @@ layout: base.njk
           <source src="/design-works/seasons.mp4" type="video/mp4">
           {{ ui.browserDoesNotSupportVideo }}
         </video>
-        <h3 class="mt-4 text-center text-sm">{{ works.seasons.caption }}</h3>
+        <h3 class="work-caption">{{ works.seasons.caption }}</h3>
       </article>
 
       <article class="col-span-1 mb-6 md:col-span-5">
         <img src="/design-works/your-image.jpg"
              alt="{{ works.yourImage.alt }}"
              class="h-auto w-full rounded-lg shadow-lg" loading="lazy">
-        <h3 class="mt-4 text-center text-sm">{{ works.yourImage.caption }}</h3>
+        <h3 class="work-caption">{{ works.yourImage.caption }}</h3>
       </article>
 
       <article class="col-span-1 mb-6 md:col-span-4">
         <img src="/design-works/self-image.png"
              alt="{{ works.selfImage.alt }}"
              class="h-auto w-full" loading="lazy">
-        <h3 class="mt-4 text-center text-sm">{{ works.selfImage.caption }}</h3>
+        <h3 class="work-caption">{{ works.selfImage.caption }}</h3>
       </article>
 
       <article class="col-span-1 mb-6 md:col-span-4">
         <img src="/design-works/uploaded-image.jpg"
              alt="{{ works.uploadedImage.alt }}"
              class="h-auto w-full" loading="lazy">
-        <h3 class="mt-4 text-center text-sm">{{ works.uploadedImage.caption }}</h3>
+        <h3 class="work-caption">{{ works.uploadedImage.caption }}</h3>
       </article>
 
       <article class="col-span-1 mb-6 md:col-span-6">
         <img src="/design-works/tuna-icons.png"
              alt="{{ works.tunaIcons.alt }}"
              class="h-auto w-full" loading="lazy">
-        <h3 class="mt-4 text-center text-sm">{{ works.tunaIcons.caption }}</h3>
+        <h3 class="work-caption">{{ works.tunaIcons.caption }}</h3>
       </article>
 
-      <article class="col-span-1 mb-6 pl-32 pr-32 md:col-span-2 md:pl-0 md:pr-0">
+      <article class="col-span-1 mb-6 md:col-span-2">
         <img src="/design-works/pika-logo.png"
              alt="{{ works.pikaLogo.alt }}"
-             class="h-auto w-full" loading="lazy">
-        <h3 class="mt-4 text-center text-sm">{{ works.pikaLogo.caption }}</h3>
+             class="logo-work logo-work-small" loading="lazy">
+        <h3 class="work-caption">{{ works.pikaLogo.caption }}</h3>
       </article>
 
       <article class="col-span-1 mb-6 grid grid-cols-1 items-end gap-x-12 md:col-span-6 md:grid-cols-2">
@@ -116,7 +116,7 @@ layout: base.njk
                alt="{{ works.thermalPrinter.alt }}"
                class="h-auto w-full" loading="lazy">
         </div>
-        <div class="col-span-1 text-center text-sm md:text-left">
+        <div class="work-caption work-caption-left col-span-1">
           {{ works.thermalPrinter.caption }}
         </div>
       </article>

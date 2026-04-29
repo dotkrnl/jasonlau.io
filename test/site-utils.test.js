@@ -38,8 +38,8 @@ test("buildCvData reuses localized site data", () => {
 
   assert.equal(cv.meta.documentTitle, "Jason Lau - 中文简历");
   assert.equal(cv.education[0].degree, "计算机科学博士");
-  assert.match(cv.labels.reviewedPapers, /^评审过 104 篇论文$/);
-  assert.equal(cv.publications[0].title, "面向高层物理综合的自动化设计空间探索");
+  assert.equal(cv.labels.reviewedPapers, `评审过 ${rawSite.reviews.count} 篇论文`);
+  assert.equal(cv.publications[0].title, "面向高层次物理综合的自动化设计空间探索");
 });
 
 test("buildCvData strips website HTML markup from publication text for CV output", () => {

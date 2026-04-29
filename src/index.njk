@@ -54,9 +54,12 @@ layout: base.njk
                 <a href="{{ pub.translationPdf }}" class="paper-title button-underline group cursor-pointer"
                    data-pdf="{{ pub.translationPdf }}" data-alt-pdf="{{ pub.pdf }}">
                   {{ pub.titleStartCn }}<span class="whitespace-nowrap">{{ pub.titleEndCn }}（中文翻译）
-                    <svg aria-hidden="true" class="inline-flex h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <span class="paper-preview-hint">
+                    <svg aria-hidden="true" class="paper-preview-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                     </svg>
+                    <span class="paper-preview-label">{{ ui.previewPdf }}</span>
+                    </span>
                   </span>
                 </a>
               </h3>
@@ -64,9 +67,12 @@ layout: base.njk
                 <a href="{{ pub.pdf }}" class="paper-title button-underline group cursor-pointer"
                    data-pdf="{{ pub.pdf }}" data-alt-pdf="{{ pub.translationPdf }}">
                   {{ pub.titleStartEn }} <span class="whitespace-nowrap">{{ pub.titleEndEn }}
-                    <svg aria-hidden="true" class="inline-flex h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <span class="paper-preview-hint">
+                    <svg aria-hidden="true" class="paper-preview-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                     </svg>
+                    <span class="paper-preview-label">{{ ui.previewPdf }}</span>
+                    </span>
                   </span>
                 </a>
               </h3>
@@ -75,9 +81,12 @@ layout: base.njk
                 <a href="{{ pub.pdf }}" class="paper-title button-underline group cursor-pointer"
                    data-pdf="{{ pub.pdf }}">
                   {{ pub.titleStart }}{{ ui.publicationTitleSeparator }}<span class="whitespace-nowrap">{{ pub.titleEnd }}
-                    <svg aria-hidden="true" class="inline-flex h-3 w-3 opacity-0 transition-opacity group-hover:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <span class="paper-preview-hint">
+                    <svg aria-hidden="true" class="paper-preview-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                     </svg>
+                    <span class="paper-preview-label">{{ ui.previewPdf }}</span>
+                    </span>
                   </span>
                 </a>
               </h3>
@@ -184,6 +193,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const isTranslationPdf = (url) => url && url.endsWith('-cn.pdf');
 
+  const getPreviewFocusables = () => [switchBtn, downloadBtn, closeBtn]
+    .filter((el) => !el.classList.contains('hidden'));
+
   const closePreview = () => {
     body.classList.remove('pdf-active');
     mainDiv.style.width = '';
@@ -245,7 +257,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('keydown', (e) => {
     if (e.key === "Escape" && body.classList.contains('pdf-active')) closePreview();
     if (e.key === "Tab" && body.classList.contains('pdf-active')) {
-      const focusable = [downloadBtn, closeBtn];
+      const focusable = getPreviewFocusables();
       const idx = focusable.indexOf(document.activeElement);
       if (e.shiftKey) {
         focusable[(idx <= 0 ? focusable.length : idx) - 1].focus();

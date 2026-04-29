@@ -57,6 +57,9 @@ ui:
   paperPreview:
     en: "Paper Preview"
     cn: "论文预览"
+  previewPdf:
+    en: "Preview PDF"
+    cn: "预览 PDF"
   paperPreviewDialogLabel:
     en: "Paper Preview"
     cn: "论文预览"

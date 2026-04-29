@@ -6,8 +6,8 @@ phone: "(929) 273-1217"
 email: "i@jasonlau.io"
 github: "github.com/dotkrnl"
 copyright: "2026"
-lastmod: "2026-04-10"
-publicationsCitations: "1012"
+lastmod: "2026-04-29"
+publicationsCitations: "1034"
 
 locales:
   - code: "en"
@@ -581,6 +581,12 @@ services:
       en: "IEEE International Symposium On Field-Programmable Custom Computing Machines 2026"
       cn: "IEEE 现场可编程定制计算机器国际研讨会（FCCM '26）"
   - role:
+      en: "Research Competition Committee Judge"
+      cn: "研究竞赛评委（RCC）"
+    event:
+      en: "IEEE International Symposium On Field-Programmable Custom Computing Machines 2026"
+      cn: "IEEE 现场可编程定制计算机器国际研讨会（FCCM '26）"
+  - role:
       en: "Technical Program Committee Member"
       cn: "论文评审委员会委员（TPC）"
     event:
@@ -600,7 +606,7 @@ services:
       cn: "设计自动化会议（DAC '22）"
 
 reviews:
-  count: 104
+  count: 111
   journals:
     - en: "ACM Transactions on Architecture and Code Optimization (TACO)"
       cn: "TACO（ACM 体系结构与代码优化汇刊）"
@@ -616,6 +622,8 @@ reviews:
       cn: "FPL（现场可编程逻辑与应用会议）"
     - en: "GigaScience"
       cn: "GigaScience"
+    - en: "Great Lakes Symposium on VLSI (GLSVLSI)"
+      cn: "GLSVLSI（五大湖超大规模集成电路研讨会）"
     - en: "IEEE Access"
       cn: "IEEE Access"
     - en: "IEEE Open Journal of Circuits and Systems (OJCAS)"
@@ -638,6 +646,7 @@ reviews:
 # used on both web and CV; if only `cvYear` is set, the web shows no year label.
 publications:
   - pdf: "research-papers/10.1109-ICCAD66269.2025.11240757.pdf"
+    translationPdf: "research-papers/10.1109-ICCAD66269.2025.11240757-cn.pdf"
     titleStart:
       en: "Automated Design Space Exploration in High-Level Physical"
       cn: "面向高层次物理综合的自动化设计空间"

@@ -6,7 +6,7 @@ phone: "(929) 273-1217"
 email: "i@jasonlau.io"
 github: "github.com/dotkrnl"
 copyright: "2026"
-lastmod: "2026-04-29"
+lastmod: "2026-04-30"
 publicationsCitations: "1034"
 
 locales:
@@ -547,6 +547,12 @@ experience:
     cv: true
 
 services:
+  - role:
+      en: "Technical Program Committee Member"
+      cn: "论文评审委员会委员（TPC）"
+    event:
+      en: "International Conference on Field-Programmable Technology 2026"
+      cn: "现场可编程技术国际会议（FPT '26）"
   - role:
       en: "Technical Program Committee Member"
       cn: "论文评审委员会委员（TPC）"

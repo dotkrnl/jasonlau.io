@@ -48,8 +48,16 @@ function generateTeX(data) {
   w("");
   w("% Fonts: Palatino manually (palatino=false avoids unicode-math breaking xeCJK bold)");
   w("\\usepackage{xeCJK}");
-  w("\\setCJKmainfont{Songti SC}");
-  w("\\newCJKfontfamily\\heiti[RawFeature={embolden=3}]{Heiti SC}");
+  w("\\IfFontExistsTF{Songti SC}{%");
+  w("  \\setCJKmainfont{Songti SC}%");
+  w("}{%");
+  w("  \\setCJKmainfont{Noto Serif CJK SC}%");
+  w("}");
+  w("\\IfFontExistsTF{Heiti SC}{%");
+  w("  \\newCJKfontfamily\\heiti{Heiti SC}%");
+  w("}{%");
+  w("  \\newCJKfontfamily\\heiti{Noto Sans CJK SC}%");
+  w("}");
   w("\\let\\origbfseries\\bfseries");
   w("\\renewcommand{\\bfseries}{\\origbfseries\\heiti}");
   w("\\let\\origtextbf\\textbf");
@@ -76,11 +84,11 @@ function generateTeX(data) {
 
   // ── Contact info ──────────────────────────────────────────
   w("\\vspace{0.5em}");
-  w("\\begin{center}");
+  w("\\noindent");
   w(
     `{\\small ${esc(data.phone)} \\quad|\\quad ${esc(data.email)} \\quad|\\quad ${esc(data.github)}}`,
   );
-  w("\\end{center}");
+  w("\\par");
   w("\\vspace{0.5em}");
   w("");
 

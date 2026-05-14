@@ -8,6 +8,7 @@ module.exports = function (eleventyConfig) {
   for (const pattern of [
     "src/*.png",
     "src/*.ico",
+    "src/_headers",
     "src/site.webmanifest",
     "src/robots.txt",
     "src/design-works",

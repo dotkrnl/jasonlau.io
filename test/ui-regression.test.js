@@ -69,3 +69,21 @@ test("designer works use reusable caption and logo sizing classes", () => {
   assert.match(styles, /\.logo-work/);
   assert.doesNotMatch(designer, /pl-32|pr-32|-mt-6/);
 });
+
+test("PDF assets declare HTTP canonical headers for crawlers", () => {
+  const headers = read("src/_headers");
+  const config = read("eleventy.config.js");
+
+  assert.match(config, /src\/_headers/);
+  assert.match(headers, /\/research-papers\/\*/);
+  assert.match(headers, /Link:\s*<https:\/\/jasonlau\.io\/research-papers\/:splat>;\s*rel="canonical"/);
+  assert.match(headers, /\/jason-lau-cv\.pdf/);
+  assert.match(headers, /\/jason-lau-cv-cn\.pdf/);
+});
+
+test("page hreflang x-default follows the current page family", () => {
+  const base = read("src/_includes/base.njk");
+
+  assert.match(base, /hreflang="x-default" href="{{ siteView\.url }}{{ siteView\.locales\[0\]\.url }}"/);
+  assert.doesNotMatch(base, /hreflang="x-default" href="{{ siteView\.url }}\/"/);
+});

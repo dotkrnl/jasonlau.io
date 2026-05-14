@@ -1,0 +1,9 @@
+# Canonical hints for non-HTML assets that crawlers cannot read from page markup.
+/research-papers/*
+  Link: <https://jasonlau.io/research-papers/:splat>; rel="canonical"
+
+/jason-lau-cv.pdf
+  Link: <https://jasonlau.io/jason-lau-cv.pdf>; rel="canonical"
+
+/jason-lau-cv-cn.pdf
+  Link: <https://jasonlau.io/jason-lau-cv-cn.pdf>; rel="canonical"

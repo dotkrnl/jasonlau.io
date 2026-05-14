@@ -19,7 +19,7 @@
     {% for localeItem in siteView.locales %}
     <link rel="alternate" hreflang="{{ localeItem.htmlLang }}" href="{{ siteView.url }}{{ localeItem.url }}">
     {% endfor %}
-    <link rel="alternate" hreflang="x-default" href="{{ siteView.url }}/">
+    <link rel="alternate" hreflang="x-default" href="{{ siteView.url }}{{ siteView.locales[0].url }}">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",

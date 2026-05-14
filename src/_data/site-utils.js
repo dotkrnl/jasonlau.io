@@ -51,6 +51,20 @@ function getPermalink(pageKey, locale) {
   return route ? `cn/${route}` : "cn/index.html";
 }
 
+function buildSitemapEntries(rawSite) {
+  return rawSite.roles.flatMap((role) =>
+    rawSite.locales.map((locale) => ({
+      url: `${rawSite.url}${getPageUrl(role.key, locale.code)}`,
+      lastmod: rawSite.lastmod,
+      priority: role.key === "researcher" ? "1.0" : "0.8",
+      alternates: rawSite.locales.map((alternate) => ({
+        htmlLang: alternate.htmlLang,
+        url: `${rawSite.url}${getPageUrl(role.key, alternate.code)}`,
+      })),
+    })),
+  );
+}
+
 function replaceCount(template, count) {
   return template.replace("{{count}}", String(count));
 }
@@ -194,6 +208,7 @@ function buildCvData(rawSite, locale, options = {}) {
 module.exports = {
   buildCvData,
   buildLocalizedSite,
+  buildSitemapEntries,
   getPageUrl,
   getPermalink,
   loadRawSite,

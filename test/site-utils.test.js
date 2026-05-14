@@ -3,6 +3,7 @@ const assert = require("node:assert/strict");
 const {
   buildCvData,
   buildLocalizedSite,
+  buildSitemapEntries,
   getPageUrl,
   getPermalink,
   loadRawSite,
@@ -31,6 +32,26 @@ test("buildLocalizedSite rewrites role and CV links for CN pages", () => {
   assert.equal(site.roles[0].url, "/cn/");
   assert.equal(cvLink.url, "/jason-lau-cv-cn.pdf");
   assert.equal(site.locales.find((locale) => locale.code === "en").url, "/developer.html");
+});
+
+test("buildSitemapEntries exposes every canonical localized page with alternates", () => {
+  const entries = buildSitemapEntries(rawSite);
+  const urls = entries.map((entry) => entry.url);
+
+  assert.deepEqual(urls, [
+    "https://jasonlau.io/",
+    "https://jasonlau.io/cn/",
+    "https://jasonlau.io/developer.html",
+    "https://jasonlau.io/cn/developer.html",
+    "https://jasonlau.io/designer.html",
+    "https://jasonlau.io/cn/designer.html",
+  ]);
+  assert.equal(entries[0].priority, "1.0");
+  assert.equal(entries[2].priority, "0.8");
+  assert.deepEqual(entries[3].alternates, [
+    { htmlLang: "en", url: "https://jasonlau.io/developer.html" },
+    { htmlLang: "zh-Hans", url: "https://jasonlau.io/cn/developer.html" },
+  ]);
 });
 
 test("buildCvData reuses localized site data", () => {

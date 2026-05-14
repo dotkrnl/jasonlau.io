@@ -20,7 +20,8 @@ test("localizeValue falls back to English for untranslated CN content", () => {
 test("locale URLs preserve shared page templates", () => {
   assert.equal(getPageUrl("researcher", "en"), "/");
   assert.equal(getPageUrl("researcher", "cn"), "/cn/");
-  assert.equal(getPageUrl("developer", "cn"), "/cn/developer.html");
+  assert.equal(getPageUrl("developer", "en"), "/developer");
+  assert.equal(getPageUrl("developer", "cn"), "/cn/developer");
   assert.equal(getPermalink("designer", "cn"), "cn/designer.html");
 });
 
@@ -28,10 +29,10 @@ test("buildLocalizedSite rewrites role and CV links for CN pages", () => {
   const site = buildLocalizedSite(rawSite, "cn", "developer");
   const cvLink = site.navLinks.find((link) => link.cv);
 
-  assert.equal(site.currentUrl, "/cn/developer.html");
+  assert.equal(site.currentUrl, "/cn/developer");
   assert.equal(site.roles[0].url, "/cn/");
   assert.equal(cvLink.url, "/jason-lau-cv-cn.pdf");
-  assert.equal(site.locales.find((locale) => locale.code === "en").url, "/developer.html");
+  assert.equal(site.locales.find((locale) => locale.code === "en").url, "/developer");
 });
 
 test("buildSitemapEntries exposes every canonical localized page with alternates", () => {
@@ -41,16 +42,16 @@ test("buildSitemapEntries exposes every canonical localized page with alternates
   assert.deepEqual(urls, [
     "https://jasonlau.io/",
     "https://jasonlau.io/cn/",
-    "https://jasonlau.io/developer.html",
-    "https://jasonlau.io/cn/developer.html",
-    "https://jasonlau.io/designer.html",
-    "https://jasonlau.io/cn/designer.html",
+    "https://jasonlau.io/developer",
+    "https://jasonlau.io/cn/developer",
+    "https://jasonlau.io/designer",
+    "https://jasonlau.io/cn/designer",
   ]);
   assert.equal(entries[0].priority, "1.0");
   assert.equal(entries[2].priority, "0.8");
   assert.deepEqual(entries[3].alternates, [
-    { htmlLang: "en", url: "https://jasonlau.io/developer.html" },
-    { htmlLang: "zh-Hans", url: "https://jasonlau.io/cn/developer.html" },
+    { htmlLang: "en", url: "https://jasonlau.io/developer" },
+    { htmlLang: "zh-Hans", url: "https://jasonlau.io/cn/developer" },
   ]);
 });
 

@@ -34,8 +34,8 @@ function localizeValue(value, locale) {
 
 function getPageRoute(pageKey) {
   if (pageKey === "researcher") return "";
-  if (pageKey === "developer") return "developer.html";
-  if (pageKey === "designer") return "designer.html";
+  if (pageKey === "developer") return "developer";
+  if (pageKey === "designer") return "designer";
   throw new Error(`Unknown page key: ${pageKey}`);
 }
 
@@ -47,8 +47,9 @@ function getPageUrl(pageKey, locale) {
 
 function getPermalink(pageKey, locale) {
   const route = getPageRoute(pageKey);
-  if (locale === "en") return route || "index.html";
-  return route ? `cn/${route}` : "cn/index.html";
+  if (locale === "en") return route ? `${route}.html` : "index.html";
+  if (!route) return "cn/index.html";
+  return `cn/${route}.html`;
 }
 
 function buildSitemapEntries(rawSite) {

@@ -6,8 +6,8 @@ phone: "(929) 273-1217"
 email: "i@jasonlau.io"
 github: "github.com/dotkrnl"
 copyright: "2026"
-lastmod: "2026-05-14"
-publicationsCitations: "1044"
+lastmod: "2026-05-15"
+publicationsCitations: "1048"
 
 locales:
   - code: "en"
@@ -559,6 +559,12 @@ services:
     event:
       en: "International Conference on Field-Programmable Logic and Applications 2026"
       cn: "现场可编程逻辑与应用国际会议（FPL '26）"
+  - role:
+      en: "Technical Program Committee Member"
+      cn: "论文评审委员会委员（TPC）"
+    event:
+      en: "IEEE International Conference on Computer Design 2026"
+      cn: "IEEE 计算机设计国际会议（ICCD '26）"
   - role:
       en: "Technical Program Committee Member"
       cn: "论文评审委员会委员（TPC）"

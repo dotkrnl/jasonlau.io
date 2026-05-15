@@ -22,6 +22,7 @@ test("publication titles expose a subtle PDF preview hint", () => {
   assert.match(index, /paper-preview-label/);
   assert.match(styles, /\.paper-preview-icon/);
   assert.match(styles, /align-items:\s*center/);
+  assert.match(styles, /@media\s*\(max-width:\s*767\.98px\)\s*{[^}]*\.paper-title\s*{[^}]*text-align:\s*left/s);
   assert.match(styles, /\.paper-preview-icon\s*{[^}]*height:\s*0\.6875rem/s);
   assert.match(styles, /\.paper-preview-label\s*{[^}]*font-size:\s*0\.6875rem/s);
   assert.doesNotMatch(styles, /translateY/);

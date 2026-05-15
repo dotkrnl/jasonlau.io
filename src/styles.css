@@ -117,6 +117,12 @@
   }
 }
 
+@media (max-width: 767.98px) {
+  .paper-title {
+    text-align: left;
+  }
+}
+
 /* Hide focus ring for mouse/programmatic focus; keep for keyboard nav */
 .paper-title:focus {
   outline: none;

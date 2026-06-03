@@ -6,8 +6,8 @@ phone: "(929) 273-1217"
 email: "i@jasonlau.io"
 github: "github.com/dotkrnl"
 copyright: "2026"
-lastmod: "2026-06-02"
-publicationsCitations: "1067"
+lastmod: "2026-06-03"
+publicationsCitations: "1068"
 
 locales:
   - code: "en"
@@ -627,7 +627,7 @@ services:
       cn: "设计自动化会议（DAC '22）"
 
 reviews:
-  count: 111
+  count: 112
   journals:
     - en: "ACM Transactions on Architecture and Code Optimization (TACO)"
       cn: "TACO（ACM 体系结构与代码优化汇刊）"

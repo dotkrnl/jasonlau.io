@@ -48,7 +48,10 @@ test("role navigation uses radio-style markers without text decoration", () => {
   assert.match(base, /ui\.afterRolesPunctuation/);
   assert.match(base, /role-marker/);
   assert.match(base, /role-active/);
-  assert.match(styles, /\.role-token\s*{[^}]*white-space:\s*nowrap/s);
+  assert.match(base, /role-separator/);
+  assert.match(styles, /\.role-link\s*{[^}]*white-space:\s*nowrap/s);
+  assert.match(styles, /\.role-token\s*{[^}]*white-space:\s*normal/s);
+  assert.match(styles, /\.role-separator\s*{[^}]*white-space:\s*normal/s);
   assert.match(base, /●/);
   assert.match(base, /○/);
   assert.match(styles, /\.role-marker\s*{[^}]*font-size:\s*0\.58em/s);

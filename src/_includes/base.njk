@@ -39,7 +39,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
   </head>
-  <body class="min-h-screen overflow-x-hidden px-8 py-6 font-sans antialiased leading-snug text-justify hyphens-auto text-black bg-white md:p-12 md:text-left md:hyphens-none selection:bg-black selection:text-white">
+  <body class="min-h-screen overflow-x-hidden px-8 py-6 font-sans antialiased leading-snug text-left hyphens-none text-black bg-white md:p-12 selection:bg-black selection:text-white">
     <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-white focus:px-4 focus:py-2 focus:text-black focus:shadow-lg">{{ ui.skipToContent }}</a>
     <div id="app" class="relative w-full">
     <header class="relative grid grid-cols-1 gap-y-8 mb-12 md:grid-cols-12 md:gap-x-12 md:mb-24">
@@ -50,7 +50,7 @@
         </div>
         <div class="{{ introMaxWidthClass | default('max-w-[620px]') }} text-2xl font-light leading-tight text-black text-left hyphens-none intro-text">
           <h1 class="sr-only">{{ h1 }}</h1>
-          <span class="font-bold">{{ siteView.name }}</span>{% if locale == "cn" %}{{ ui.personIntroLead }}{% else %} {{ ui.personIntroLead }} {% endif %}<nav class="role-nav inline">{% for role in siteView.roles -%}<span class="role-token">{%- if role.name == activeRole -%}<span class="role-link role-active font-bold" aria-current="page"><span class="role-marker" aria-hidden="true">●</span>{{ role.name }}</span>{%- else -%}<a href="{{ role.url }}" class="role-link role-inactive text-gray-500 hover:text-black"><span class="role-marker" aria-hidden="true">○</span>{{ role.name }}</a>{%- endif -%}{%- if not loop.last and loop.revindex > 2 -%}{{ ui.roleSeparator }}{%- elif not loop.last and loop.revindex == 2 -%}{{ ui.roleFinalSeparator }}{%- else -%}{{ ui.afterRolesPunctuation }}{%- endif -%}</span>{%- endfor %}</nav><span class="inline">{% if locale != "cn" %} {% endif %}{{ tagline | safe }}</span>
+          <span class="font-bold">{{ siteView.name }}</span>{% if locale == "cn" %}{{ ui.personIntroLead }}{% else %} {{ ui.personIntroLead }} {% endif %}<nav class="role-nav inline">{% for role in siteView.roles -%}<span class="role-token">{%- if role.name == activeRole -%}<span class="role-link role-active font-bold" aria-current="page"><span class="role-marker" aria-hidden="true">●</span>{{ role.name }}</span>{%- else -%}<a href="{{ role.url }}" class="role-link role-inactive text-gray-500 hover:text-black"><span class="role-marker" aria-hidden="true">○</span>{{ role.name }}</a>{%- endif -%}</span>{%- if not loop.last and loop.revindex > 2 -%}<span class="role-separator">{{ ui.roleSeparator }}</span>{%- elif not loop.last and loop.revindex == 2 -%}<span class="role-separator">{{ ui.roleFinalSeparator }}</span>{%- else -%}<span class="role-separator">{{ ui.afterRolesPunctuation }}</span>{%- endif -%}{%- endfor %}</nav><span class="inline">{% if locale != "cn" %} {% endif %}{{ tagline | safe }}</span>
         </div>
       </div>
       <div class="order-1 col-span-4 flex justify-start -ml-[30px] -mt-5 md:order-2 md:col-span-4 md:justify-end md:ml-0 md:mt-0 xl:-mr-[50px] 2xl:col-span-2 2xl:-mr-20">

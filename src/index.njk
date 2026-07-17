@@ -40,7 +40,7 @@ layout: base.njk
 
   <div id="main-div" class="flex flex-col max-w-[1400px] gap-16 md:col-span-8 2xl:col-span-6 2xl:-mt-[140px]">
     <section class="w-full">
-      <div class="mb-8 flex items-baseline justify-between border-t border-gray-100 pt-4 md:border-none md:pt-0">
+      <div class="mb-8 flex items-baseline justify-between border-t border-gray-200 pt-4 md:border-none md:pt-0">
         <h2 class="text-xs font-bold uppercase tracking-[0.2em] text-gray-500">{{ pageContent.headings.publications }} ({{ pageContent.headings.citedPrefix }} {{ siteView.publicationsCitations }} {{ pageContent.headings.citedSuffix }})</h2>
         <span class="hidden text-[10px] uppercase tracking-widest text-gray-500 md:block">{{ pageContent.headings.coFirstAuthorsNote }}</span>
       </div>
@@ -97,7 +97,7 @@ layout: base.njk
               {% endif %}
               {% endif %}
               <p class="pub-authors mb-1 text-sm leading-snug text-gray-800">{{ pub.authors | safe }}</p>
-              <div class="pub-venue text-sm uppercase tracking-wide text-gray-500">{{ pub.venue | safe }}</div>
+              <div class="pub-venue text-sm text-gray-500">{{ pub.venue | safe }}</div>
             </div>
             {% if pub.year %}
             <div class="hidden font-mono text-sm text-right text-gray-500 md:block md:col-span-2">{{ pub.year }}</div>

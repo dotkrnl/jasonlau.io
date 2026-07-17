@@ -233,6 +233,10 @@ pages:
       en: "a multidisciplinary graphic designer aiming to make technologies expressive."
       cn: "致力于让技术拥有更强表达力的跨学科平面设计师。"
     introMaxWidthClass: "max-w-[580px]"
+    headings:
+      education:
+        en: "Education"
+        cn: "教育背景"
     designWorks:
       bookOcean:
         caption:

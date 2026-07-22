@@ -631,7 +631,7 @@ services:
       cn: "设计自动化会议（DAC '22）"
 
 reviews:
-  count: 122
+  count: 127
   journals:
     - en: "ACM Transactions on Architecture and Code Optimization (TACO)"
       cn: "TACO（ACM 体系结构与代码优化汇刊）"

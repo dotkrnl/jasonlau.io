@@ -81,3 +81,15 @@ test("buildCvData localizes award organizations for English CV output", () => {
   assert.equal(cv.awards[0].org, "International Symposium on Field-Programmable Gate Arrays (2021)");
   assert.equal(cv.awards[1].org, "Xilinx, Inc. (2021)");
 });
+
+test("every TPC service conference appears in the reviewed-for list", () => {
+  const reviewedFor = rawSite.reviews.journals.map((entry) => entry.en).join("\n");
+  const tpcAcronyms = rawSite.services
+    .filter((service) => service.role.en === "Technical Program Committee Member")
+    .map((service) => service.event.cn.match(/（([A-Z]+)(?:\s*'\d+)?）/)?.[1]);
+
+  assert.ok(tpcAcronyms.every(Boolean), "every TPC service must expose its conference acronym");
+  for (const acronym of new Set(tpcAcronyms)) {
+    assert.match(reviewedFor, new RegExp(`\\(${acronym}\\)`));
+  }
+});

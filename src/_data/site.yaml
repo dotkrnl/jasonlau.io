@@ -7,7 +7,7 @@ email: "i@jasonlau.io"
 github: "github.com/dotkrnl"
 copyright: "2026"
 lastmod: "2026-08-13"
-publicationsCitations: "1131"
+publicationsCitations: "1132"
 
 locales:
   - code: "en"
@@ -631,7 +631,7 @@ services:
       cn: "设计自动化会议（DAC '22）"
 
 reviews:
-  count: 133
+  count: 134
   journals:
     - en: "ACM Transactions on Architecture and Code Optimization (TACO)"
       cn: "TACO（ACM 体系结构与代码优化汇刊）"
